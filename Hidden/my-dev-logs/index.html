@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Web Developer</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css">
+    <link rel="stylesheet" href="//www.gausszhou.top/source/data/css/litegraph-topo.css">
+    <srcipt src="//cdn.bootcdn.net/ajax/libs/zrender/5.1.1/zrender.min.js"></srcipt>
+    <meta name="description" content="Gauss Zhou's Web Developer Note">
+    <meta name="keywords" content="gausszhou , Gauss Zhou , Web , develop ,technical , knowledge">
+    <meta name="author" content="Gauss Zhou">
+    <meta name="og:title" content="Web Develop">
+    <meta name="og:type" content="website">
+    <meta name="og:description" content="Gauss Zhou's Web Developer Note">
+    <meta name="baidu-site-verification" content="">
+    <meta name="msvalidate.01" content="">
+    <meta name="google-site-verification" content="">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="7">
+    
+    <link rel="preload" href="/assets/css/0.styles.199c727d.css" as="style"><link rel="preload" href="/assets/js/app.0700b199.js" as="script"><link rel="preload" href="/assets/js/4.85800d9b.js" as="script"><link rel="preload" href="/assets/js/108.d0b517b7.js" as="script"><link rel="prefetch" href="/assets/js/1.64af6ab6.js"><link rel="prefetch" href="/assets/js/10.91dc4ea6.js"><link rel="prefetch" href="/assets/js/100.9d065f43.js"><link rel="prefetch" href="/assets/js/101.162f6f5a.js"><link rel="prefetch" href="/assets/js/102.547f0494.js"><link rel="prefetch" href="/assets/js/103.8df50f95.js"><link rel="prefetch" href="/assets/js/104.0dc1a023.js"><link rel="prefetch" href="/assets/js/105.6342d25f.js"><link rel="prefetch" href="/assets/js/106.c5f00494.js"><link rel="prefetch" href="/assets/js/107.67279c92.js"><link rel="prefetch" href="/assets/js/109.2c4dcaeb.js"><link rel="prefetch" href="/assets/js/11.86efad00.js"><link rel="prefetch" href="/assets/js/110.90adfb2c.js"><link rel="prefetch" href="/assets/js/111.e96a4ae7.js"><link rel="prefetch" href="/assets/js/112.169ab31b.js"><link rel="prefetch" href="/assets/js/113.1f2b9fc2.js"><link rel="prefetch" href="/assets/js/114.0c95ee77.js"><link rel="prefetch" href="/assets/js/115.79141d61.js"><link rel="prefetch" href="/assets/js/116.03dd9b47.js"><link rel="prefetch" href="/assets/js/117.8438da1c.js"><link rel="prefetch" href="/assets/js/118.2a3d98f0.js"><link rel="prefetch" href="/assets/js/119.56aa8bb0.js"><link rel="prefetch" href="/assets/js/12.a355d486.js"><link rel="prefetch" href="/assets/js/120.1d693ff2.js"><link rel="prefetch" href="/assets/js/121.c0e8837b.js"><link rel="prefetch" href="/assets/js/122.309c2d09.js"><link rel="prefetch" href="/assets/js/123.05bba04a.js"><link rel="prefetch" href="/assets/js/124.6b67611a.js"><link rel="prefetch" href="/assets/js/125.02506fca.js"><link rel="prefetch" href="/assets/js/126.ef821603.js"><link rel="prefetch" href="/assets/js/127.cd6f872b.js"><link rel="prefetch" href="/assets/js/128.bff523e0.js"><link rel="prefetch" href="/assets/js/129.6d874134.js"><link rel="prefetch" href="/assets/js/13.b7a2e696.js"><link rel="prefetch" href="/assets/js/130.27ecf01a.js"><link rel="prefetch" href="/assets/js/131.271da5ba.js"><link rel="prefetch" href="/assets/js/132.77b954e5.js"><link rel="prefetch" href="/assets/js/133.7ec87ea9.js"><link rel="prefetch" href="/assets/js/134.41482d0a.js"><link rel="prefetch" href="/assets/js/135.9bb9090d.js"><link rel="prefetch" href="/assets/js/136.afb054c5.js"><link rel="prefetch" href="/assets/js/137.78e85fab.js"><link rel="prefetch" href="/assets/js/138.7b30e1df.js"><link rel="prefetch" href="/assets/js/139.a3eb663e.js"><link rel="prefetch" href="/assets/js/14.34da2ea7.js"><link rel="prefetch" href="/assets/js/140.c28342e1.js"><link rel="prefetch" href="/assets/js/141.b2c12178.js"><link rel="prefetch" href="/assets/js/142.b4c64f63.js"><link rel="prefetch" href="/assets/js/143.42bbb2b5.js"><link rel="prefetch" href="/assets/js/144.78422f6c.js"><link rel="prefetch" href="/assets/js/145.be9153a1.js"><link rel="prefetch" href="/assets/js/146.d941f41a.js"><link rel="prefetch" href="/assets/js/147.84300116.js"><link rel="prefetch" href="/assets/js/148.ddb29130.js"><link rel="prefetch" href="/assets/js/149.11f63f93.js"><link rel="prefetch" href="/assets/js/15.056d0b73.js"><link rel="prefetch" href="/assets/js/150.04922cf6.js"><link rel="prefetch" href="/assets/js/151.290d279d.js"><link rel="prefetch" href="/assets/js/152.ec8536b5.js"><link rel="prefetch" href="/assets/js/153.a4173dd7.js"><link rel="prefetch" href="/assets/js/154.d779c69e.js"><link rel="prefetch" href="/assets/js/155.3077f0a2.js"><link rel="prefetch" href="/assets/js/156.cdee6fa6.js"><link rel="prefetch" href="/assets/js/157.3f1d5a91.js"><link rel="prefetch" href="/assets/js/158.a6c22872.js"><link rel="prefetch" href="/assets/js/159.2c0184ca.js"><link rel="prefetch" href="/assets/js/16.fa07b758.js"><link rel="prefetch" href="/assets/js/160.5833a2f0.js"><link rel="prefetch" href="/assets/js/161.2c142f87.js"><link rel="prefetch" href="/assets/js/162.1266048f.js"><link rel="prefetch" href="/assets/js/163.4a5f7392.js"><link rel="prefetch" href="/assets/js/164.7a70881f.js"><link rel="prefetch" href="/assets/js/165.146513ec.js"><link rel="prefetch" href="/assets/js/166.2645f0ab.js"><link rel="prefetch" href="/assets/js/167.3aeb02bb.js"><link rel="prefetch" href="/assets/js/168.7629d5ff.js"><link rel="prefetch" href="/assets/js/169.d4d379e4.js"><link rel="prefetch" href="/assets/js/17.d916cef4.js"><link rel="prefetch" href="/assets/js/170.e0116c1f.js"><link rel="prefetch" href="/assets/js/171.caacdd8c.js"><link rel="prefetch" href="/assets/js/172.aa46a804.js"><link rel="prefetch" href="/assets/js/173.5eb08c7b.js"><link rel="prefetch" href="/assets/js/174.634bccf9.js"><link rel="prefetch" href="/assets/js/175.5c854bb9.js"><link rel="prefetch" href="/assets/js/176.4defa747.js"><link rel="prefetch" href="/assets/js/177.501bd009.js"><link rel="prefetch" href="/assets/js/178.3eac16d7.js"><link rel="prefetch" href="/assets/js/179.99f0fa6e.js"><link rel="prefetch" href="/assets/js/18.f1005fa3.js"><link rel="prefetch" href="/assets/js/180.a7d76a2f.js"><link rel="prefetch" href="/assets/js/181.f98a015d.js"><link rel="prefetch" href="/assets/js/182.bc4badf7.js"><link rel="prefetch" href="/assets/js/183.44be8c5d.js"><link rel="prefetch" href="/assets/js/184.f39a6b50.js"><link rel="prefetch" href="/assets/js/185.061272a9.js"><link rel="prefetch" href="/assets/js/186.abbb412a.js"><link rel="prefetch" href="/assets/js/187.34d77c25.js"><link rel="prefetch" href="/assets/js/188.c2220440.js"><link rel="prefetch" href="/assets/js/189.350abc46.js"><link rel="prefetch" href="/assets/js/19.d298d243.js"><link rel="prefetch" href="/assets/js/190.87f0fd7e.js"><link rel="prefetch" href="/assets/js/191.c5f01ac4.js"><link rel="prefetch" href="/assets/js/192.1302768c.js"><link rel="prefetch" href="/assets/js/193.23c582aa.js"><link rel="prefetch" href="/assets/js/194.74b791d1.js"><link rel="prefetch" href="/assets/js/195.4caf22e0.js"><link rel="prefetch" href="/assets/js/196.9b26c85f.js"><link rel="prefetch" href="/assets/js/197.19d33cff.js"><link rel="prefetch" href="/assets/js/198.b7b6ce3c.js"><link rel="prefetch" href="/assets/js/199.6f952b58.js"><link rel="prefetch" href="/assets/js/2.da16fb8b.js"><link rel="prefetch" href="/assets/js/20.06ba9109.js"><link rel="prefetch" href="/assets/js/200.5e4e9f49.js"><link rel="prefetch" href="/assets/js/201.3f355daa.js"><link rel="prefetch" href="/assets/js/202.3e2919b5.js"><link rel="prefetch" href="/assets/js/203.8585a9f8.js"><link rel="prefetch" href="/assets/js/204.86e09c32.js"><link rel="prefetch" href="/assets/js/205.a8c009b4.js"><link rel="prefetch" href="/assets/js/206.5a9c12c7.js"><link rel="prefetch" href="/assets/js/207.02dbf5d7.js"><link rel="prefetch" href="/assets/js/208.34468414.js"><link rel="prefetch" href="/assets/js/209.e021049b.js"><link rel="prefetch" href="/assets/js/21.5d4702e5.js"><link rel="prefetch" href="/assets/js/210.50f044d7.js"><link rel="prefetch" href="/assets/js/211.df88eea7.js"><link rel="prefetch" href="/assets/js/212.1a61778e.js"><link rel="prefetch" href="/assets/js/213.571cd7a5.js"><link rel="prefetch" href="/assets/js/214.b15e3796.js"><link rel="prefetch" href="/assets/js/215.c35ab00d.js"><link rel="prefetch" href="/assets/js/216.bbb38e4b.js"><link rel="prefetch" href="/assets/js/217.4cc8ce50.js"><link rel="prefetch" href="/assets/js/218.27e9a5dc.js"><link rel="prefetch" href="/assets/js/219.29152dfb.js"><link rel="prefetch" href="/assets/js/22.b29dff3f.js"><link rel="prefetch" href="/assets/js/220.b94a420d.js"><link rel="prefetch" href="/assets/js/221.3e1e3f07.js"><link rel="prefetch" href="/assets/js/222.610c9243.js"><link rel="prefetch" href="/assets/js/223.20324a9e.js"><link rel="prefetch" href="/assets/js/224.6a5c1a7b.js"><link rel="prefetch" href="/assets/js/225.d5981282.js"><link rel="prefetch" href="/assets/js/226.323ae76d.js"><link rel="prefetch" href="/assets/js/227.f8a80a3d.js"><link rel="prefetch" href="/assets/js/228.ba7673a9.js"><link rel="prefetch" href="/assets/js/229.331b64d1.js"><link rel="prefetch" href="/assets/js/23.5397bf05.js"><link rel="prefetch" href="/assets/js/230.4f9aab9d.js"><link rel="prefetch" href="/assets/js/231.85306ec0.js"><link rel="prefetch" href="/assets/js/232.d15e01b6.js"><link rel="prefetch" href="/assets/js/233.9d33c762.js"><link rel="prefetch" href="/assets/js/234.ac16a8ea.js"><link rel="prefetch" href="/assets/js/235.efeff7b8.js"><link rel="prefetch" href="/assets/js/236.67d274b8.js"><link rel="prefetch" href="/assets/js/237.6fae8904.js"><link rel="prefetch" href="/assets/js/238.719fb0d8.js"><link rel="prefetch" href="/assets/js/239.0f5c6dac.js"><link rel="prefetch" href="/assets/js/24.09719cb7.js"><link rel="prefetch" href="/assets/js/240.49c4e101.js"><link rel="prefetch" href="/assets/js/241.768b17f7.js"><link rel="prefetch" href="/assets/js/242.5372e06c.js"><link rel="prefetch" href="/assets/js/243.293366a2.js"><link rel="prefetch" href="/assets/js/244.3e49f572.js"><link rel="prefetch" href="/assets/js/245.cbdf8f5a.js"><link rel="prefetch" href="/assets/js/246.56a55dbe.js"><link rel="prefetch" href="/assets/js/247.3e4f7724.js"><link rel="prefetch" href="/assets/js/248.4fb11b1c.js"><link rel="prefetch" href="/assets/js/249.0caa7968.js"><link rel="prefetch" href="/assets/js/25.05ca3b89.js"><link rel="prefetch" href="/assets/js/250.e70797f8.js"><link rel="prefetch" href="/assets/js/251.ab153d87.js"><link rel="prefetch" href="/assets/js/252.3bca6b4e.js"><link rel="prefetch" href="/assets/js/253.0f0f05bf.js"><link rel="prefetch" href="/assets/js/254.31b0a826.js"><link rel="prefetch" href="/assets/js/255.dcd9479e.js"><link rel="prefetch" href="/assets/js/256.f4f3cbe7.js"><link rel="prefetch" href="/assets/js/257.87b5c111.js"><link rel="prefetch" href="/assets/js/258.a06a5792.js"><link rel="prefetch" href="/assets/js/259.00e7cf37.js"><link rel="prefetch" href="/assets/js/26.a9923aed.js"><link rel="prefetch" href="/assets/js/260.1b15d79f.js"><link rel="prefetch" href="/assets/js/261.7931ff8b.js"><link rel="prefetch" href="/assets/js/262.b79b03fd.js"><link rel="prefetch" href="/assets/js/263.7e7a7a69.js"><link rel="prefetch" href="/assets/js/264.a3362353.js"><link rel="prefetch" href="/assets/js/265.5f5b8f63.js"><link rel="prefetch" href="/assets/js/266.d132b970.js"><link rel="prefetch" href="/assets/js/267.b5e6046b.js"><link rel="prefetch" href="/assets/js/268.0f9d91d5.js"><link rel="prefetch" href="/assets/js/27.49d424f0.js"><link rel="prefetch" href="/assets/js/28.804b176d.js"><link rel="prefetch" href="/assets/js/29.73ad7742.js"><link rel="prefetch" href="/assets/js/30.4b7153eb.js"><link rel="prefetch" href="/assets/js/31.e2baa352.js"><link rel="prefetch" href="/assets/js/32.306f9a8b.js"><link rel="prefetch" href="/assets/js/33.86bba420.js"><link rel="prefetch" href="/assets/js/34.377cc87b.js"><link rel="prefetch" href="/assets/js/35.ccb29e89.js"><link rel="prefetch" href="/assets/js/36.ac3b170b.js"><link rel="prefetch" href="/assets/js/37.a6c86796.js"><link rel="prefetch" href="/assets/js/38.a863dc90.js"><link rel="prefetch" href="/assets/js/39.5bb1248d.js"><link rel="prefetch" href="/assets/js/40.c8f3e571.js"><link rel="prefetch" href="/assets/js/41.90c9a221.js"><link rel="prefetch" href="/assets/js/42.5e7a2243.js"><link rel="prefetch" href="/assets/js/43.4e6e2fa0.js"><link rel="prefetch" href="/assets/js/44.3f386908.js"><link rel="prefetch" href="/assets/js/45.9861347f.js"><link rel="prefetch" href="/assets/js/46.f1a56538.js"><link rel="prefetch" href="/assets/js/47.bfaf984a.js"><link rel="prefetch" href="/assets/js/48.8294d8ff.js"><link rel="prefetch" href="/assets/js/49.33f5b0f7.js"><link rel="prefetch" href="/assets/js/5.27bc9b2c.js"><link rel="prefetch" href="/assets/js/50.89ea98b4.js"><link rel="prefetch" href="/assets/js/51.ed9b70fc.js"><link rel="prefetch" href="/assets/js/52.a6368693.js"><link rel="prefetch" href="/assets/js/53.184d59c4.js"><link rel="prefetch" href="/assets/js/54.090ae4a9.js"><link rel="prefetch" href="/assets/js/55.e2476995.js"><link rel="prefetch" href="/assets/js/56.a22a1485.js"><link rel="prefetch" href="/assets/js/57.3075220f.js"><link rel="prefetch" href="/assets/js/58.452bfc36.js"><link rel="prefetch" href="/assets/js/59.8bd0bc93.js"><link rel="prefetch" href="/assets/js/6.4f220469.js"><link rel="prefetch" href="/assets/js/60.d0efd55d.js"><link rel="prefetch" href="/assets/js/61.616b58ab.js"><link rel="prefetch" href="/assets/js/62.a1ca26c4.js"><link rel="prefetch" href="/assets/js/63.6e7074ce.js"><link rel="prefetch" href="/assets/js/64.baaef4c5.js"><link rel="prefetch" href="/assets/js/65.544aafea.js"><link rel="prefetch" href="/assets/js/66.0cbcb512.js"><link rel="prefetch" href="/assets/js/67.30d4fb26.js"><link rel="prefetch" href="/assets/js/68.fb2c2c07.js"><link rel="prefetch" href="/assets/js/69.eee868b7.js"><link rel="prefetch" href="/assets/js/7.67093bab.js"><link rel="prefetch" href="/assets/js/70.47f4314b.js"><link rel="prefetch" href="/assets/js/71.e61b917c.js"><link rel="prefetch" href="/assets/js/72.bc2c0cbe.js"><link rel="prefetch" href="/assets/js/73.bec5088f.js"><link rel="prefetch" href="/assets/js/74.76623c2b.js"><link rel="prefetch" href="/assets/js/75.ce6f8500.js"><link rel="prefetch" href="/assets/js/76.400e0887.js"><link rel="prefetch" href="/assets/js/77.d4fcbd2b.js"><link rel="prefetch" href="/assets/js/78.fea867a9.js"><link rel="prefetch" href="/assets/js/79.f7238bc4.js"><link rel="prefetch" href="/assets/js/8.c2aa376e.js"><link rel="prefetch" href="/assets/js/80.db5ced4a.js"><link rel="prefetch" href="/assets/js/81.949eaaaf.js"><link rel="prefetch" href="/assets/js/82.1fa9be34.js"><link rel="prefetch" href="/assets/js/83.3a6f83cc.js"><link rel="prefetch" href="/assets/js/84.35fb63b7.js"><link rel="prefetch" href="/assets/js/85.4ff3d26e.js"><link rel="prefetch" href="/assets/js/86.7e761e5a.js"><link rel="prefetch" href="/assets/js/87.da4a560d.js"><link rel="prefetch" href="/assets/js/88.d4678a0e.js"><link rel="prefetch" href="/assets/js/89.8f257cba.js"><link rel="prefetch" href="/assets/js/9.821e10b0.js"><link rel="prefetch" href="/assets/js/90.c544ed8b.js"><link rel="prefetch" href="/assets/js/91.b69a1698.js"><link rel="prefetch" href="/assets/js/92.02e15344.js"><link rel="prefetch" href="/assets/js/93.08fe83ef.js"><link rel="prefetch" href="/assets/js/94.7239b1d9.js"><link rel="prefetch" href="/assets/js/95.8c442a25.js"><link rel="prefetch" href="/assets/js/96.08670966.js"><link rel="prefetch" href="/assets/js/97.730b22df.js"><link rel="prefetch" href="/assets/js/98.676f0c52.js"><link rel="prefetch" href="/assets/js/99.330aee19.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.199c727d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Web Developer</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个性学习" class="dropdown-title"><span class="title">个性学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="个性学习" class="mobile-dropdown-title"><span class="title">个性学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          个人博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Blog/Frontend/" class="nav-link">
+  前端博客
+</a></li><li class="dropdown-subitem"><a href="/Blog/Format/" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-subitem"><a href="/Blog/Admin/" class="nav-link">
+  后台管理
+</a></li><li class="dropdown-subitem"><a href="/Blog/Effect/" class="nav-link">
+  搞点特效
+</a></li><li class="dropdown-subitem"><a href="/Blog/Chore/" class="nav-link">
+  折腾一下
+</a></li></ul></li><li class="dropdown-item"><h4>
+          源码学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/SourceCode/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vite/" class="nav-link">
+  Vite
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue2/" class="nav-link">
+  Vue2
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue3/" class="nav-link">
+  Vue3
+</a></li></ul></li><li class="dropdown-item"><h4>
+          常用工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Tool/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/Tool/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-subitem"><a href="/Tool/Linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/Tool/Docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-subitem"><a href="/Tool/Nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-subitem"><a href="/Tool/Npm/" class="nav-link">
+  Npm
+</a></li><li class="dropdown-subitem"><a href="/Tool/Puppeteer/" class="nav-link">
+  Puppeteer
+</a></li><li class="dropdown-subitem"><a href="/Tool/VSCode/" class="nav-link">
+  VSCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="系统学习" class="dropdown-title"><span class="title">系统学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="系统学习" class="mobile-dropdown-title"><span class="title">系统学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Computer/Science/" class="nav-link">
+  计算机科学导论
+</a></li><li class="dropdown-subitem"><a href="/Computer/System/" class="nav-link">
+  计算机操作系统
+</a></li><li class="dropdown-subitem"><a href="/Computer/Network/" class="nav-link">
+  计算机网络
+</a></li></ul></li><li class="dropdown-item"><h4>
+          在线书籍
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Book/Handbook/" class="nav-link">
+  禅道 程序员生存手册
+</a></li><li class="dropdown-subitem"><a href="/Book/Refactoring2/" class="nav-link">
+  重构 改善既有代码的设计
+</a></li></ul></li><li class="dropdown-item"><h4>
+          学习笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Study/CSS-World/" class="nav-link">
+  CSS世界
+</a></li><li class="dropdown-subitem"><a href="/Study/CSS-New-World/" class="nav-link">
+  CSS新世界
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Houdunren/" class="nav-link">
+  JS后端人视频教程
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Advanced/" class="nav-link">
+  JS高级程序设计
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Pattern/" class="nav-link">
+  JS设计模式与开发实践
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Structure-Algo/" class="nav-link">
+  JS数据结构与算法
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言" class="dropdown-title"><span class="title">编程语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言" class="mobile-dropdown-title"><span class="title">编程语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Language/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Language/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/Language/PHP/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-subitem"><a href="/Language/Node/" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Assembly/" class="nav-link">
+  Assembly
+</a></li><li class="dropdown-subitem"><a href="/Language/C/" class="nav-link">
+  C
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="解决方案" class="dropdown-title"><span class="title">解决方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="解决方案" class="mobile-dropdown-title"><span class="title">解决方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          打包工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Bundle/WebPack/" class="nav-link">
+  WebPack
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/VueCLI/" class="nav-link">
+  VueCLI
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/Vite/" class="nav-link">
+  Vite
+</a></li></ul></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/React/" class="nav-link">
+  React
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue2/" class="nav-link">
+  Vue2.x
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue-Router/" class="nav-link">
+  Vue Router
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vuex/" class="nav-link">
+  Vuex
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Jest/" class="nav-link">
+  Jest
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Nuxt/" class="nav-link">
+  Nuxt
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/VueConf/" class="nav-link">
+  VueConf
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue3/" class="nav-link">
+  Vue3.x
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="领域技术" class="dropdown-title"><span class="title">领域技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="领域技术" class="mobile-dropdown-title"><span class="title">领域技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          通用技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Web/HTTP/" class="nav-link">
+  HTTP
+</a></li><li class="dropdown-subitem"><a href="/Web/WebSocket/" class="nav-link">
+  WebSocket
+</a></li><li class="dropdown-subitem"><a href="/Web/WebRTC/" class="nav-link">
+  WebRTC
+</a></li><li class="dropdown-subitem"><a href="/Web/WebAssembly/" class="nav-link">
+  WebAssembly
+</a></li></ul></li><li class="dropdown-item"><h4>
+          图形技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Graph/SVG/" class="nav-link">
+  SVG
+</a></li><li class="dropdown-subitem"><a href="/Graph/Canvas/" class="nav-link">
+  Canvas
+</a></li><li class="dropdown-subitem"><a href="/Graph/WebGL/" class="nav-link">
+  WebGL
+</a></li><li class="dropdown-subitem"><a href="/Graph/ZRender/" class="nav-link">
+  ZRender
+</a></li><li class="dropdown-subitem"><a href="/Graph/Echarts/" class="nav-link">
+  Echarts
+</a></li><li class="dropdown-subitem"><a href="/Graph/Draw2D/" class="nav-link">
+  Draw2D
+</a></li><li class="dropdown-subitem"><a href="/Graph/LiteGraph/" class="nav-link">
+  LiteGraph
+</a></li></ul></li><li class="dropdown-item"><h4>
+          音视频技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Media/Audio/" class="nav-link">
+  Audio
+</a></li><li class="dropdown-subitem"><a href="/Solution/Media/FFmpeg/" class="nav-link">
+  FFmpeg
+</a></li></ul></li><li class="dropdown-item"><h4>
+          数据库技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/DataBase/LowDB/" class="nav-link">
+  LowDB
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/SQLite/" class="nav-link">
+  SQLite
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/MySQL/" class="nav-link">
+  MySQL
+</a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个性学习" class="dropdown-title"><span class="title">个性学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="个性学习" class="mobile-dropdown-title"><span class="title">个性学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          个人博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Blog/Frontend/" class="nav-link">
+  前端博客
+</a></li><li class="dropdown-subitem"><a href="/Blog/Format/" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-subitem"><a href="/Blog/Admin/" class="nav-link">
+  后台管理
+</a></li><li class="dropdown-subitem"><a href="/Blog/Effect/" class="nav-link">
+  搞点特效
+</a></li><li class="dropdown-subitem"><a href="/Blog/Chore/" class="nav-link">
+  折腾一下
+</a></li></ul></li><li class="dropdown-item"><h4>
+          源码学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/SourceCode/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vite/" class="nav-link">
+  Vite
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue2/" class="nav-link">
+  Vue2
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue3/" class="nav-link">
+  Vue3
+</a></li></ul></li><li class="dropdown-item"><h4>
+          常用工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Tool/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/Tool/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-subitem"><a href="/Tool/Linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/Tool/Docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-subitem"><a href="/Tool/Nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-subitem"><a href="/Tool/Npm/" class="nav-link">
+  Npm
+</a></li><li class="dropdown-subitem"><a href="/Tool/Puppeteer/" class="nav-link">
+  Puppeteer
+</a></li><li class="dropdown-subitem"><a href="/Tool/VSCode/" class="nav-link">
+  VSCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="系统学习" class="dropdown-title"><span class="title">系统学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="系统学习" class="mobile-dropdown-title"><span class="title">系统学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Computer/Science/" class="nav-link">
+  计算机科学导论
+</a></li><li class="dropdown-subitem"><a href="/Computer/System/" class="nav-link">
+  计算机操作系统
+</a></li><li class="dropdown-subitem"><a href="/Computer/Network/" class="nav-link">
+  计算机网络
+</a></li></ul></li><li class="dropdown-item"><h4>
+          在线书籍
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Book/Handbook/" class="nav-link">
+  禅道 程序员生存手册
+</a></li><li class="dropdown-subitem"><a href="/Book/Refactoring2/" class="nav-link">
+  重构 改善既有代码的设计
+</a></li></ul></li><li class="dropdown-item"><h4>
+          学习笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Study/CSS-World/" class="nav-link">
+  CSS世界
+</a></li><li class="dropdown-subitem"><a href="/Study/CSS-New-World/" class="nav-link">
+  CSS新世界
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Houdunren/" class="nav-link">
+  JS后端人视频教程
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Advanced/" class="nav-link">
+  JS高级程序设计
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Pattern/" class="nav-link">
+  JS设计模式与开发实践
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Structure-Algo/" class="nav-link">
+  JS数据结构与算法
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言" class="dropdown-title"><span class="title">编程语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言" class="mobile-dropdown-title"><span class="title">编程语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Language/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Language/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/Language/PHP/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-subitem"><a href="/Language/Node/" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Assembly/" class="nav-link">
+  Assembly
+</a></li><li class="dropdown-subitem"><a href="/Language/C/" class="nav-link">
+  C
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="解决方案" class="dropdown-title"><span class="title">解决方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="解决方案" class="mobile-dropdown-title"><span class="title">解决方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          打包工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Bundle/WebPack/" class="nav-link">
+  WebPack
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/VueCLI/" class="nav-link">
+  VueCLI
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/Vite/" class="nav-link">
+  Vite
+</a></li></ul></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/React/" class="nav-link">
+  React
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue2/" class="nav-link">
+  Vue2.x
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue-Router/" class="nav-link">
+  Vue Router
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vuex/" class="nav-link">
+  Vuex
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Jest/" class="nav-link">
+  Jest
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Nuxt/" class="nav-link">
+  Nuxt
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/VueConf/" class="nav-link">
+  VueConf
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue3/" class="nav-link">
+  Vue3.x
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="领域技术" class="dropdown-title"><span class="title">领域技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="领域技术" class="mobile-dropdown-title"><span class="title">领域技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          通用技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Web/HTTP/" class="nav-link">
+  HTTP
+</a></li><li class="dropdown-subitem"><a href="/Web/WebSocket/" class="nav-link">
+  WebSocket
+</a></li><li class="dropdown-subitem"><a href="/Web/WebRTC/" class="nav-link">
+  WebRTC
+</a></li><li class="dropdown-subitem"><a href="/Web/WebAssembly/" class="nav-link">
+  WebAssembly
+</a></li></ul></li><li class="dropdown-item"><h4>
+          图形技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Graph/SVG/" class="nav-link">
+  SVG
+</a></li><li class="dropdown-subitem"><a href="/Graph/Canvas/" class="nav-link">
+  Canvas
+</a></li><li class="dropdown-subitem"><a href="/Graph/WebGL/" class="nav-link">
+  WebGL
+</a></li><li class="dropdown-subitem"><a href="/Graph/ZRender/" class="nav-link">
+  ZRender
+</a></li><li class="dropdown-subitem"><a href="/Graph/Echarts/" class="nav-link">
+  Echarts
+</a></li><li class="dropdown-subitem"><a href="/Graph/Draw2D/" class="nav-link">
+  Draw2D
+</a></li><li class="dropdown-subitem"><a href="/Graph/LiteGraph/" class="nav-link">
+  LiteGraph
+</a></li></ul></li><li class="dropdown-item"><h4>
+          音视频技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Media/Audio/" class="nav-link">
+  Audio
+</a></li><li class="dropdown-subitem"><a href="/Solution/Media/FFmpeg/" class="nav-link">
+  FFmpeg
+</a></li></ul></li><li class="dropdown-item"><h4>
+          数据库技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/DataBase/LowDB/" class="nav-link">
+  LowDB
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/SQLite/" class="nav-link">
+  SQLite
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/MySQL/" class="nav-link">
+  MySQL
+</a></li></ul></li></ul></div></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>哦 瞧瞧你发现了什么</p></div> <h1 id="development-logs"><a href="#development-logs" class="header-anchor">#</a> Development Logs</h1> <p>TODO:</p> <p>FIXME:</p> <ul class="contains-task-list"><li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 搞点小项目</p></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 同步协作的JSON编辑器</p></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 可分享的简历生成器</p></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 学习 Vue3.0</p></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 学习 Vue3.0 源码</p></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 学习 Vue3.0 源码笔记</p></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 学习 litegraph.js 源码</p></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 编写 litegraph.js 技术揭秘</p></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 学习 draw2d.js 源码</p></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 编写 draw2d.js 技术揭秘</p></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 重学 Nginx</p></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 重学 Docker</p></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 学习 React</p></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 学习 LowDB</p></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 学习 SQLite</p></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 学习 MySQL</p></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 学习 Javascript 向军老师视频教程</p></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 学习 JavaScript高级程序设计 第四版</p></li></ul> <h2 id="_2021-09-九月"><a href="#_2021-09-九月" class="header-anchor">#</a> 2021-09 九月</h2> <h3 id="_2021-08-27-八月"><a href="#_2021-08-27-八月" class="header-anchor">#</a> 2021-08-27 八月</h3> <h3 id="_2021-08-20-八月"><a href="#_2021-08-20-八月" class="header-anchor">#</a> 2021-08-20 八月</h3> <p>Kiloview IMS</p> <ul><li>模拟设备的参数获取和设置接口</li> <li>整理文档</li></ul> <p>文档地址 http://doc.gausszhou.top/web/#/12</p> <p>一些探索</p> <ul><li>是否可以针对ElementUI制作统一风格的样式基础库，一套web一套qt</li> <li>语言包在线共享编辑，部署个网页用于语言包的管理，可跨部门协作</li></ul> <p>IMS需求讨论:
+主要在拓扑图和资源池
+IMS功能模拟：
+使用设备已有API接口进行功能模拟
+看能不能把编码器的流通过IMS设置将配置带到解码器，实现流的配置转发</p> <h3 id="_2021-08-13-八月"><a href="#_2021-08-13-八月" class="header-anchor">#</a> 2021-08-13 八月</h3> <p>Kiloview IMS
+‒ 基本RBAC功能模块</p> <p>Kiloview IMS
+‒ 根据产品计划和UI设计图，进行界面开发</p> <h3 id="_2021-08-06-八月"><a href="#_2021-08-06-八月" class="header-anchor">#</a> 2021-08-06 八月</h3> <p>IMS Graph Manager</p> <ul><li>搭建项目基本结构</li> <li>更多讨论</li></ul> <h3 id="_2021-07-30-七月"><a href="#_2021-07-30-七月" class="header-anchor">#</a> 2021-07-30 七月</h3> <p>kiloview 网站</p> <ul><li>跟进</li></ul> <p>MultiView Youku Recorder</p> <ul><li>跟进</li></ul> <p>IMS Graph Manager</p> <ul><li>权限设计和讨论[未完成]</li> <li>拓扑图功能讨论</li></ul> <h3 id="_2021-07-23-七月"><a href="#_2021-07-23-七月" class="header-anchor">#</a> 2021-07-23 七月</h3> <p>kiloview 网站</p> <ul><li>跟进</li></ul> <p>MultiView Youku Recorder</p> <ul><li>跟进</li></ul> <p>Kiloview MultiView</p> <ul><li>适当重构</li></ul> <p>IMS Graph Manager</p> <ul><li>封装litegraph-topo</li> <li>覆写litegraph-topo 部分逻辑</li></ul> <h3 id="_2021-07-16-七月"><a href="#_2021-07-16-七月" class="header-anchor">#</a> 2021-07-16 七月</h3> <p>MultiView Youku Recorder</p> <ul><li>跟进</li></ul> <p>IMS Topo Graph Manager</p> <ul><li>封装litegraph-topo</li> <li>业务需求和实施方案讨论(未完成)</li></ul> <h3 id="_2021-07-09-七月"><a href="#_2021-07-09-七月" class="header-anchor">#</a> 2021-07-09 七月</h3> <p>Kiloview 网站建设</p> <ul><li>英文技术支持调整</li> <li>英文主站移动端调整(未完成)</li></ul> <p>MultiView Youku Recorder</p> <ul><li>跟进</li></ul> <p>IMS Topo Graph Manager</p> <ul><li>技术方案更换(<a href="https://github.com/jagenjo/litegraph.js" target="_blank" rel="noopener noreferrer">litegraph.js<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>)</li> <li>封装litegraph-topo(未完成)</li></ul> <h2 id="_2021-04-06-第二季度"><a href="#_2021-04-06-第二季度" class="header-anchor">#</a> 2021-04-06 第二季度</h2> <p>Kiloview 网站建设</p> <ul><li>官网一些产品落地页</li> <li>技术支持文档</li> <li>英文网站跟进</li> <li>网站样式调整</li> <li>活动页面制作</li> <li>网站问题修复</li> <li>移动端样式调整</li></ul> <p>MultiView NDI 播放器</p> <ul><li>NDI Take功能设置</li> <li>叠加和裁切界面(未上线功能)</li> <li>跟进</li> <li>NDI YouKu录像分支开发</li></ul> <p>IMS 集中管理平台</p> <ul><li>可视化管理方案预研</li></ul> <p>其他</p> <ul><li>紫光项目跟进</li> <li>WebAssembly H265 预研</li></ul> <h2 id="_2021-06-六月"><a href="#_2021-06-六月" class="header-anchor">#</a> 2021-06 六月</h2> <p>MultiView 播放器</p> <ul><li>NDI录像</li> <li>项目收尾
+Kiloview 网站建设</li> <li>移动端样式</li></ul> <h2 id="_2021-05-五月"><a href="#_2021-05-五月" class="header-anchor">#</a> 2021-05 五月</h2> <p>Kiloview 网站建设</p> <p>MultiView 播放器</p> <h3 id="_2021-05-30-周日"><a href="#_2021-05-30-周日" class="header-anchor">#</a> 2021-05-30 周日</h3> <p>Kiloview 网站建设</p> <ul><li>网站样式调整</li> <li>活动页面制作</li> <li>网站问题修复</li></ul> <p>IMS 集中管理平台</p> <ul><li>可视化管理方案预研</li></ul> <p>MultiView 播放器</p> <ul><li>跟进</li> <li>NDI录像分支开发</li></ul> <h3 id="_2021-05-23-周日"><a href="#_2021-05-23-周日" class="header-anchor">#</a> 2021-05-23 周日</h3> <p>Kiloview 网站建设</p> <ul><li>测试和解决新相关问题</li> <li>跟进新需求</li></ul> <p>IMS topology 设置</p> <h3 id="_2021-05-16-周日"><a href="#_2021-05-16-周日" class="header-anchor">#</a> 2021-05-16 周日</h3> <p>Kiloview 网站建设</p> <h3 id="_2021-05-09-周日"><a href="#_2021-05-09-周日" class="header-anchor">#</a> 2021-05-09 周日</h3> <p>编码器新界面UI调整</p> <p>集中管理平台，拓扑图动态编辑功能预研</p> <h2 id="_2021-04-四月"><a href="#_2021-04-四月" class="header-anchor">#</a> 2021-04 四月</h2> <p>尾递归 动态规划 剪枝  贪心 回溯</p> <p>基本排序查找算法 有限状态机</p> <p>Music Uniapp    WebRTC 聊天室</p> <h3 id="_2021-04-30-周五"><a href="#_2021-04-30-周五" class="header-anchor">#</a> 2021-04-30 周五</h3> <p>Kiloview 网站建设</p> <ul><li>官网一些产品落地页</li> <li>技术支持文档</li> <li>英文网站跟进</li></ul> <p>MultiView NDI 播放器</p> <ul><li>NDI Take功能设置</li> <li>叠加和裁切界面(未上线功能)</li></ul> <p>其他</p> <ul><li>紫光项目跟进</li> <li>WebAssembly H265 预研</li></ul> <h3 id="_2021-04-25-周日"><a href="#_2021-04-25-周日" class="header-anchor">#</a> 2021-04-25 周日</h3> <p>Kiloview 网站建设</p> <ul class="contains-task-list"><li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> NDI落地页 25</li></ul> <p>MultiView NDI 播放器</p> <ul><li>叠加完成</li> <li>裁切完成</li></ul> <h3 id="_2021-04-18-周日"><a href="#_2021-04-18-周日" class="header-anchor">#</a> 2021-04-18 周日</h3> <p>MultiView NDI 播放器</p> <ul><li>Rest.vue</li></ul> <p>Kiloview 网站建设</p> <ul><li>聊天机器人</li> <li>邮件营销</li></ul> <p>Kiloview 网站建设</p> <ul><li>开会 新需求</li> <li>GoogleFonts 处理</li></ul> <p>Kiloview 网站建设</p> <ul><li>英文网站自定义404页面</li></ul> <p>注册功能（手机用户信息）</p> <ul><li>隐私政策</li> <li>用户条款</li> <li>删除回调</li></ul> <p>订阅
+mailchimp</p> <h3 id="_2021-04-11-周日"><a href="#_2021-04-11-周日" class="header-anchor">#</a> 2021-04-11 周日</h3> <p>写个周报</p> <p>Kiloview 网站建设</p> <ul><li>知识库文章多层级</li> <li>搜索结果调整</li> <li>模板页面调整</li> <li>英文网站新需求</li></ul> <p>MultiView NDI 播放</p> <ul class="contains-task-list"><li><p>Take接口对接</p></li> <li><p>前景裁切预研</p></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> Kiloview 网站建设</p> <ul class="contains-task-list"><li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 知识库文章多层级和展开收起  24</li></ul></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> Kiloview 网站建设</p> <ul class="contains-task-list"><li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 知识库增加层级控制  23</li> <li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 官网模板页面调整  22</li></ul></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> MultiView NDI 播放</p> <ul class="contains-task-list"><li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> Take 窗口接口对接</li></ul></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> Kiloview 网站建设</p> <ul class="contains-task-list"><li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 搜索结果限定搜索范围  21</li></ul></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> Kiloview 英文网站新需求</p> <ul class="contains-task-list"><li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 注册登录 首页 右上角    20</p> <ul><li>弹窗 填写姓名，城市，邮箱号，密码</li></ul></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 成为经销商 关于我们 子菜单  19</p> <ul><li>新页面 国家，公司名称，网址，姓名，电话，邮箱，您感兴趣的产品，是否愿意持有库存，经销区域</li></ul></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 在哪里购买 关于我们之后  18</p> <ul><li>新页面 区域，国家，查询 相当于搜索功能  （呈现经销商的信息）</li></ul></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 产品延保 技术支持 子菜单</p> <ul><li>新页面 姓，名，国家，邮箱，购买产品型号，序列号，购买日期</li></ul></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> newsletter订阅 右上角   17</p> <ul><li>插件</li></ul></li></ul></li></ul> <h3 id="_2021-04-04-周日"><a href="#_2021-04-04-周日" class="header-anchor">#</a> 2021-04-04 周日</h3> <p>写个月报
+Kiloview 网站建设</p> <ul><li>官网和知识库非插件功能的实现</li> <li>根据UI设计图调整样式</li> <li>响应式及其细节调整</li></ul> <p>MultiView NDI播放器</p> <ul><li>布局界面调整</li> <li>完善旋转裁切组件</li> <li>NDI单画面输出</li> <li>Take功能调整</li></ul> <p>写个周报
+Kiloview 网站建设</p> <ul><li>官网文章结构调整</li> <li>轮播图，响应式调整</li> <li>知识库调整</li></ul> <p>MultiView NDI播放器</p> <ul><li>Take功能调整</li> <li>对接接口</li></ul> <h2 id="_2021-03-三月"><a href="#_2021-03-三月" class="header-anchor">#</a> 2021-03 三月</h2> <h3 id="_2021-03-28-周日"><a href="#_2021-03-28-周日" class="header-anchor">#</a> 2021-03-28 周日</h3> <blockquote><p>写个周报</p></blockquote> <p>Kiloview 网站建设</p> <ul><li>根据UI设计图调整样式</li> <li>响应式及其细节调整</li></ul> <p>MultiView NDI播放器</p> <ul class="contains-task-list"><li><p>NDI单画面输出</p></li> <li><p>全局音频增益设置</p></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> MultiView NDI播放器</p> <ul class="contains-task-list"><li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> NDI单屏画面输出功能接口对接和调试</li></ul></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> Kiloview 网站建设</p> <ul class="contains-task-list"><li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 页面样式调整  16</li></ul></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> Kiloview 网站建设</p> <ul class="contains-task-list"><li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox">   15</li></ul></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> Kiloview 网站建设</p> <ul class="contains-task-list"><li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 官网响应式调整   14</li></ul></li></ul> <h3 id="_2021-03-21-周日"><a href="#_2021-03-21-周日" class="header-anchor">#</a> 2021-03-21 周日</h3> <p>写个周报，内容如下</p> <blockquote><p>本周完成工作</p></blockquote> <p>Kiloview 知识库网站建设</p> <ul><li>后台管理的文档结构调整</li> <li>前台文档中心页面调整</li> <li>处理一些知识库搬迁和录入的问题</li></ul> <p>MultiView NDI播放器</p> <ul><li>NDI输出功能和API文档</li> <li>预设功能调整和API文档</li> <li>配置导入导出</li></ul> <blockquote><p>下周工作计划</p></blockquote> <ul class="contains-task-list"><li><p>NDI单屏画面输出功能接口对接和调试</p></li> <li><p>预设功能对接和调试</p></li> <li><p>增设NDI画面裁切输出功能</p></li> <li><p>Vue项目中封装QT-WebSocket接口</p></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> MultiView NDI播放器</p> <ul class="contains-task-list"><li class="task-list-item"><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 处理预设和NDI输出功能API接口和文档</li></ul></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> Kiloview 知识库网站建设</p> <ul class="contains-task-list"><li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 处理一些知识库搬迁的问题 13</li></ul></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> MultiView NDI播放器</p> <ul class="contains-task-list"><li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 完善旋转裁切组件</li></ul></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> MultiView NDI播放器</p> <ul class="contains-task-list"><li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 单画面NDI输出设置</li></ul></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> Kiloview 知识库网站建设</p> <ul class="contains-task-list"><li class="task-list-item"><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 文章详情页的顶级目录跳转  12</li></ul></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> Kiloview 知识库网站建设</p> <ul class="contains-task-list"><li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 文档结构调整  11</li> <li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 文档中心调整  10</li></ul></li></ul> <h3 id="_2020-03-14-周日"><a href="#_2020-03-14-周日" class="header-anchor">#</a> 2020-03-14 周日</h3> <p>写个周报，内容如下</p> <blockquote><p>本周完成工作</p></blockquote> <p>Kiloview 知识库网站建设</p> <ul><li>增加需求定制和延保服务页面</li> <li>增加文章分享和锚点跳转功能</li> <li>搜索页调整</li> <li>下载页调整，增加分类筛选</li></ul> <blockquote><p>下周工作计划</p></blockquote> <p>Multiview NDI播放器</p> <ul class="contains-task-list"><li><p>布局界面调整</p></li> <li><p>增加纵横比设置</p></li> <li><p>对接预设功能和裁切功能</p></li> <li class="task-list-item"><p><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> Kiloview知识库网站建设</p> <ul class="contains-task-list"><li class="task-list-item"><input disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 实现搜索结果页定制  9</li></ul></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> Kiloview知识库网站建设</p> <ul class="contains-task-list"><li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 实现文章详情页锚点跳转  8</li></ul></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> Kiloview知识库网站建设</p> <ul class="contains-task-list"><li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 下载搜索细分  7</li> <li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 搜索结果页面调整 6</li> <li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 下载页按需跳转  5</li></ul></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> Kiloview知识库网站建设</p> <ul class="contains-task-list"><li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 增加分享功能   4</li> <li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 样式调整   3</li></ul></li> <li class="task-list-item"><p><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> Kiloview知识库网站建设</p> <ul class="contains-task-list"><li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 需求定制页面  2</li> <li class="task-list-item"><input checked="checked" disabled="disabled" type="checkbox" class="task-list-item-checkbox"> 延保服务页面  1</li></ul></li></ul> <h3 id="_2021-03-07-周日"><a href="#_2021-03-07-周日" class="header-anchor">#</a> 2021-03-07 周日</h3> <p>写个周报，内容如下:</p> <blockquote><p>本周完成工作</p></blockquote> <p>Kiloview 知识库网站建设</p> <ul><li>文档图片批量导出和在线管理</li> <li>基本页面功能的完善</li></ul> <blockquote><p>下周工作计划</p></blockquote> <p>Kiloview 知识库网站建设</p> <ul><li>样式优化</li> <li>图片管理优化</li> <li>跟进和实现新的需求</li></ul> <p>Multiview NDI播放器</p> <ul><li>布局界面调整</li> <li>增加纵横比设置</li></ul> <blockquote><p>更早的工作没有被记录下来</p></blockquote></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.0700b199.js" defer></script><script src="/assets/js/4.85800d9b.js" defer></script><script src="/assets/js/108.d0b517b7.js" defer></script>
+  </body>
+</html>

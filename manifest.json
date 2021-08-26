@@ -1,0 +1,15 @@
+{
+  "name": "WebDevelop",
+  "short_name": "WebDevelop",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Gauss Zhou 开发学习笔记",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ]
+}

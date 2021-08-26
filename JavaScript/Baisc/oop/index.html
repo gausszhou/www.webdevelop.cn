@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>lesson1 实例对象与 new 命令 | Web Developer</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css">
+    <link rel="stylesheet" href="//www.gausszhou.top/source/data/css/litegraph-topo.css">
+    <srcipt src="//cdn.bootcdn.net/ajax/libs/zrender/5.1.1/zrender.min.js"></srcipt>
+    <meta name="description" content="Gauss Zhou's Web Developer Note">
+    <meta name="keywords" content="gausszhou , Gauss Zhou , Web , develop ,technical , knowledge">
+    <meta name="author" content="Gauss Zhou">
+    <meta name="og:title" content="Web Develop">
+    <meta name="og:type" content="website">
+    <meta name="og:description" content="Gauss Zhou's Web Developer Note">
+    <meta name="baidu-site-verification" content="">
+    <meta name="msvalidate.01" content="">
+    <meta name="google-site-verification" content="">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="7">
+    
+    <link rel="preload" href="/assets/css/0.styles.199c727d.css" as="style"><link rel="preload" href="/assets/js/app.0700b199.js" as="script"><link rel="preload" href="/assets/js/4.85800d9b.js" as="script"><link rel="preload" href="/assets/js/141.b2c12178.js" as="script"><link rel="prefetch" href="/assets/js/1.64af6ab6.js"><link rel="prefetch" href="/assets/js/10.91dc4ea6.js"><link rel="prefetch" href="/assets/js/100.9d065f43.js"><link rel="prefetch" href="/assets/js/101.162f6f5a.js"><link rel="prefetch" href="/assets/js/102.547f0494.js"><link rel="prefetch" href="/assets/js/103.8df50f95.js"><link rel="prefetch" href="/assets/js/104.0dc1a023.js"><link rel="prefetch" href="/assets/js/105.6342d25f.js"><link rel="prefetch" href="/assets/js/106.c5f00494.js"><link rel="prefetch" href="/assets/js/107.67279c92.js"><link rel="prefetch" href="/assets/js/108.d0b517b7.js"><link rel="prefetch" href="/assets/js/109.2c4dcaeb.js"><link rel="prefetch" href="/assets/js/11.86efad00.js"><link rel="prefetch" href="/assets/js/110.90adfb2c.js"><link rel="prefetch" href="/assets/js/111.e96a4ae7.js"><link rel="prefetch" href="/assets/js/112.169ab31b.js"><link rel="prefetch" href="/assets/js/113.1f2b9fc2.js"><link rel="prefetch" href="/assets/js/114.0c95ee77.js"><link rel="prefetch" href="/assets/js/115.79141d61.js"><link rel="prefetch" href="/assets/js/116.03dd9b47.js"><link rel="prefetch" href="/assets/js/117.8438da1c.js"><link rel="prefetch" href="/assets/js/118.2a3d98f0.js"><link rel="prefetch" href="/assets/js/119.56aa8bb0.js"><link rel="prefetch" href="/assets/js/12.a355d486.js"><link rel="prefetch" href="/assets/js/120.1d693ff2.js"><link rel="prefetch" href="/assets/js/121.c0e8837b.js"><link rel="prefetch" href="/assets/js/122.309c2d09.js"><link rel="prefetch" href="/assets/js/123.05bba04a.js"><link rel="prefetch" href="/assets/js/124.6b67611a.js"><link rel="prefetch" href="/assets/js/125.02506fca.js"><link rel="prefetch" href="/assets/js/126.ef821603.js"><link rel="prefetch" href="/assets/js/127.cd6f872b.js"><link rel="prefetch" href="/assets/js/128.bff523e0.js"><link rel="prefetch" href="/assets/js/129.6d874134.js"><link rel="prefetch" href="/assets/js/13.b7a2e696.js"><link rel="prefetch" href="/assets/js/130.27ecf01a.js"><link rel="prefetch" href="/assets/js/131.271da5ba.js"><link rel="prefetch" href="/assets/js/132.77b954e5.js"><link rel="prefetch" href="/assets/js/133.7ec87ea9.js"><link rel="prefetch" href="/assets/js/134.41482d0a.js"><link rel="prefetch" href="/assets/js/135.9bb9090d.js"><link rel="prefetch" href="/assets/js/136.afb054c5.js"><link rel="prefetch" href="/assets/js/137.78e85fab.js"><link rel="prefetch" href="/assets/js/138.7b30e1df.js"><link rel="prefetch" href="/assets/js/139.a3eb663e.js"><link rel="prefetch" href="/assets/js/14.34da2ea7.js"><link rel="prefetch" href="/assets/js/140.c28342e1.js"><link rel="prefetch" href="/assets/js/142.b4c64f63.js"><link rel="prefetch" href="/assets/js/143.42bbb2b5.js"><link rel="prefetch" href="/assets/js/144.78422f6c.js"><link rel="prefetch" href="/assets/js/145.be9153a1.js"><link rel="prefetch" href="/assets/js/146.d941f41a.js"><link rel="prefetch" href="/assets/js/147.84300116.js"><link rel="prefetch" href="/assets/js/148.ddb29130.js"><link rel="prefetch" href="/assets/js/149.11f63f93.js"><link rel="prefetch" href="/assets/js/15.056d0b73.js"><link rel="prefetch" href="/assets/js/150.04922cf6.js"><link rel="prefetch" href="/assets/js/151.290d279d.js"><link rel="prefetch" href="/assets/js/152.ec8536b5.js"><link rel="prefetch" href="/assets/js/153.a4173dd7.js"><link rel="prefetch" href="/assets/js/154.d779c69e.js"><link rel="prefetch" href="/assets/js/155.3077f0a2.js"><link rel="prefetch" href="/assets/js/156.cdee6fa6.js"><link rel="prefetch" href="/assets/js/157.3f1d5a91.js"><link rel="prefetch" href="/assets/js/158.a6c22872.js"><link rel="prefetch" href="/assets/js/159.2c0184ca.js"><link rel="prefetch" href="/assets/js/16.fa07b758.js"><link rel="prefetch" href="/assets/js/160.5833a2f0.js"><link rel="prefetch" href="/assets/js/161.2c142f87.js"><link rel="prefetch" href="/assets/js/162.1266048f.js"><link rel="prefetch" href="/assets/js/163.4a5f7392.js"><link rel="prefetch" href="/assets/js/164.7a70881f.js"><link rel="prefetch" href="/assets/js/165.146513ec.js"><link rel="prefetch" href="/assets/js/166.2645f0ab.js"><link rel="prefetch" href="/assets/js/167.3aeb02bb.js"><link rel="prefetch" href="/assets/js/168.7629d5ff.js"><link rel="prefetch" href="/assets/js/169.d4d379e4.js"><link rel="prefetch" href="/assets/js/17.d916cef4.js"><link rel="prefetch" href="/assets/js/170.e0116c1f.js"><link rel="prefetch" href="/assets/js/171.caacdd8c.js"><link rel="prefetch" href="/assets/js/172.aa46a804.js"><link rel="prefetch" href="/assets/js/173.5eb08c7b.js"><link rel="prefetch" href="/assets/js/174.634bccf9.js"><link rel="prefetch" href="/assets/js/175.5c854bb9.js"><link rel="prefetch" href="/assets/js/176.4defa747.js"><link rel="prefetch" href="/assets/js/177.501bd009.js"><link rel="prefetch" href="/assets/js/178.3eac16d7.js"><link rel="prefetch" href="/assets/js/179.99f0fa6e.js"><link rel="prefetch" href="/assets/js/18.f1005fa3.js"><link rel="prefetch" href="/assets/js/180.a7d76a2f.js"><link rel="prefetch" href="/assets/js/181.f98a015d.js"><link rel="prefetch" href="/assets/js/182.bc4badf7.js"><link rel="prefetch" href="/assets/js/183.44be8c5d.js"><link rel="prefetch" href="/assets/js/184.f39a6b50.js"><link rel="prefetch" href="/assets/js/185.061272a9.js"><link rel="prefetch" href="/assets/js/186.abbb412a.js"><link rel="prefetch" href="/assets/js/187.34d77c25.js"><link rel="prefetch" href="/assets/js/188.c2220440.js"><link rel="prefetch" href="/assets/js/189.350abc46.js"><link rel="prefetch" href="/assets/js/19.d298d243.js"><link rel="prefetch" href="/assets/js/190.87f0fd7e.js"><link rel="prefetch" href="/assets/js/191.c5f01ac4.js"><link rel="prefetch" href="/assets/js/192.1302768c.js"><link rel="prefetch" href="/assets/js/193.23c582aa.js"><link rel="prefetch" href="/assets/js/194.74b791d1.js"><link rel="prefetch" href="/assets/js/195.4caf22e0.js"><link rel="prefetch" href="/assets/js/196.9b26c85f.js"><link rel="prefetch" href="/assets/js/197.19d33cff.js"><link rel="prefetch" href="/assets/js/198.b7b6ce3c.js"><link rel="prefetch" href="/assets/js/199.6f952b58.js"><link rel="prefetch" href="/assets/js/2.da16fb8b.js"><link rel="prefetch" href="/assets/js/20.06ba9109.js"><link rel="prefetch" href="/assets/js/200.5e4e9f49.js"><link rel="prefetch" href="/assets/js/201.3f355daa.js"><link rel="prefetch" href="/assets/js/202.3e2919b5.js"><link rel="prefetch" href="/assets/js/203.8585a9f8.js"><link rel="prefetch" href="/assets/js/204.86e09c32.js"><link rel="prefetch" href="/assets/js/205.a8c009b4.js"><link rel="prefetch" href="/assets/js/206.5a9c12c7.js"><link rel="prefetch" href="/assets/js/207.02dbf5d7.js"><link rel="prefetch" href="/assets/js/208.34468414.js"><link rel="prefetch" href="/assets/js/209.e021049b.js"><link rel="prefetch" href="/assets/js/21.5d4702e5.js"><link rel="prefetch" href="/assets/js/210.50f044d7.js"><link rel="prefetch" href="/assets/js/211.df88eea7.js"><link rel="prefetch" href="/assets/js/212.1a61778e.js"><link rel="prefetch" href="/assets/js/213.571cd7a5.js"><link rel="prefetch" href="/assets/js/214.b15e3796.js"><link rel="prefetch" href="/assets/js/215.c35ab00d.js"><link rel="prefetch" href="/assets/js/216.bbb38e4b.js"><link rel="prefetch" href="/assets/js/217.4cc8ce50.js"><link rel="prefetch" href="/assets/js/218.27e9a5dc.js"><link rel="prefetch" href="/assets/js/219.29152dfb.js"><link rel="prefetch" href="/assets/js/22.b29dff3f.js"><link rel="prefetch" href="/assets/js/220.b94a420d.js"><link rel="prefetch" href="/assets/js/221.3e1e3f07.js"><link rel="prefetch" href="/assets/js/222.610c9243.js"><link rel="prefetch" href="/assets/js/223.20324a9e.js"><link rel="prefetch" href="/assets/js/224.6a5c1a7b.js"><link rel="prefetch" href="/assets/js/225.d5981282.js"><link rel="prefetch" href="/assets/js/226.323ae76d.js"><link rel="prefetch" href="/assets/js/227.f8a80a3d.js"><link rel="prefetch" href="/assets/js/228.ba7673a9.js"><link rel="prefetch" href="/assets/js/229.331b64d1.js"><link rel="prefetch" href="/assets/js/23.5397bf05.js"><link rel="prefetch" href="/assets/js/230.4f9aab9d.js"><link rel="prefetch" href="/assets/js/231.85306ec0.js"><link rel="prefetch" href="/assets/js/232.d15e01b6.js"><link rel="prefetch" href="/assets/js/233.9d33c762.js"><link rel="prefetch" href="/assets/js/234.ac16a8ea.js"><link rel="prefetch" href="/assets/js/235.efeff7b8.js"><link rel="prefetch" href="/assets/js/236.67d274b8.js"><link rel="prefetch" href="/assets/js/237.6fae8904.js"><link rel="prefetch" href="/assets/js/238.719fb0d8.js"><link rel="prefetch" href="/assets/js/239.0f5c6dac.js"><link rel="prefetch" href="/assets/js/24.09719cb7.js"><link rel="prefetch" href="/assets/js/240.49c4e101.js"><link rel="prefetch" href="/assets/js/241.768b17f7.js"><link rel="prefetch" href="/assets/js/242.5372e06c.js"><link rel="prefetch" href="/assets/js/243.293366a2.js"><link rel="prefetch" href="/assets/js/244.3e49f572.js"><link rel="prefetch" href="/assets/js/245.cbdf8f5a.js"><link rel="prefetch" href="/assets/js/246.56a55dbe.js"><link rel="prefetch" href="/assets/js/247.3e4f7724.js"><link rel="prefetch" href="/assets/js/248.4fb11b1c.js"><link rel="prefetch" href="/assets/js/249.0caa7968.js"><link rel="prefetch" href="/assets/js/25.05ca3b89.js"><link rel="prefetch" href="/assets/js/250.e70797f8.js"><link rel="prefetch" href="/assets/js/251.ab153d87.js"><link rel="prefetch" href="/assets/js/252.3bca6b4e.js"><link rel="prefetch" href="/assets/js/253.0f0f05bf.js"><link rel="prefetch" href="/assets/js/254.31b0a826.js"><link rel="prefetch" href="/assets/js/255.dcd9479e.js"><link rel="prefetch" href="/assets/js/256.f4f3cbe7.js"><link rel="prefetch" href="/assets/js/257.87b5c111.js"><link rel="prefetch" href="/assets/js/258.a06a5792.js"><link rel="prefetch" href="/assets/js/259.00e7cf37.js"><link rel="prefetch" href="/assets/js/26.a9923aed.js"><link rel="prefetch" href="/assets/js/260.1b15d79f.js"><link rel="prefetch" href="/assets/js/261.7931ff8b.js"><link rel="prefetch" href="/assets/js/262.b79b03fd.js"><link rel="prefetch" href="/assets/js/263.7e7a7a69.js"><link rel="prefetch" href="/assets/js/264.a3362353.js"><link rel="prefetch" href="/assets/js/265.5f5b8f63.js"><link rel="prefetch" href="/assets/js/266.d132b970.js"><link rel="prefetch" href="/assets/js/267.b5e6046b.js"><link rel="prefetch" href="/assets/js/268.0f9d91d5.js"><link rel="prefetch" href="/assets/js/27.49d424f0.js"><link rel="prefetch" href="/assets/js/28.804b176d.js"><link rel="prefetch" href="/assets/js/29.73ad7742.js"><link rel="prefetch" href="/assets/js/30.4b7153eb.js"><link rel="prefetch" href="/assets/js/31.e2baa352.js"><link rel="prefetch" href="/assets/js/32.306f9a8b.js"><link rel="prefetch" href="/assets/js/33.86bba420.js"><link rel="prefetch" href="/assets/js/34.377cc87b.js"><link rel="prefetch" href="/assets/js/35.ccb29e89.js"><link rel="prefetch" href="/assets/js/36.ac3b170b.js"><link rel="prefetch" href="/assets/js/37.a6c86796.js"><link rel="prefetch" href="/assets/js/38.a863dc90.js"><link rel="prefetch" href="/assets/js/39.5bb1248d.js"><link rel="prefetch" href="/assets/js/40.c8f3e571.js"><link rel="prefetch" href="/assets/js/41.90c9a221.js"><link rel="prefetch" href="/assets/js/42.5e7a2243.js"><link rel="prefetch" href="/assets/js/43.4e6e2fa0.js"><link rel="prefetch" href="/assets/js/44.3f386908.js"><link rel="prefetch" href="/assets/js/45.9861347f.js"><link rel="prefetch" href="/assets/js/46.f1a56538.js"><link rel="prefetch" href="/assets/js/47.bfaf984a.js"><link rel="prefetch" href="/assets/js/48.8294d8ff.js"><link rel="prefetch" href="/assets/js/49.33f5b0f7.js"><link rel="prefetch" href="/assets/js/5.27bc9b2c.js"><link rel="prefetch" href="/assets/js/50.89ea98b4.js"><link rel="prefetch" href="/assets/js/51.ed9b70fc.js"><link rel="prefetch" href="/assets/js/52.a6368693.js"><link rel="prefetch" href="/assets/js/53.184d59c4.js"><link rel="prefetch" href="/assets/js/54.090ae4a9.js"><link rel="prefetch" href="/assets/js/55.e2476995.js"><link rel="prefetch" href="/assets/js/56.a22a1485.js"><link rel="prefetch" href="/assets/js/57.3075220f.js"><link rel="prefetch" href="/assets/js/58.452bfc36.js"><link rel="prefetch" href="/assets/js/59.8bd0bc93.js"><link rel="prefetch" href="/assets/js/6.4f220469.js"><link rel="prefetch" href="/assets/js/60.d0efd55d.js"><link rel="prefetch" href="/assets/js/61.616b58ab.js"><link rel="prefetch" href="/assets/js/62.a1ca26c4.js"><link rel="prefetch" href="/assets/js/63.6e7074ce.js"><link rel="prefetch" href="/assets/js/64.baaef4c5.js"><link rel="prefetch" href="/assets/js/65.544aafea.js"><link rel="prefetch" href="/assets/js/66.0cbcb512.js"><link rel="prefetch" href="/assets/js/67.30d4fb26.js"><link rel="prefetch" href="/assets/js/68.fb2c2c07.js"><link rel="prefetch" href="/assets/js/69.eee868b7.js"><link rel="prefetch" href="/assets/js/7.67093bab.js"><link rel="prefetch" href="/assets/js/70.47f4314b.js"><link rel="prefetch" href="/assets/js/71.e61b917c.js"><link rel="prefetch" href="/assets/js/72.bc2c0cbe.js"><link rel="prefetch" href="/assets/js/73.bec5088f.js"><link rel="prefetch" href="/assets/js/74.76623c2b.js"><link rel="prefetch" href="/assets/js/75.ce6f8500.js"><link rel="prefetch" href="/assets/js/76.400e0887.js"><link rel="prefetch" href="/assets/js/77.d4fcbd2b.js"><link rel="prefetch" href="/assets/js/78.fea867a9.js"><link rel="prefetch" href="/assets/js/79.f7238bc4.js"><link rel="prefetch" href="/assets/js/8.c2aa376e.js"><link rel="prefetch" href="/assets/js/80.db5ced4a.js"><link rel="prefetch" href="/assets/js/81.949eaaaf.js"><link rel="prefetch" href="/assets/js/82.1fa9be34.js"><link rel="prefetch" href="/assets/js/83.3a6f83cc.js"><link rel="prefetch" href="/assets/js/84.35fb63b7.js"><link rel="prefetch" href="/assets/js/85.4ff3d26e.js"><link rel="prefetch" href="/assets/js/86.7e761e5a.js"><link rel="prefetch" href="/assets/js/87.da4a560d.js"><link rel="prefetch" href="/assets/js/88.d4678a0e.js"><link rel="prefetch" href="/assets/js/89.8f257cba.js"><link rel="prefetch" href="/assets/js/9.821e10b0.js"><link rel="prefetch" href="/assets/js/90.c544ed8b.js"><link rel="prefetch" href="/assets/js/91.b69a1698.js"><link rel="prefetch" href="/assets/js/92.02e15344.js"><link rel="prefetch" href="/assets/js/93.08fe83ef.js"><link rel="prefetch" href="/assets/js/94.7239b1d9.js"><link rel="prefetch" href="/assets/js/95.8c442a25.js"><link rel="prefetch" href="/assets/js/96.08670966.js"><link rel="prefetch" href="/assets/js/97.730b22df.js"><link rel="prefetch" href="/assets/js/98.676f0c52.js"><link rel="prefetch" href="/assets/js/99.330aee19.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.199c727d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Web Developer</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个性学习" class="dropdown-title"><span class="title">个性学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="个性学习" class="mobile-dropdown-title"><span class="title">个性学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          个人博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Blog/Frontend/" class="nav-link">
+  前端博客
+</a></li><li class="dropdown-subitem"><a href="/Blog/Format/" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-subitem"><a href="/Blog/Admin/" class="nav-link">
+  后台管理
+</a></li><li class="dropdown-subitem"><a href="/Blog/Effect/" class="nav-link">
+  搞点特效
+</a></li><li class="dropdown-subitem"><a href="/Blog/Chore/" class="nav-link">
+  折腾一下
+</a></li></ul></li><li class="dropdown-item"><h4>
+          源码学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/SourceCode/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vite/" class="nav-link">
+  Vite
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue2/" class="nav-link">
+  Vue2
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue3/" class="nav-link">
+  Vue3
+</a></li></ul></li><li class="dropdown-item"><h4>
+          常用工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Tool/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/Tool/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-subitem"><a href="/Tool/Linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/Tool/Docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-subitem"><a href="/Tool/Nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-subitem"><a href="/Tool/Npm/" class="nav-link">
+  Npm
+</a></li><li class="dropdown-subitem"><a href="/Tool/Puppeteer/" class="nav-link">
+  Puppeteer
+</a></li><li class="dropdown-subitem"><a href="/Tool/VSCode/" class="nav-link">
+  VSCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="系统学习" class="dropdown-title"><span class="title">系统学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="系统学习" class="mobile-dropdown-title"><span class="title">系统学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Computer/Science/" class="nav-link">
+  计算机科学导论
+</a></li><li class="dropdown-subitem"><a href="/Computer/System/" class="nav-link">
+  计算机操作系统
+</a></li><li class="dropdown-subitem"><a href="/Computer/Network/" class="nav-link">
+  计算机网络
+</a></li></ul></li><li class="dropdown-item"><h4>
+          在线书籍
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Book/Handbook/" class="nav-link">
+  禅道 程序员生存手册
+</a></li><li class="dropdown-subitem"><a href="/Book/Refactoring2/" class="nav-link">
+  重构 改善既有代码的设计
+</a></li></ul></li><li class="dropdown-item"><h4>
+          学习笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Study/CSS-World/" class="nav-link">
+  CSS世界
+</a></li><li class="dropdown-subitem"><a href="/Study/CSS-New-World/" class="nav-link">
+  CSS新世界
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Houdunren/" class="nav-link">
+  JS后端人视频教程
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Advanced/" class="nav-link">
+  JS高级程序设计
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Pattern/" class="nav-link">
+  JS设计模式与开发实践
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Structure-Algo/" class="nav-link">
+  JS数据结构与算法
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言" class="dropdown-title"><span class="title">编程语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言" class="mobile-dropdown-title"><span class="title">编程语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Language/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Language/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/Language/PHP/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-subitem"><a href="/Language/Node/" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Assembly/" class="nav-link">
+  Assembly
+</a></li><li class="dropdown-subitem"><a href="/Language/C/" class="nav-link">
+  C
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="解决方案" class="dropdown-title"><span class="title">解决方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="解决方案" class="mobile-dropdown-title"><span class="title">解决方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          打包工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Bundle/WebPack/" class="nav-link">
+  WebPack
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/VueCLI/" class="nav-link">
+  VueCLI
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/Vite/" class="nav-link">
+  Vite
+</a></li></ul></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/React/" class="nav-link">
+  React
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue2/" class="nav-link">
+  Vue2.x
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue-Router/" class="nav-link">
+  Vue Router
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vuex/" class="nav-link">
+  Vuex
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Jest/" class="nav-link">
+  Jest
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Nuxt/" class="nav-link">
+  Nuxt
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/VueConf/" class="nav-link">
+  VueConf
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue3/" class="nav-link">
+  Vue3.x
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="领域技术" class="dropdown-title"><span class="title">领域技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="领域技术" class="mobile-dropdown-title"><span class="title">领域技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          通用技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Web/HTTP/" class="nav-link">
+  HTTP
+</a></li><li class="dropdown-subitem"><a href="/Web/WebSocket/" class="nav-link">
+  WebSocket
+</a></li><li class="dropdown-subitem"><a href="/Web/WebRTC/" class="nav-link">
+  WebRTC
+</a></li><li class="dropdown-subitem"><a href="/Web/WebAssembly/" class="nav-link">
+  WebAssembly
+</a></li></ul></li><li class="dropdown-item"><h4>
+          图形技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Graph/SVG/" class="nav-link">
+  SVG
+</a></li><li class="dropdown-subitem"><a href="/Graph/Canvas/" class="nav-link">
+  Canvas
+</a></li><li class="dropdown-subitem"><a href="/Graph/WebGL/" class="nav-link">
+  WebGL
+</a></li><li class="dropdown-subitem"><a href="/Graph/ZRender/" class="nav-link">
+  ZRender
+</a></li><li class="dropdown-subitem"><a href="/Graph/Echarts/" class="nav-link">
+  Echarts
+</a></li><li class="dropdown-subitem"><a href="/Graph/Draw2D/" class="nav-link">
+  Draw2D
+</a></li><li class="dropdown-subitem"><a href="/Graph/LiteGraph/" class="nav-link">
+  LiteGraph
+</a></li></ul></li><li class="dropdown-item"><h4>
+          音视频技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Media/Audio/" class="nav-link">
+  Audio
+</a></li><li class="dropdown-subitem"><a href="/Solution/Media/FFmpeg/" class="nav-link">
+  FFmpeg
+</a></li></ul></li><li class="dropdown-item"><h4>
+          数据库技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/DataBase/LowDB/" class="nav-link">
+  LowDB
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/SQLite/" class="nav-link">
+  SQLite
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/MySQL/" class="nav-link">
+  MySQL
+</a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个性学习" class="dropdown-title"><span class="title">个性学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="个性学习" class="mobile-dropdown-title"><span class="title">个性学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          个人博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Blog/Frontend/" class="nav-link">
+  前端博客
+</a></li><li class="dropdown-subitem"><a href="/Blog/Format/" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-subitem"><a href="/Blog/Admin/" class="nav-link">
+  后台管理
+</a></li><li class="dropdown-subitem"><a href="/Blog/Effect/" class="nav-link">
+  搞点特效
+</a></li><li class="dropdown-subitem"><a href="/Blog/Chore/" class="nav-link">
+  折腾一下
+</a></li></ul></li><li class="dropdown-item"><h4>
+          源码学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/SourceCode/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vite/" class="nav-link">
+  Vite
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue2/" class="nav-link">
+  Vue2
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue3/" class="nav-link">
+  Vue3
+</a></li></ul></li><li class="dropdown-item"><h4>
+          常用工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Tool/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/Tool/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-subitem"><a href="/Tool/Linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/Tool/Docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-subitem"><a href="/Tool/Nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-subitem"><a href="/Tool/Npm/" class="nav-link">
+  Npm
+</a></li><li class="dropdown-subitem"><a href="/Tool/Puppeteer/" class="nav-link">
+  Puppeteer
+</a></li><li class="dropdown-subitem"><a href="/Tool/VSCode/" class="nav-link">
+  VSCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="系统学习" class="dropdown-title"><span class="title">系统学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="系统学习" class="mobile-dropdown-title"><span class="title">系统学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Computer/Science/" class="nav-link">
+  计算机科学导论
+</a></li><li class="dropdown-subitem"><a href="/Computer/System/" class="nav-link">
+  计算机操作系统
+</a></li><li class="dropdown-subitem"><a href="/Computer/Network/" class="nav-link">
+  计算机网络
+</a></li></ul></li><li class="dropdown-item"><h4>
+          在线书籍
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Book/Handbook/" class="nav-link">
+  禅道 程序员生存手册
+</a></li><li class="dropdown-subitem"><a href="/Book/Refactoring2/" class="nav-link">
+  重构 改善既有代码的设计
+</a></li></ul></li><li class="dropdown-item"><h4>
+          学习笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Study/CSS-World/" class="nav-link">
+  CSS世界
+</a></li><li class="dropdown-subitem"><a href="/Study/CSS-New-World/" class="nav-link">
+  CSS新世界
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Houdunren/" class="nav-link">
+  JS后端人视频教程
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Advanced/" class="nav-link">
+  JS高级程序设计
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Pattern/" class="nav-link">
+  JS设计模式与开发实践
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Structure-Algo/" class="nav-link">
+  JS数据结构与算法
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言" class="dropdown-title"><span class="title">编程语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言" class="mobile-dropdown-title"><span class="title">编程语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Language/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Language/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/Language/PHP/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-subitem"><a href="/Language/Node/" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Assembly/" class="nav-link">
+  Assembly
+</a></li><li class="dropdown-subitem"><a href="/Language/C/" class="nav-link">
+  C
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="解决方案" class="dropdown-title"><span class="title">解决方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="解决方案" class="mobile-dropdown-title"><span class="title">解决方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          打包工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Bundle/WebPack/" class="nav-link">
+  WebPack
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/VueCLI/" class="nav-link">
+  VueCLI
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/Vite/" class="nav-link">
+  Vite
+</a></li></ul></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/React/" class="nav-link">
+  React
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue2/" class="nav-link">
+  Vue2.x
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue-Router/" class="nav-link">
+  Vue Router
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vuex/" class="nav-link">
+  Vuex
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Jest/" class="nav-link">
+  Jest
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Nuxt/" class="nav-link">
+  Nuxt
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/VueConf/" class="nav-link">
+  VueConf
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue3/" class="nav-link">
+  Vue3.x
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="领域技术" class="dropdown-title"><span class="title">领域技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="领域技术" class="mobile-dropdown-title"><span class="title">领域技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          通用技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Web/HTTP/" class="nav-link">
+  HTTP
+</a></li><li class="dropdown-subitem"><a href="/Web/WebSocket/" class="nav-link">
+  WebSocket
+</a></li><li class="dropdown-subitem"><a href="/Web/WebRTC/" class="nav-link">
+  WebRTC
+</a></li><li class="dropdown-subitem"><a href="/Web/WebAssembly/" class="nav-link">
+  WebAssembly
+</a></li></ul></li><li class="dropdown-item"><h4>
+          图形技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Graph/SVG/" class="nav-link">
+  SVG
+</a></li><li class="dropdown-subitem"><a href="/Graph/Canvas/" class="nav-link">
+  Canvas
+</a></li><li class="dropdown-subitem"><a href="/Graph/WebGL/" class="nav-link">
+  WebGL
+</a></li><li class="dropdown-subitem"><a href="/Graph/ZRender/" class="nav-link">
+  ZRender
+</a></li><li class="dropdown-subitem"><a href="/Graph/Echarts/" class="nav-link">
+  Echarts
+</a></li><li class="dropdown-subitem"><a href="/Graph/Draw2D/" class="nav-link">
+  Draw2D
+</a></li><li class="dropdown-subitem"><a href="/Graph/LiteGraph/" class="nav-link">
+  LiteGraph
+</a></li></ul></li><li class="dropdown-item"><h4>
+          音视频技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Media/Audio/" class="nav-link">
+  Audio
+</a></li><li class="dropdown-subitem"><a href="/Solution/Media/FFmpeg/" class="nav-link">
+  FFmpeg
+</a></li></ul></li><li class="dropdown-item"><h4>
+          数据库技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/DataBase/LowDB/" class="nav-link">
+  LowDB
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/SQLite/" class="nav-link">
+  SQLite
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/MySQL/" class="nav-link">
+  MySQL
+</a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Language/JavaScript/" class="sidebar-link">简介</a></li><li><a href="/JavaScript/Basic/basic/" class="sidebar-link">基本语法</a></li><li><a href="/JavaScript/Baisc/oop/" aria-current="page" class="active sidebar-link">面向对象</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/JavaScript/Baisc/async-operation/" class="sidebar-link">异步操作</a></li><li><a href="/JavaScript/Baisc/es6-features/" class="sidebar-link">ES6特性</a></li><li><a href="/JavaScript/Baisc/regexp/" class="sidebar-link">正则表达式</a></li><li><a href="/Language/JavaScript/06-DOM基础.html" class="sidebar-link">DOM基础</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="lesson1-实例对象与-new-命令"><a href="#lesson1-实例对象与-new-命令" class="header-anchor">#</a> lesson1 实例对象与 new 命令</h3> <ol><li><h5 id="对象是什么"><a href="#对象是什么" class="header-anchor">#</a> 对象是什么</h5> <p>​	OOP是目前主流的编程范式。它将真实世界中的各种复杂的关系，抽象为一个个对象。每一个对象都是功能中心，具有明确分工，可以完成接受信息，处理数据，发出信息等任务。对象可以复用，通过继承机制还可以定制。</p> <p>对象是一个容器，封装了属性<code>property</code>和方法<code>method</code>。</p></li> <li><h5 id="构造函数"><a href="#构造函数" class="header-anchor">#</a> 构造函数</h5> <p>​	面对对象编程的第一步，就是要生成对象。前面说过，对象是单个实物的抽象。通常需要一个模板，表示某一类实物的共同特征，然后对象就根据这个模板来生成。JavaScript语言的对象体系，不是基于“类”的，而是基于构造函数<code>constructor</code>和原型链<code>prototype</code>。JavaScript使用构造函数作为对象的模板。所谓“构造函数”，就是专门用来生成实例对象的函数。</p> <p>构造函数就是一个普通的函数，但是有自己的特征和用法</p> <ul><li>函数体内部使用<code>this</code>关键字，来代表所要生成的实例对象</li> <li>生成对象的时候必须使用<code>new</code>命令</li></ul></li> <li><h5 id="new-命令"><a href="#new-命令" class="header-anchor">#</a> new 命令</h5> <ol><li><h6 id="基本用法"><a href="#基本用法" class="header-anchor">#</a> 基本用法</h6> <p>new命令的作用就是执行构造函数，返回一个实例对象。使用new命令时，根据需要，构造函数也可以接受参数。虽然new命令本身就可以执行构造函数，但为了表示函数调用还是推荐带上括号。</p> <p>如果不使用new命令，直接调用构造函数，这种情况下，构造函数就变成了普通函数，并不会生成实例对象，此时this代表全局对象global</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> <span class="token function-variable function">Vehicle</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> v <span class="token operator">=</span> <span class="token function">Vehicle</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+v <span class="token comment">// undefined</span>
+price <span class="token comment">// 1000</span>
+</code></pre></div><p>为了保证构造函数必须与new命令一起使用，一个解决办法是构造函数内部使用严格模式，即在第一行加上<code>’use strict‘</code></p></li> <li><h6 id="运行原理"><a href="#运行原理" class="header-anchor">#</a> 运行原理</h6> <p>使用new命令时，它后面的函数依次执行下面的步骤。</p> <ol><li>创建一个空对象，作为将要返回的对象实例</li> <li>将这个空对象的原型，指向构造函数的prototype属性</li> <li>将这个空对象赋值给函数内部的this关键字</li> <li>开始执行构造函数内部的代码</li></ol> <p>构造函数之所以叫“构造函数”，就是说这个函数的目的，就是操作一个空对象，将其“构造”为需要的样子</p></li> <li><h6 id="new-target"><a href="#new-target" class="header-anchor">#</a> new.target</h6> <p>函数内部可以使用new.target属性。如果当前函数是new命令调用。new.target指向当前函数，否则为undefined</p></li></ol></li> <li><h5 id="object-creat-创建实例对象"><a href="#object-creat-创建实例对象" class="header-anchor">#</a> Object.creat()创建实例对象</h5> <ol><li><p>有时拿不到构造函数，只能拿到一个现有的对象。我们希望以这个现有的对象为模板，生成新的实例，这时就可以使用Object.create()方法。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> person1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'张三'</span><span class="token punctuation">,</span>
+  age<span class="token operator">:</span> <span class="token number">38</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">greeting</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hi! I\'m '</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> person2 <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>person1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+person2<span class="token punctuation">.</span>name <span class="token comment">// 张三</span>
+person2<span class="token punctuation">.</span><span class="token function">greeting</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// Hi! I'm 张三.</span>
+</code></pre></div></li></ol></li></ol> <h3 id="lesson2-this-关键字"><a href="#lesson2-this-关键字" class="header-anchor">#</a> lesson2 this 关键字</h3> <ol><li><h5 id="含义"><a href="#含义" class="header-anchor">#</a> 含义</h5> <ol><li><p><code>this</code>关键字是一个非常重要的语法点。毫不夸张地说，不理解它的含义，大部分开发任务都无法完成。前一章已经提到，<code>this</code>可以用在构造函数之中，表示实例对象。除此之外，<code>this</code>还可以用在别的场合，但不管是什么场合，<code>this</code>都有一个共同点：它总是返回一个对象。</p></li> <li><p>简单的说，<code>this</code>就是属性或方法“当前“所在的对象。 由于对象的属性可以赋给另一个对象，所以属性所在的当前对象是可变的，即<code>this</code>的指向是可变的。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> <span class="token constant">A</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'张三'</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">describe</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'姓名：'</span><span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> <span class="token constant">B</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">'李四'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token constant">B</span><span class="token punctuation">.</span>describe <span class="token operator">=</span> <span class="token constant">A</span><span class="token punctuation">.</span>describe<span class="token punctuation">;</span>
+<span class="token constant">B</span><span class="token punctuation">.</span><span class="token function">describe</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;姓名：李四&quot;</span>
+</code></pre></div></li> <li><p>总结一下，JavaScript 语言之中，一切皆对象，运行环境也是对象，所以函数都是在某个对象之中运行，<code>this</code>就是函数运行时所在的对象（环境）。</p></li></ol></li> <li><h5 id="实质"><a href="#实质" class="header-anchor">#</a> 实质</h5> <ol><li><p>JavaScript 语言之所以有 this 的设计，跟内存里面的数据结构有关系。  原始的对象以字典结构保存，每一个属性名都对应一个属性描述对象。  这样的结构是很清晰的，问题在于属性的值可能是一个函数。  这时，引擎会将函数单独保存在内存中，然后再将函数的地址赋值给<code>foo</code>属性的<code>value</code>属性。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token function-variable function">foo</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li><p>由于函数是一个单独的值，所以它可以在不同的环境（上下文）执行。  JavaScript 允许在函数体内部，引用当前环境的其他变量。  由于函数可以在不同的运行环境执行，所以需要有一种机制，能够在函数体内部获得当前的运行环境（context）。所以，<code>this</code>就出现了，它的设计目的就是在函数体内部，指代函数当前的运行环境。</p></li></ol></li> <li><h5 id="使用场合"><a href="#使用场合" class="header-anchor">#</a> 使用场合</h5> <p><code>this</code>主要有以下几个使用场合。</p> <ol><li><strong>全局环境</strong>  全局环境使用<code>this</code>，它指的就是顶层对象<code>window</code>。</li> <li><strong>构造函数</strong>  构造函数中的<code>this</code>，指的是实例对象。</li> <li><strong>对象的方法</strong>  如果对象的方法里面包含<code>this</code>，<code>this</code>的指向就是方法运行时所在的对象。该方法赋值给另一个对象，就会改变<code>this</code>的指向。</li></ol></li> <li><h5 id="使用注意点"><a href="#使用注意点" class="header-anchor">#</a> 使用注意点</h5> <ol><li>避免多层<code>this</code> ，由于<code>this</code>的指向是不确定的，所以切勿在函数中包含多层的<code>this</code>。</li> <li>避免数组处理方法中的this，数组的map和foreach方法，允许提供一个函数作为参数。这个函数内部不应使用<code>this</code>。</li> <li>避免回调函数中的<code>this</code>，回调函数中的<code>this</code>往往会改变指向，最好避免使用。</li></ol></li> <li><h5 id="绑定-this-的方法"><a href="#绑定-this-的方法" class="header-anchor">#</a> 绑定 this 的方法</h5> <ol><li><p>JavaScript 提供了<code>call</code>、<code>apply</code>、<code>bind</code>这三个方法，来切换/固定<code>this</code>的指向。</p></li> <li><p>函数实例的<code>call</code>方法，可以指定函数内部<code>this</code>的指向（即函数执行时所在的作用域），然后在所指定的作用域中，调用该函数。 <code>call</code>方法的参数，应该是一个对象。如果参数为空、<code>null</code>和<code>undefined</code>，则默认传入全局对象。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> n <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span> n<span class="token operator">:</span> <span class="token number">456</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">a</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 123</span>
+<span class="token function">a</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token comment">// 123</span>
+<span class="token function">a</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token comment">// 123</span>
+<span class="token function">a</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>window<span class="token punctuation">)</span> <span class="token comment">// 123</span>
+<span class="token function">a</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token comment">// 456</span>
+</code></pre></div></li> <li><p><code>apply</code>方法的作用与<code>call</code>方法类似，也是改变<code>this</code>指向，然后再调用该函数。唯一的区别就是，它接收一个数组作为函数执行时的参数</p> <ul><li><strong>找出数组最大元素</strong> JavaScript 不提供找出数组最大元素的函数。结合使用<code>apply</code>方法和<code>Math.max</code>方法，就可以返回数组的最大元素。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span> <span class="token comment">// 15</span>
+</code></pre></div><ul><li><strong>将数组的空元素变为<code>undefined</code></strong>  通过<code>apply</code>方法，利用<code>Array</code>构造函数将数组的空元素变成<code>undefined</code>。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">Array</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment">// [ 'a', undefined, 'b' ]</span>
+</code></pre></div><ul><li><strong>转换类似数组的对象</strong>  利用数组对象的<code>slice</code>方法，可以将一个类似数组的对象（比如<code>arguments</code>对象）转为真正的数组。  被处理的对象必须有<code>length</code>属性，以及相对应的数字键。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token class-name">Array</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token number">0</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> length<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// [1, undefined]</span>
+<span class="token class-name">Array</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token punctuation">{</span>length<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token comment">// [undefined]</span>
+</code></pre></div><ul><li><strong>绑定回调函数的对象</strong></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> o <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+o<span class="token punctuation">.</span><span class="token function-variable function">f</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">===</span> o<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> <span class="token function-variable function">f</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    o<span class="token punctuation">.</span><span class="token function">f</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>o<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+o<span class="token punctuation">.</span><span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// true</span>
+</code></pre></div></li> <li><p><code>bind()</code>方法用于将函数体内的<code>this</code>绑定到某个对象，然后返回一个新函数。</p> <div class="language- extra-class"><pre class="language-text"><code>var d = new Date();
+d.getTime() // 1481869925657
+var print = d.getTime;
+print() //
+var print = d.getTime.bind(d);
+print() // 1481869925657
+</code></pre></div><p>上面代码中，<code>bind()</code>方法将<code>getTime()</code>方法内部的<code>this</code>绑定到<code>d</code>对象，这时就可以安全地将这个方法赋值给其他变量了。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span> y</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> x <span class="token operator">+</span> y<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> plus5 <span class="token operator">=</span> <span class="token function">add</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">plus5</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">/</span>
+</code></pre></div><p>上面代码中，函数<code>add()</code>内部并没有<code>this</code>，使用<code>bind()</code>方法的主要目的是绑定参数<code>x</code>，以后每次运行新函数<code>plus5()</code>，就只需要提供另一个参数<code>y</code>就够了。</p> <p><code>bind()</code>方法有一些使用注意点：</p> <ul><li><strong>每一次返回一个新函数</strong> <code>bind()</code>方法每运行一次，就返回一个新函数，这会产生一些问题。</li> <li><strong>结合回调函数使用</strong></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 使用bing()绑定</span>
+obj<span class="token punctuation">.</span><span class="token function-variable function">print</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>times<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// forEach()方法自带this绑定</span>
+obj<span class="token punctuation">.</span><span class="token function-variable function">print</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>times<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">n</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> obj<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li><strong>结合<code>call()</code>方法使用</strong> 这块看的有点头疼</li></ul></li></ol></li></ol> <h3 id="lesson3-对象的继承"><a href="#lesson3-对象的继承" class="header-anchor">#</a> lesson3 对象的继承</h3> <p>​	面向对象编程很重要的一个方面，就是对象的继承。A 对象通过继承 B 对象，就能直接拥有 B 对象的所有属性和方法。这对于代码的复用是非常有用的。大部分面向对象的编程语言，都是通过“类”（class）实现对象的继承。传统上，JavaScript 语言的继承不通过 class，而是通过“原型对象”（prototype）实现。</p> <ol><li><h5 id="原型对象概述"><a href="#原型对象概述" class="header-anchor">#</a> 原型对象概述</h5> <ol><li><p>构造函数的缺点</p> <p>JavaScript通过构造函数生成新对象，因此构造函数可以视为对象的模板。实例对象的属性和方法，定义在构造函数内部。通过构造函数为实例对象定义属性，虽然很方便，但有一个缺点，那就是同一个构造函数的多个实例之间，无法共享属性。同时每新建一个实例就会新建一个实例对应的方法，这既没有必要，又造成系统资源的浪费。</p></li> <li><p>prototype属性的作用</p> <p>JavaScript继承机制的设计思想就是，原型对象的所有属性和方法，都能被实例对象共享。原型对象的属性不是实例对象属性自身的属性。只要修改原型对象，变动就会立刻体现在所有实例对象上。</p></li> <li><p>原型链</p> <p>JavaScript规定，每个对象都有自己的原型对象(prototype)。一方面，任何一个对象，都可以充当其他对象的原型对象；另一方面，由于原型对象也是对象，所以它也有自己的原型对象。因此就会形成一个原型链，原型链的尽头是null</p></li> <li><p>constructor属性</p> <p>prototype对象有一个constructor属性，指向prototype对象所在的构造函数。constructor属性表示原型对象与构造函数之间的关联关系，如果修改了原型对象，一般要同时修改constructor属性，放置引用的时候发生错误。</p></li></ol></li> <li><h5 id="instanceof-运算符"><a href="#instanceof-运算符" class="header-anchor">#</a> instanceof 运算符</h5> <p><code>instanceof</code>运算符返回一个布尔值，表示对象是否为某个构造函数的实例。  由于<code>instanceof</code>检查整个原型链，因此同一个实例对象，可能会对多个构造函数都返回<code>true</code>。  除了<code>null</code>，其他对象的<code>instanceOf Object</code>的运算结果都是<code>true</code>。</p> <p><code>instanceof</code>的原理是检查右边构造函数的<code>prototype</code>属性，是否在左边对象的原型链上。  注意，<code>instanceof</code>运算符只能用于对象，不适用原始类型的值。</p></li> <li><h5 id="构造函数的继承"><a href="#构造函数的继承" class="header-anchor">#</a> 构造函数的继承</h5> <ol><li><p>让一个构造函数继承另一个构造函数，是非常常见的需求。这可以分成两步实现。</p> <p>第一步是在子类的构造函数中，调用父类的构造函数。</p> <p>第二步，是让子类的原型指向父类的原型，这样子类就可以继承父类原型。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">Sub</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">Super</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token class-name">Sub</span><span class="token punctuation">.</span>prototype <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token class-name">Super</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">Sub</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>constructor <span class="token operator">=</span> Sub<span class="token punctuation">;</span>
+</code></pre></div></li></ol></li> <li><h5 id="多重继承"><a href="#多重继承" class="header-anchor">#</a> 多重继承</h5> <p>JavaScript 不提供多重继承功能，即不允许一个对象同时继承多个对象。但是，可以通过变通方法，实现这个功能。</p></li> <li><h5 id="模块"><a href="#模块" class="header-anchor">#</a> 模块</h5> <ol><li><h6 id="基本的实现方法"><a href="#基本的实现方法" class="header-anchor">#</a> 基本的实现方法</h6> <p>模块是实现特定功能的一组属性和方法的封装。</p> <p>简单的做法是把模块写成一个对象，所有的模块成员都放到这个对象里面。</p></li> <li><h6 id="封装私有变量-构造函数的写法"><a href="#封装私有变量-构造函数的写法" class="header-anchor">#</a> 封装私有变量：构造函数的写法</h6> <p>在构造函数中封装私有变量，会导致构造函数与实例对象是一体的，总是存在于内存之中。</p></li> <li><h6 id="封装私有变量-立即执行函数的写法"><a href="#封装私有变量-立即执行函数的写法" class="header-anchor">#</a> 封装私有变量：立即执行函数的写法</h6> <p>使用立即执行函数，将相关的属性和方法封装在一个函数作用域里面，可以达到不暴露私有成员的目的，利用了闭包。</p></li> <li><h6 id="模块的放大模式"><a href="#模块的放大模式" class="header-anchor">#</a> 模块的放大模式</h6> <p>如果一个模块很大，必须分成几个部分，或者一个模块需要继承另一个模块，这时就有必要采用“放大模式”（augmentation）。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> module1 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">mod</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+　mod<span class="token punctuation">.</span><span class="token function-variable function">m3</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+　　<span class="token comment">//...</span>
+　<span class="token punctuation">}</span><span class="token punctuation">;</span>
+　<span class="token keyword">return</span> mod<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>module1 <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>上面的代码为<code>module1</code>模块添加了一个新方法<code>m3()</code>，然后返回新的<code>module1</code>模块。 同时这个立即执行函数的参数还可以是空对象，叫做”宽放大“模式</p></li> <li><h6 id="输入全局变量"><a href="#输入全局变量" class="header-anchor">#</a> 输入全局变量</h6> <p>独立性是模块的重要特点，模块内部最好不与程序的其他部分直接交互。</p> <p>为了在模块内部调用全局变量，必须显式地将其他变量输入模块。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> module1 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">$<span class="token punctuation">,</span> <span class="token constant">YAHOO</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+　<span class="token comment">//...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>jQuery<span class="token punctuation">,</span> <span class="token constant">YAHOO</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>上面的<code>module1</code>模块需要使用 jQuery 库和 YUI 库，就把这两个库（其实是两个模块）当作参数输入<code>module1</code>。这样做除了保证模块的独立性，还使得模块之间的依赖关系变得明显。</p></li></ol></li></ol> <h3 id="lesson4-object-对象的相关方法"><a href="#lesson4-object-对象的相关方法" class="header-anchor">#</a> lesson4 Object 对象的相关方法</h3> <ol><li><h5 id="object-getprototypeof"><a href="#object-getprototypeof" class="header-anchor">#</a> <code>Object.getPrototypeOf()</code></h5> <p><code>Object.getPrototypeOf</code>方法返回参数对象的原型。这是获取原型对象的标准方法。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> <span class="token function-variable function">F</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> f <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">F</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token class-name">F</span><span class="token punctuation">.</span>prototype <span class="token comment">// true</span>
+</code></pre></div></li> <li><h5 id="object-setprototypeof"><a href="#object-setprototypeof" class="header-anchor">#</a> <code>Object.setPrototypeOf()</code></h5> <p><code>Object.setPrototypeOf</code>方法为参数对象设置原型，返回该参数对象。它接受两个参数，第一个是现有对象，第二个是原型对象。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token punctuation">{</span>x<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token operator">===</span> b <span class="token comment">// true</span>
+a<span class="token punctuation">.</span>x <span class="token comment">// 1</span>
+</code></pre></div></li> <li><h5 id="object-create"><a href="#object-create" class="header-anchor">#</a> <code>Object.create()</code></h5> <p>该方法接受一个对象作为参数，然后以它为原型，返回一个实例对象。该实例完全继承原型对象的属性。  下面三种方式生成的新对象是等价的。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> obj1 <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj2 <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">.</span>prototype<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li><h5 id="object-prototype-isprototypeof"><a href="#object-prototype-isprototypeof" class="header-anchor">#</a> <code>Object.prototype.isPrototypeOf()</code></h5> <p>实例对象的<code>isPrototypeOf</code>方法，用来判断该对象是否为参数对象的原型。 检查原型链。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> o1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> o2 <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>o1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> o3 <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>o2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+o2<span class="token punctuation">.</span><span class="token function">isPrototypeOf</span><span class="token punctuation">(</span>o3<span class="token punctuation">)</span> <span class="token comment">// true</span>
+o1<span class="token punctuation">.</span><span class="token function">isPrototypeOf</span><span class="token punctuation">(</span>o3<span class="token punctuation">)</span> <span class="token comment">// true</span>
+</code></pre></div></li> <li><h5 id="object-prototype-proto"><a href="#object-prototype-proto" class="header-anchor">#</a> <code>Object.prototype._proto_</code></h5> <p>实例对象的<code>__proto__</code>属性（前后各两个下划线），返回该对象的原型。该属性可读写。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> p <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+obj<span class="token punctuation">.</span>__proto__ <span class="token operator">=</span> p<span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token operator">===</span> p <span class="token comment">// true</span>
+</code></pre></div></li> <li><h5 id="获取原型对象方法的比较"><a href="#获取原型对象方法的比较" class="header-anchor">#</a> 获取原型对象方法的比较</h5> <ol><li>获取实例对象<code>obj</code>的原型对象，有三种方法。
+<ul><li><code>obj.__proto__</code></li> <li><code>obj.constructor.prototype</code></li> <li><code>Object.getPrototypeOf(obj)</code></li></ul></li> <li>推荐使用第三种<code>Object.getPrototypeOf</code>方法，获取原型对象。</li></ol></li> <li><h5 id="object-getownpropertynames"><a href="#object-getownpropertynames" class="header-anchor">#</a> <code>Object.getOwnPropertyNames()</code></h5> <p><code>Object.getOwnPropertyNames</code>方法返回一个数组，成员是参数对象本身的所有属性的键名，不包含继承的属性键名。</p> <div class="language-js extra-class"><pre class="language-js"><code>Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyNames</span><span class="token punctuation">(</span>Date<span class="token punctuation">)</span>
+<span class="token comment">// [&quot;parse&quot;, &quot;arguments&quot;, &quot;UTC&quot;, &quot;caller&quot;, &quot;name&quot;, &quot;prototype&quot;, &quot;now&quot;, &quot;length&quot;]</span>
+</code></pre></div><p>对象本身的属性之中，有的是可以遍历的（enumerable），有的是不可以遍历的。<code>Object.getOwnPropertyNames</code>方法返回所有键名，不管是否可以遍历。只获取那些可以遍历的属性，使用<code>Object.keys</code>方法。</p> <div class="language-js extra-class"><pre class="language-js"><code>Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>Date<span class="token punctuation">)</span> <span class="token comment">// []</span>
+</code></pre></div><p>上面代码表明，<code>Date</code>对象所有自身的属性，都是不可以遍历的。</p></li> <li><h5 id="object-prototype-hasownproperty"><a href="#object-prototype-hasownproperty" class="header-anchor">#</a> <code>Object.prototype.hasOwnProperty()</code></h5> <p>对象实例的<code>hasOwnProperty</code>方法返回一个布尔值，用于判断某个属性定义在对象自身，还是定义在原型链上。</p> <div class="language-js extra-class"><pre class="language-js"><code>Date<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">'length'</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+Date<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span><span class="token string">'toString'</span><span class="token punctuation">)</span> <span class="token comment">// false</span>
+</code></pre></div><p>​	上面代码表明，<code>Date.length</code>（构造函数<code>Date</code>可以接受多少个参数）是<code>Date</code>自身的属性，<code>Date.toString</code>是继承的属性。</p></li> <li><h5 id="in-运算符和-for-in-循环"><a href="#in-运算符和-for-in-循环" class="header-anchor">#</a> in 运算符和 for...in 循环</h5> <p><code>in</code>运算符返回一个布尔值，表示一个对象是否具有某个属性。  它不区分该属性是对象自身的属性，还是继承的属性。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string">'length'</span> <span class="token keyword">in</span> Date <span class="token comment">// true</span>
+<span class="token string">'toString'</span> <span class="token keyword">in</span> Date <span class="token comment">// true</span>
+</code></pre></div><p>获得对象的所有可遍历属性（不管是自身的还是继承的），可以使用<code>for...in</code>循环。  为了在<code>for...in</code>循环中获得对象自身的属性，可以采用<code>hasOwnProperty</code>方法判断一下。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">for</span> <span class="token punctuation">(</span> <span class="token keyword">var</span> name <span class="token keyword">in</span> object <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span> object<span class="token punctuation">.</span><span class="token function">hasOwnProperty</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* loop code */</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><h5 id="对象的拷贝"><a href="#对象的拷贝" class="header-anchor">#</a> 对象的拷贝</h5> <p>如果要拷贝一个对象，需要做到下面两件事情。</p> <ul><li>确保拷贝后的对象，与原对象具有同样的原型。</li> <li>确保拷贝后的对象，与原对象具有同样的实例属性。</li></ul> <p>下面就是根据上面两点，实现的对象拷贝函数。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">copyObject</span><span class="token punctuation">(</span><span class="token parameter">orig</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> copy <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span>orig<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">copyOwnPropertiesFrom</span><span class="token punctuation">(</span>copy<span class="token punctuation">,</span> orig<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> copy<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">copyOwnPropertiesFrom</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> source</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Object
+    <span class="token punctuation">.</span><span class="token function">getOwnPropertyNames</span><span class="token punctuation">(</span>source<span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">propKey</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> desc <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyDescriptor</span><span class="token punctuation">(</span>source<span class="token punctuation">,</span> propKey<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> propKey<span class="token punctuation">,</span> desc<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> target<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li></ol> <h3 id="lesson5-严格模式"><a href="#lesson5-严格模式" class="header-anchor">#</a> lesson5 严格模式</h3> <div class="language- extra-class"><pre><code>除了正常的运行模式，JavaScript 还有第二种运行模式：严格模式（strict mode）。顾名思义，这种模式采用更加严格的 JavaScript 语法。 
+</code></pre></div><ol><li><h5 id="设计目的"><a href="#设计目的" class="header-anchor">#</a> 设计目的</h5> <p>​	早期的 JavaScript 语言有很多设计不合理的地方，但是为了兼容以前的代码，又不能改变老的语法，只能不断添加新的语法，引导程序员使用新语法。  严格模式是从 ES5 进入标准的， 严格模式体现了 JavaScript 更合理、更安全、更严谨的发展方向。</p></li> <li><h5 id="启用方法"><a href="#启用方法" class="header-anchor">#</a> 启用方法</h5> <p>进入严格模式的标志，是一行字符串<code>use strict</code>。</p> <ul><li><code>use strict</code>放在脚本文件的第一行，整个脚本都将以严格模式运行。</li> <li><code>use strict</code>放在函数体的第一行，则整个函数以严格模式运行。</li></ul></li> <li><h5 id="显示报错"><a href="#显示报错" class="header-anchor">#</a> 显示报错</h5> <p>严格模式使得 JavaScript 的语法变得更严格，更多的操作会显式报错。其中有些操作，在正常模式下只会默默地失败，不会报错。</p> <ol><li>只读属性不可写</li> <li>只设置了取值器的属性不可写</li> <li>禁止扩展的对象不可扩展</li> <li>eval、arguments不可用作标识名</li> <li>函数不能有重名的参数</li> <li>禁止八进制的前缀0表示法</li></ol></li> <li><h5 id="增强的安全措施"><a href="#增强的安全措施" class="header-anchor">#</a> 增强的安全措施</h5> <p>严格模式增强了安全保护，从语法上防止了一些不小心会出现的错误。</p> <ol><li>全局变量显示声明</li> <li>禁止this关键字指向全局对象</li> <li>禁止使用fn.callee、fn.caller</li> <li>禁止使用arguments.callee、arguments.caller</li> <li>禁止删除变量</li></ol></li> <li><h5 id="静态绑定"><a href="#静态绑定" class="header-anchor">#</a> 静态绑定</h5> <ol><li>禁止使用with语句</li> <li>创设eval作用域</li> <li>arguments不在追踪参数的变化</li></ol></li> <li><h5 id="向下一个版本的javascript过渡"><a href="#向下一个版本的javascript过渡" class="header-anchor">#</a> 向下一个版本的JavaScript过渡</h5> <ol><li>非函数代码块不得声明函数</li> <li>保留字</li></ol></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/JavaScript/Basic/basic/" class="prev">
+        基本语法
+      </a></span> <span class="next"><a href="/JavaScript/Baisc/async-operation/">
+        异步操作
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.0700b199.js" defer></script><script src="/assets/js/4.85800d9b.js" defer></script><script src="/assets/js/141.b2c12178.js" defer></script>
+  </body>
+</html>

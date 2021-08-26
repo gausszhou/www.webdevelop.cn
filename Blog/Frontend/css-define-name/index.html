@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CSS命名那些事儿 | Web Developer</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css">
+    <link rel="stylesheet" href="//www.gausszhou.top/source/data/css/litegraph-topo.css">
+    <srcipt src="//cdn.bootcdn.net/ajax/libs/zrender/5.1.1/zrender.min.js"></srcipt>
+    <meta name="description" content="Gauss Zhou's Web Developer Note">
+    <meta name="keywords" content="gausszhou , Gauss Zhou , Web , develop ,technical , knowledge">
+    <meta name="author" content="Gauss Zhou">
+    <meta name="og:title" content="Web Develop">
+    <meta name="og:type" content="website">
+    <meta name="og:description" content="Gauss Zhou's Web Developer Note">
+    <meta name="baidu-site-verification" content="">
+    <meta name="msvalidate.01" content="">
+    <meta name="google-site-verification" content="">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="7">
+    
+    <link rel="preload" href="/assets/css/0.styles.199c727d.css" as="style"><link rel="preload" href="/assets/js/app.0700b199.js" as="script"><link rel="preload" href="/assets/js/4.85800d9b.js" as="script"><link rel="preload" href="/assets/js/38.a863dc90.js" as="script"><link rel="prefetch" href="/assets/js/1.64af6ab6.js"><link rel="prefetch" href="/assets/js/10.91dc4ea6.js"><link rel="prefetch" href="/assets/js/100.9d065f43.js"><link rel="prefetch" href="/assets/js/101.162f6f5a.js"><link rel="prefetch" href="/assets/js/102.547f0494.js"><link rel="prefetch" href="/assets/js/103.8df50f95.js"><link rel="prefetch" href="/assets/js/104.0dc1a023.js"><link rel="prefetch" href="/assets/js/105.6342d25f.js"><link rel="prefetch" href="/assets/js/106.c5f00494.js"><link rel="prefetch" href="/assets/js/107.67279c92.js"><link rel="prefetch" href="/assets/js/108.d0b517b7.js"><link rel="prefetch" href="/assets/js/109.2c4dcaeb.js"><link rel="prefetch" href="/assets/js/11.86efad00.js"><link rel="prefetch" href="/assets/js/110.90adfb2c.js"><link rel="prefetch" href="/assets/js/111.e96a4ae7.js"><link rel="prefetch" href="/assets/js/112.169ab31b.js"><link rel="prefetch" href="/assets/js/113.1f2b9fc2.js"><link rel="prefetch" href="/assets/js/114.0c95ee77.js"><link rel="prefetch" href="/assets/js/115.79141d61.js"><link rel="prefetch" href="/assets/js/116.03dd9b47.js"><link rel="prefetch" href="/assets/js/117.8438da1c.js"><link rel="prefetch" href="/assets/js/118.2a3d98f0.js"><link rel="prefetch" href="/assets/js/119.56aa8bb0.js"><link rel="prefetch" href="/assets/js/12.a355d486.js"><link rel="prefetch" href="/assets/js/120.1d693ff2.js"><link rel="prefetch" href="/assets/js/121.c0e8837b.js"><link rel="prefetch" href="/assets/js/122.309c2d09.js"><link rel="prefetch" href="/assets/js/123.05bba04a.js"><link rel="prefetch" href="/assets/js/124.6b67611a.js"><link rel="prefetch" href="/assets/js/125.02506fca.js"><link rel="prefetch" href="/assets/js/126.ef821603.js"><link rel="prefetch" href="/assets/js/127.cd6f872b.js"><link rel="prefetch" href="/assets/js/128.bff523e0.js"><link rel="prefetch" href="/assets/js/129.6d874134.js"><link rel="prefetch" href="/assets/js/13.b7a2e696.js"><link rel="prefetch" href="/assets/js/130.27ecf01a.js"><link rel="prefetch" href="/assets/js/131.271da5ba.js"><link rel="prefetch" href="/assets/js/132.77b954e5.js"><link rel="prefetch" href="/assets/js/133.7ec87ea9.js"><link rel="prefetch" href="/assets/js/134.41482d0a.js"><link rel="prefetch" href="/assets/js/135.9bb9090d.js"><link rel="prefetch" href="/assets/js/136.afb054c5.js"><link rel="prefetch" href="/assets/js/137.78e85fab.js"><link rel="prefetch" href="/assets/js/138.7b30e1df.js"><link rel="prefetch" href="/assets/js/139.a3eb663e.js"><link rel="prefetch" href="/assets/js/14.34da2ea7.js"><link rel="prefetch" href="/assets/js/140.c28342e1.js"><link rel="prefetch" href="/assets/js/141.b2c12178.js"><link rel="prefetch" href="/assets/js/142.b4c64f63.js"><link rel="prefetch" href="/assets/js/143.42bbb2b5.js"><link rel="prefetch" href="/assets/js/144.78422f6c.js"><link rel="prefetch" href="/assets/js/145.be9153a1.js"><link rel="prefetch" href="/assets/js/146.d941f41a.js"><link rel="prefetch" href="/assets/js/147.84300116.js"><link rel="prefetch" href="/assets/js/148.ddb29130.js"><link rel="prefetch" href="/assets/js/149.11f63f93.js"><link rel="prefetch" href="/assets/js/15.056d0b73.js"><link rel="prefetch" href="/assets/js/150.04922cf6.js"><link rel="prefetch" href="/assets/js/151.290d279d.js"><link rel="prefetch" href="/assets/js/152.ec8536b5.js"><link rel="prefetch" href="/assets/js/153.a4173dd7.js"><link rel="prefetch" href="/assets/js/154.d779c69e.js"><link rel="prefetch" href="/assets/js/155.3077f0a2.js"><link rel="prefetch" href="/assets/js/156.cdee6fa6.js"><link rel="prefetch" href="/assets/js/157.3f1d5a91.js"><link rel="prefetch" href="/assets/js/158.a6c22872.js"><link rel="prefetch" href="/assets/js/159.2c0184ca.js"><link rel="prefetch" href="/assets/js/16.fa07b758.js"><link rel="prefetch" href="/assets/js/160.5833a2f0.js"><link rel="prefetch" href="/assets/js/161.2c142f87.js"><link rel="prefetch" href="/assets/js/162.1266048f.js"><link rel="prefetch" href="/assets/js/163.4a5f7392.js"><link rel="prefetch" href="/assets/js/164.7a70881f.js"><link rel="prefetch" href="/assets/js/165.146513ec.js"><link rel="prefetch" href="/assets/js/166.2645f0ab.js"><link rel="prefetch" href="/assets/js/167.3aeb02bb.js"><link rel="prefetch" href="/assets/js/168.7629d5ff.js"><link rel="prefetch" href="/assets/js/169.d4d379e4.js"><link rel="prefetch" href="/assets/js/17.d916cef4.js"><link rel="prefetch" href="/assets/js/170.e0116c1f.js"><link rel="prefetch" href="/assets/js/171.caacdd8c.js"><link rel="prefetch" href="/assets/js/172.aa46a804.js"><link rel="prefetch" href="/assets/js/173.5eb08c7b.js"><link rel="prefetch" href="/assets/js/174.634bccf9.js"><link rel="prefetch" href="/assets/js/175.5c854bb9.js"><link rel="prefetch" href="/assets/js/176.4defa747.js"><link rel="prefetch" href="/assets/js/177.501bd009.js"><link rel="prefetch" href="/assets/js/178.3eac16d7.js"><link rel="prefetch" href="/assets/js/179.99f0fa6e.js"><link rel="prefetch" href="/assets/js/18.f1005fa3.js"><link rel="prefetch" href="/assets/js/180.a7d76a2f.js"><link rel="prefetch" href="/assets/js/181.f98a015d.js"><link rel="prefetch" href="/assets/js/182.bc4badf7.js"><link rel="prefetch" href="/assets/js/183.44be8c5d.js"><link rel="prefetch" href="/assets/js/184.f39a6b50.js"><link rel="prefetch" href="/assets/js/185.061272a9.js"><link rel="prefetch" href="/assets/js/186.abbb412a.js"><link rel="prefetch" href="/assets/js/187.34d77c25.js"><link rel="prefetch" href="/assets/js/188.c2220440.js"><link rel="prefetch" href="/assets/js/189.350abc46.js"><link rel="prefetch" href="/assets/js/19.d298d243.js"><link rel="prefetch" href="/assets/js/190.87f0fd7e.js"><link rel="prefetch" href="/assets/js/191.c5f01ac4.js"><link rel="prefetch" href="/assets/js/192.1302768c.js"><link rel="prefetch" href="/assets/js/193.23c582aa.js"><link rel="prefetch" href="/assets/js/194.74b791d1.js"><link rel="prefetch" href="/assets/js/195.4caf22e0.js"><link rel="prefetch" href="/assets/js/196.9b26c85f.js"><link rel="prefetch" href="/assets/js/197.19d33cff.js"><link rel="prefetch" href="/assets/js/198.b7b6ce3c.js"><link rel="prefetch" href="/assets/js/199.6f952b58.js"><link rel="prefetch" href="/assets/js/2.da16fb8b.js"><link rel="prefetch" href="/assets/js/20.06ba9109.js"><link rel="prefetch" href="/assets/js/200.5e4e9f49.js"><link rel="prefetch" href="/assets/js/201.3f355daa.js"><link rel="prefetch" href="/assets/js/202.3e2919b5.js"><link rel="prefetch" href="/assets/js/203.8585a9f8.js"><link rel="prefetch" href="/assets/js/204.86e09c32.js"><link rel="prefetch" href="/assets/js/205.a8c009b4.js"><link rel="prefetch" href="/assets/js/206.5a9c12c7.js"><link rel="prefetch" href="/assets/js/207.02dbf5d7.js"><link rel="prefetch" href="/assets/js/208.34468414.js"><link rel="prefetch" href="/assets/js/209.e021049b.js"><link rel="prefetch" href="/assets/js/21.5d4702e5.js"><link rel="prefetch" href="/assets/js/210.50f044d7.js"><link rel="prefetch" href="/assets/js/211.df88eea7.js"><link rel="prefetch" href="/assets/js/212.1a61778e.js"><link rel="prefetch" href="/assets/js/213.571cd7a5.js"><link rel="prefetch" href="/assets/js/214.b15e3796.js"><link rel="prefetch" href="/assets/js/215.c35ab00d.js"><link rel="prefetch" href="/assets/js/216.bbb38e4b.js"><link rel="prefetch" href="/assets/js/217.4cc8ce50.js"><link rel="prefetch" href="/assets/js/218.27e9a5dc.js"><link rel="prefetch" href="/assets/js/219.29152dfb.js"><link rel="prefetch" href="/assets/js/22.b29dff3f.js"><link rel="prefetch" href="/assets/js/220.b94a420d.js"><link rel="prefetch" href="/assets/js/221.3e1e3f07.js"><link rel="prefetch" href="/assets/js/222.610c9243.js"><link rel="prefetch" href="/assets/js/223.20324a9e.js"><link rel="prefetch" href="/assets/js/224.6a5c1a7b.js"><link rel="prefetch" href="/assets/js/225.d5981282.js"><link rel="prefetch" href="/assets/js/226.323ae76d.js"><link rel="prefetch" href="/assets/js/227.f8a80a3d.js"><link rel="prefetch" href="/assets/js/228.ba7673a9.js"><link rel="prefetch" href="/assets/js/229.331b64d1.js"><link rel="prefetch" href="/assets/js/23.5397bf05.js"><link rel="prefetch" href="/assets/js/230.4f9aab9d.js"><link rel="prefetch" href="/assets/js/231.85306ec0.js"><link rel="prefetch" href="/assets/js/232.d15e01b6.js"><link rel="prefetch" href="/assets/js/233.9d33c762.js"><link rel="prefetch" href="/assets/js/234.ac16a8ea.js"><link rel="prefetch" href="/assets/js/235.efeff7b8.js"><link rel="prefetch" href="/assets/js/236.67d274b8.js"><link rel="prefetch" href="/assets/js/237.6fae8904.js"><link rel="prefetch" href="/assets/js/238.719fb0d8.js"><link rel="prefetch" href="/assets/js/239.0f5c6dac.js"><link rel="prefetch" href="/assets/js/24.09719cb7.js"><link rel="prefetch" href="/assets/js/240.49c4e101.js"><link rel="prefetch" href="/assets/js/241.768b17f7.js"><link rel="prefetch" href="/assets/js/242.5372e06c.js"><link rel="prefetch" href="/assets/js/243.293366a2.js"><link rel="prefetch" href="/assets/js/244.3e49f572.js"><link rel="prefetch" href="/assets/js/245.cbdf8f5a.js"><link rel="prefetch" href="/assets/js/246.56a55dbe.js"><link rel="prefetch" href="/assets/js/247.3e4f7724.js"><link rel="prefetch" href="/assets/js/248.4fb11b1c.js"><link rel="prefetch" href="/assets/js/249.0caa7968.js"><link rel="prefetch" href="/assets/js/25.05ca3b89.js"><link rel="prefetch" href="/assets/js/250.e70797f8.js"><link rel="prefetch" href="/assets/js/251.ab153d87.js"><link rel="prefetch" href="/assets/js/252.3bca6b4e.js"><link rel="prefetch" href="/assets/js/253.0f0f05bf.js"><link rel="prefetch" href="/assets/js/254.31b0a826.js"><link rel="prefetch" href="/assets/js/255.dcd9479e.js"><link rel="prefetch" href="/assets/js/256.f4f3cbe7.js"><link rel="prefetch" href="/assets/js/257.87b5c111.js"><link rel="prefetch" href="/assets/js/258.a06a5792.js"><link rel="prefetch" href="/assets/js/259.00e7cf37.js"><link rel="prefetch" href="/assets/js/26.a9923aed.js"><link rel="prefetch" href="/assets/js/260.1b15d79f.js"><link rel="prefetch" href="/assets/js/261.7931ff8b.js"><link rel="prefetch" href="/assets/js/262.b79b03fd.js"><link rel="prefetch" href="/assets/js/263.7e7a7a69.js"><link rel="prefetch" href="/assets/js/264.a3362353.js"><link rel="prefetch" href="/assets/js/265.5f5b8f63.js"><link rel="prefetch" href="/assets/js/266.d132b970.js"><link rel="prefetch" href="/assets/js/267.b5e6046b.js"><link rel="prefetch" href="/assets/js/268.0f9d91d5.js"><link rel="prefetch" href="/assets/js/27.49d424f0.js"><link rel="prefetch" href="/assets/js/28.804b176d.js"><link rel="prefetch" href="/assets/js/29.73ad7742.js"><link rel="prefetch" href="/assets/js/30.4b7153eb.js"><link rel="prefetch" href="/assets/js/31.e2baa352.js"><link rel="prefetch" href="/assets/js/32.306f9a8b.js"><link rel="prefetch" href="/assets/js/33.86bba420.js"><link rel="prefetch" href="/assets/js/34.377cc87b.js"><link rel="prefetch" href="/assets/js/35.ccb29e89.js"><link rel="prefetch" href="/assets/js/36.ac3b170b.js"><link rel="prefetch" href="/assets/js/37.a6c86796.js"><link rel="prefetch" href="/assets/js/39.5bb1248d.js"><link rel="prefetch" href="/assets/js/40.c8f3e571.js"><link rel="prefetch" href="/assets/js/41.90c9a221.js"><link rel="prefetch" href="/assets/js/42.5e7a2243.js"><link rel="prefetch" href="/assets/js/43.4e6e2fa0.js"><link rel="prefetch" href="/assets/js/44.3f386908.js"><link rel="prefetch" href="/assets/js/45.9861347f.js"><link rel="prefetch" href="/assets/js/46.f1a56538.js"><link rel="prefetch" href="/assets/js/47.bfaf984a.js"><link rel="prefetch" href="/assets/js/48.8294d8ff.js"><link rel="prefetch" href="/assets/js/49.33f5b0f7.js"><link rel="prefetch" href="/assets/js/5.27bc9b2c.js"><link rel="prefetch" href="/assets/js/50.89ea98b4.js"><link rel="prefetch" href="/assets/js/51.ed9b70fc.js"><link rel="prefetch" href="/assets/js/52.a6368693.js"><link rel="prefetch" href="/assets/js/53.184d59c4.js"><link rel="prefetch" href="/assets/js/54.090ae4a9.js"><link rel="prefetch" href="/assets/js/55.e2476995.js"><link rel="prefetch" href="/assets/js/56.a22a1485.js"><link rel="prefetch" href="/assets/js/57.3075220f.js"><link rel="prefetch" href="/assets/js/58.452bfc36.js"><link rel="prefetch" href="/assets/js/59.8bd0bc93.js"><link rel="prefetch" href="/assets/js/6.4f220469.js"><link rel="prefetch" href="/assets/js/60.d0efd55d.js"><link rel="prefetch" href="/assets/js/61.616b58ab.js"><link rel="prefetch" href="/assets/js/62.a1ca26c4.js"><link rel="prefetch" href="/assets/js/63.6e7074ce.js"><link rel="prefetch" href="/assets/js/64.baaef4c5.js"><link rel="prefetch" href="/assets/js/65.544aafea.js"><link rel="prefetch" href="/assets/js/66.0cbcb512.js"><link rel="prefetch" href="/assets/js/67.30d4fb26.js"><link rel="prefetch" href="/assets/js/68.fb2c2c07.js"><link rel="prefetch" href="/assets/js/69.eee868b7.js"><link rel="prefetch" href="/assets/js/7.67093bab.js"><link rel="prefetch" href="/assets/js/70.47f4314b.js"><link rel="prefetch" href="/assets/js/71.e61b917c.js"><link rel="prefetch" href="/assets/js/72.bc2c0cbe.js"><link rel="prefetch" href="/assets/js/73.bec5088f.js"><link rel="prefetch" href="/assets/js/74.76623c2b.js"><link rel="prefetch" href="/assets/js/75.ce6f8500.js"><link rel="prefetch" href="/assets/js/76.400e0887.js"><link rel="prefetch" href="/assets/js/77.d4fcbd2b.js"><link rel="prefetch" href="/assets/js/78.fea867a9.js"><link rel="prefetch" href="/assets/js/79.f7238bc4.js"><link rel="prefetch" href="/assets/js/8.c2aa376e.js"><link rel="prefetch" href="/assets/js/80.db5ced4a.js"><link rel="prefetch" href="/assets/js/81.949eaaaf.js"><link rel="prefetch" href="/assets/js/82.1fa9be34.js"><link rel="prefetch" href="/assets/js/83.3a6f83cc.js"><link rel="prefetch" href="/assets/js/84.35fb63b7.js"><link rel="prefetch" href="/assets/js/85.4ff3d26e.js"><link rel="prefetch" href="/assets/js/86.7e761e5a.js"><link rel="prefetch" href="/assets/js/87.da4a560d.js"><link rel="prefetch" href="/assets/js/88.d4678a0e.js"><link rel="prefetch" href="/assets/js/89.8f257cba.js"><link rel="prefetch" href="/assets/js/9.821e10b0.js"><link rel="prefetch" href="/assets/js/90.c544ed8b.js"><link rel="prefetch" href="/assets/js/91.b69a1698.js"><link rel="prefetch" href="/assets/js/92.02e15344.js"><link rel="prefetch" href="/assets/js/93.08fe83ef.js"><link rel="prefetch" href="/assets/js/94.7239b1d9.js"><link rel="prefetch" href="/assets/js/95.8c442a25.js"><link rel="prefetch" href="/assets/js/96.08670966.js"><link rel="prefetch" href="/assets/js/97.730b22df.js"><link rel="prefetch" href="/assets/js/98.676f0c52.js"><link rel="prefetch" href="/assets/js/99.330aee19.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.199c727d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Web Developer</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个性学习" class="dropdown-title"><span class="title">个性学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="个性学习" class="mobile-dropdown-title"><span class="title">个性学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          个人博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Blog/Frontend/" class="nav-link router-link-active">
+  前端博客
+</a></li><li class="dropdown-subitem"><a href="/Blog/Format/" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-subitem"><a href="/Blog/Admin/" class="nav-link">
+  后台管理
+</a></li><li class="dropdown-subitem"><a href="/Blog/Effect/" class="nav-link">
+  搞点特效
+</a></li><li class="dropdown-subitem"><a href="/Blog/Chore/" class="nav-link">
+  折腾一下
+</a></li></ul></li><li class="dropdown-item"><h4>
+          源码学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/SourceCode/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vite/" class="nav-link">
+  Vite
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue2/" class="nav-link">
+  Vue2
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue3/" class="nav-link">
+  Vue3
+</a></li></ul></li><li class="dropdown-item"><h4>
+          常用工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Tool/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/Tool/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-subitem"><a href="/Tool/Linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/Tool/Docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-subitem"><a href="/Tool/Nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-subitem"><a href="/Tool/Npm/" class="nav-link">
+  Npm
+</a></li><li class="dropdown-subitem"><a href="/Tool/Puppeteer/" class="nav-link">
+  Puppeteer
+</a></li><li class="dropdown-subitem"><a href="/Tool/VSCode/" class="nav-link">
+  VSCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="系统学习" class="dropdown-title"><span class="title">系统学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="系统学习" class="mobile-dropdown-title"><span class="title">系统学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Computer/Science/" class="nav-link">
+  计算机科学导论
+</a></li><li class="dropdown-subitem"><a href="/Computer/System/" class="nav-link">
+  计算机操作系统
+</a></li><li class="dropdown-subitem"><a href="/Computer/Network/" class="nav-link">
+  计算机网络
+</a></li></ul></li><li class="dropdown-item"><h4>
+          在线书籍
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Book/Handbook/" class="nav-link">
+  禅道 程序员生存手册
+</a></li><li class="dropdown-subitem"><a href="/Book/Refactoring2/" class="nav-link">
+  重构 改善既有代码的设计
+</a></li></ul></li><li class="dropdown-item"><h4>
+          学习笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Study/CSS-World/" class="nav-link">
+  CSS世界
+</a></li><li class="dropdown-subitem"><a href="/Study/CSS-New-World/" class="nav-link">
+  CSS新世界
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Houdunren/" class="nav-link">
+  JS后端人视频教程
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Advanced/" class="nav-link">
+  JS高级程序设计
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Pattern/" class="nav-link">
+  JS设计模式与开发实践
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Structure-Algo/" class="nav-link">
+  JS数据结构与算法
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言" class="dropdown-title"><span class="title">编程语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言" class="mobile-dropdown-title"><span class="title">编程语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Language/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Language/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/Language/PHP/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-subitem"><a href="/Language/Node/" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Assembly/" class="nav-link">
+  Assembly
+</a></li><li class="dropdown-subitem"><a href="/Language/C/" class="nav-link">
+  C
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="解决方案" class="dropdown-title"><span class="title">解决方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="解决方案" class="mobile-dropdown-title"><span class="title">解决方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          打包工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Bundle/WebPack/" class="nav-link">
+  WebPack
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/VueCLI/" class="nav-link">
+  VueCLI
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/Vite/" class="nav-link">
+  Vite
+</a></li></ul></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/React/" class="nav-link">
+  React
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue2/" class="nav-link">
+  Vue2.x
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue-Router/" class="nav-link">
+  Vue Router
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vuex/" class="nav-link">
+  Vuex
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Jest/" class="nav-link">
+  Jest
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Nuxt/" class="nav-link">
+  Nuxt
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/VueConf/" class="nav-link">
+  VueConf
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue3/" class="nav-link">
+  Vue3.x
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="领域技术" class="dropdown-title"><span class="title">领域技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="领域技术" class="mobile-dropdown-title"><span class="title">领域技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          通用技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Web/HTTP/" class="nav-link">
+  HTTP
+</a></li><li class="dropdown-subitem"><a href="/Web/WebSocket/" class="nav-link">
+  WebSocket
+</a></li><li class="dropdown-subitem"><a href="/Web/WebRTC/" class="nav-link">
+  WebRTC
+</a></li><li class="dropdown-subitem"><a href="/Web/WebAssembly/" class="nav-link">
+  WebAssembly
+</a></li></ul></li><li class="dropdown-item"><h4>
+          图形技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Graph/SVG/" class="nav-link">
+  SVG
+</a></li><li class="dropdown-subitem"><a href="/Graph/Canvas/" class="nav-link">
+  Canvas
+</a></li><li class="dropdown-subitem"><a href="/Graph/WebGL/" class="nav-link">
+  WebGL
+</a></li><li class="dropdown-subitem"><a href="/Graph/ZRender/" class="nav-link">
+  ZRender
+</a></li><li class="dropdown-subitem"><a href="/Graph/Echarts/" class="nav-link">
+  Echarts
+</a></li><li class="dropdown-subitem"><a href="/Graph/Draw2D/" class="nav-link">
+  Draw2D
+</a></li><li class="dropdown-subitem"><a href="/Graph/LiteGraph/" class="nav-link">
+  LiteGraph
+</a></li></ul></li><li class="dropdown-item"><h4>
+          音视频技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Media/Audio/" class="nav-link">
+  Audio
+</a></li><li class="dropdown-subitem"><a href="/Solution/Media/FFmpeg/" class="nav-link">
+  FFmpeg
+</a></li></ul></li><li class="dropdown-item"><h4>
+          数据库技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/DataBase/LowDB/" class="nav-link">
+  LowDB
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/SQLite/" class="nav-link">
+  SQLite
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/MySQL/" class="nav-link">
+  MySQL
+</a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个性学习" class="dropdown-title"><span class="title">个性学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="个性学习" class="mobile-dropdown-title"><span class="title">个性学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          个人博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Blog/Frontend/" class="nav-link router-link-active">
+  前端博客
+</a></li><li class="dropdown-subitem"><a href="/Blog/Format/" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-subitem"><a href="/Blog/Admin/" class="nav-link">
+  后台管理
+</a></li><li class="dropdown-subitem"><a href="/Blog/Effect/" class="nav-link">
+  搞点特效
+</a></li><li class="dropdown-subitem"><a href="/Blog/Chore/" class="nav-link">
+  折腾一下
+</a></li></ul></li><li class="dropdown-item"><h4>
+          源码学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/SourceCode/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vite/" class="nav-link">
+  Vite
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue2/" class="nav-link">
+  Vue2
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue3/" class="nav-link">
+  Vue3
+</a></li></ul></li><li class="dropdown-item"><h4>
+          常用工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Tool/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/Tool/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-subitem"><a href="/Tool/Linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/Tool/Docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-subitem"><a href="/Tool/Nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-subitem"><a href="/Tool/Npm/" class="nav-link">
+  Npm
+</a></li><li class="dropdown-subitem"><a href="/Tool/Puppeteer/" class="nav-link">
+  Puppeteer
+</a></li><li class="dropdown-subitem"><a href="/Tool/VSCode/" class="nav-link">
+  VSCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="系统学习" class="dropdown-title"><span class="title">系统学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="系统学习" class="mobile-dropdown-title"><span class="title">系统学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Computer/Science/" class="nav-link">
+  计算机科学导论
+</a></li><li class="dropdown-subitem"><a href="/Computer/System/" class="nav-link">
+  计算机操作系统
+</a></li><li class="dropdown-subitem"><a href="/Computer/Network/" class="nav-link">
+  计算机网络
+</a></li></ul></li><li class="dropdown-item"><h4>
+          在线书籍
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Book/Handbook/" class="nav-link">
+  禅道 程序员生存手册
+</a></li><li class="dropdown-subitem"><a href="/Book/Refactoring2/" class="nav-link">
+  重构 改善既有代码的设计
+</a></li></ul></li><li class="dropdown-item"><h4>
+          学习笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Study/CSS-World/" class="nav-link">
+  CSS世界
+</a></li><li class="dropdown-subitem"><a href="/Study/CSS-New-World/" class="nav-link">
+  CSS新世界
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Houdunren/" class="nav-link">
+  JS后端人视频教程
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Advanced/" class="nav-link">
+  JS高级程序设计
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Pattern/" class="nav-link">
+  JS设计模式与开发实践
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Structure-Algo/" class="nav-link">
+  JS数据结构与算法
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言" class="dropdown-title"><span class="title">编程语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言" class="mobile-dropdown-title"><span class="title">编程语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Language/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Language/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/Language/PHP/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-subitem"><a href="/Language/Node/" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Assembly/" class="nav-link">
+  Assembly
+</a></li><li class="dropdown-subitem"><a href="/Language/C/" class="nav-link">
+  C
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="解决方案" class="dropdown-title"><span class="title">解决方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="解决方案" class="mobile-dropdown-title"><span class="title">解决方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          打包工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Bundle/WebPack/" class="nav-link">
+  WebPack
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/VueCLI/" class="nav-link">
+  VueCLI
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/Vite/" class="nav-link">
+  Vite
+</a></li></ul></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/React/" class="nav-link">
+  React
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue2/" class="nav-link">
+  Vue2.x
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue-Router/" class="nav-link">
+  Vue Router
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vuex/" class="nav-link">
+  Vuex
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Jest/" class="nav-link">
+  Jest
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Nuxt/" class="nav-link">
+  Nuxt
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/VueConf/" class="nav-link">
+  VueConf
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue3/" class="nav-link">
+  Vue3.x
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="领域技术" class="dropdown-title"><span class="title">领域技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="领域技术" class="mobile-dropdown-title"><span class="title">领域技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          通用技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Web/HTTP/" class="nav-link">
+  HTTP
+</a></li><li class="dropdown-subitem"><a href="/Web/WebSocket/" class="nav-link">
+  WebSocket
+</a></li><li class="dropdown-subitem"><a href="/Web/WebRTC/" class="nav-link">
+  WebRTC
+</a></li><li class="dropdown-subitem"><a href="/Web/WebAssembly/" class="nav-link">
+  WebAssembly
+</a></li></ul></li><li class="dropdown-item"><h4>
+          图形技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Graph/SVG/" class="nav-link">
+  SVG
+</a></li><li class="dropdown-subitem"><a href="/Graph/Canvas/" class="nav-link">
+  Canvas
+</a></li><li class="dropdown-subitem"><a href="/Graph/WebGL/" class="nav-link">
+  WebGL
+</a></li><li class="dropdown-subitem"><a href="/Graph/ZRender/" class="nav-link">
+  ZRender
+</a></li><li class="dropdown-subitem"><a href="/Graph/Echarts/" class="nav-link">
+  Echarts
+</a></li><li class="dropdown-subitem"><a href="/Graph/Draw2D/" class="nav-link">
+  Draw2D
+</a></li><li class="dropdown-subitem"><a href="/Graph/LiteGraph/" class="nav-link">
+  LiteGraph
+</a></li></ul></li><li class="dropdown-item"><h4>
+          音视频技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Media/Audio/" class="nav-link">
+  Audio
+</a></li><li class="dropdown-subitem"><a href="/Solution/Media/FFmpeg/" class="nav-link">
+  FFmpeg
+</a></li></ul></li><li class="dropdown-item"><h4>
+          数据库技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/DataBase/LowDB/" class="nav-link">
+  LowDB
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/SQLite/" class="nav-link">
+  SQLite
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/MySQL/" class="nav-link">
+  MySQL
+</a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Blog/Frontend/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/Blog/Frontend/double/" class="sidebar-link">JS中常见的双生子</a></li><li><a href="/Blog/Frontend/data-type/" class="sidebar-link">JS中类型的一锅粥</a></li><li><a href="/Blog/Frontend/js-deepcopy-function/" class="sidebar-link">封装一个深度拷贝</a></li><li><a href="/Blog/Frontend/js-foreach/" class="sidebar-link">数组遍历那些事儿</a></li><li><a href="/Blog/Frontend/base64/" class="sidebar-link">Base64的那些事儿</a></li><li><a href="/Blog/Frontend/js-concept/" class="sidebar-link">那些比较绕的概念</a></li><li><a href="/Blog/Frontend/request-progress/" class="sidebar-link">JS常用请求小技巧</a></li><li><a href="/Blog/Frontend/promise/" class="sidebar-link">Promise搞一下</a></li><li><a href="/Blog/Frontend/upload-and-download/" class="sidebar-link">上传下载那些事儿</a></li><li><a href="/Blog/Frontend/css-define-name/" aria-current="page" class="active sidebar-link">CSS命名那些事儿</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Blog/Frontend/css-define-name/#参考资料" class="sidebar-link">参考资料</a></li><li class="sidebar-sub-header"><a href="/Blog/Frontend/css-define-name/#oocss模式" class="sidebar-link">OOCSS模式</a></li><li class="sidebar-sub-header"><a href="/Blog/Frontend/css-define-name/#smacss模式" class="sidebar-link">SMACSS模式</a></li><li class="sidebar-sub-header"><a href="/Blog/Frontend/css-define-name/#metacss模式" class="sidebar-link">METACSS模式</a></li><li class="sidebar-sub-header"><a href="/Blog/Frontend/css-define-name/#bem模式" class="sidebar-link">BEM模式</a></li><li class="sidebar-sub-header"><a href="/Blog/Frontend/css-define-name/#全文总结" class="sidebar-link">全文总结</a></li></ul></li><li><a href="/Blog/Frontend/css-context/" class="sidebar-link">CSS中那些上下文</a></li><li><a href="/Blog/Frontend/spa-seo-optimize/" class="sidebar-link">零成本单页面SEO</a></li><li><a href="/Blog/Frontend/pdf-preview/" class="sidebar-link">前端处理PDF预览</a></li><li><a href="/Blog/write-nodejs-api/" class="sidebar-link">前端也要能写接口</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="css命名那些事儿"><a href="#css命名那些事儿" class="header-anchor">#</a> CSS命名那些事儿</h1> <p>OOCSS SMACSS METACSS BEMCSS</p> <h2 id="参考资料"><a href="#参考资料" class="header-anchor">#</a> 参考资料</h2> <p><a href="https://cythilya.github.io/2018/06/05/css-methodologies/" target="_blank" rel="noopener noreferrer">CSS 的模組化方法<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <a href="https://www.sass.hk/skill/sass96.html" target="_blank" rel="noopener noreferrer">Sass 使用Sass来写OOCSS<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <a href="https://www.zhihu.com/question/22110291" target="_blank" rel="noopener noreferrer">知乎 前端使用原子类的优劣？<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <a href="https://www.zhihu.com/question/21935157" target="_blank" rel="noopener noreferrer">知乎 如何看待 CSS 中 BEM 的命名方式？<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a><br> <a href="https://juejin.cn/post/6958690548009926687" target="_blank" rel="noopener noreferrer">掘金 如何写出一套可维护的CSS库？<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="oocss模式"><a href="#oocss模式" class="header-anchor">#</a> OOCSS模式</h2> <p>OOCSS（Object Oriented CSS） 面向对象的CSS</p> <p>OOCSS的创始人Nicole Sllivan提了两个主要原则</p> <ul><li>结构与样式分离：你应该在对象中定义结构和位置，而对于样式特性应该使用类名分离出来，比如说background或border。这样一来你就不需要去覆盖一些特征性样式</li> <li>容器与内容分离：不要在你的HTML结构中插入样式。换句话说，你的样式中尽量不要使用html标签或者id标识符。相反，应该定义一些<code>类名</code>来定义样式，而且选择器的嵌套的层级应该尽量的少。</li></ul> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 不好的方式 */</span>
+<span class="token selector">.box-1</span> <span class="token punctuation">{</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #ccc<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.box-2</span> <span class="token punctuation">{</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #ccc<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 好的方式 */</span>
+<span class="token selector">.box-1</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.box-2</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.box-border</span><span class="token punctuation">{</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #CCC<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>一句话解释: 使用<code>class</code>来编写样式，每个<code>class</code>都有其各自的用途</p> <h2 id="smacss模式"><a href="#smacss模式" class="header-anchor">#</a> SMACSS模式</h2> <p>SMACSS （Scalable &amp; Modular Architecture CSS） 像OOCSS一样以减少重复样式为基础，使用一套五个层次来划分CSS给项目带来更结构化的方法</p> <ul><li>Base (基本)</li> <li>Layout (布局)</li> <li><s>Module (模块)</s></li> <li>State (状态)</li> <li><s>Theme (皮肤)</s></li></ul> <p>如果全部用上可能会显得有点繁琐，一般来说只用上 Base Layout State 就够了，如果不够用再进一步拓展</p> <p>最佳实践：<a href="https://www.bootcss.com/" target="_blank" rel="noopener noreferrer">Bootstarp<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="metacss模式"><a href="#metacss模式" class="header-anchor">#</a> METACSS模式</h2> <p>METACSS一些写在全局的通用方法，是SMACSS中通用方法思想的分支。又叫做原子类CSS。</p> <p>一般以css属性、Emmet css缩写或功能来命名，通常以一个css属性为一个单位</p> <p>表示属性的：每个属性单独成列</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.display-flex</span> <span class="token punctuation">{</span> 
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span> 
+<span class="token punctuation">}</span>
+</code></pre></div><p>表示功能的： 一组属性形成一个特定功能</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.text-ellipsis</span><span class="token punctuation">{</span>
+  <span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>
+  <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>最佳实践：<a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">Tailwind CSS<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <h2 id="bem模式"><a href="#bem模式" class="header-anchor">#</a> BEM模式</h2> <p>BEM可能是目前最流行的CSS命名方式，很多主流的组件库都是使用这种命名方式，因此我们的重点放在它身上。</p> <p>BEM 分别代表着：Block（块）、Element（元素/子块/组成部分）、Modifier（修饰符），是一种组件化的 CSS 命名方法和规范，由俄罗斯 Yandex 团队所提出。</p> <h3 id="特点"><a href="#特点" class="header-anchor">#</a> 特点</h3> <p>组件化/模块化的开发思路，书写方式解耦化，不会造成命名空间的污染，如：.xxx ul li 写法带来的潜在嵌套风险。</p> <p>命名方式化扁平，避免样式层级过多而导致的解析效率降低，渲染开销变大。</p> <p>组件结构独立化，减少样式冲突，可以将已开完成的组件快速应用到新项目中。有着较好的维护性、易读性、灵活性。规则</p> <p>BEM的命名模式在社区中有着不同方式，以下为 Yandex 团队所提出的命名规则为（本文中的代码使用该规则）：</p> <p><code>.[Block 块]__[Element 元素]_[Modifier 修饰符]</code> 不同的命名模式，区别在于BEM之间的连接符号不同，依个人而定：</p> <p><code>.[Block 块]__[Element 元素]_[Modifier 修饰符]</code> 任何一种规范，都是基于实际需求而定，便于团队开发和维护扩展，每个规范都是经过合理评估后所得出的一种“思路”和“建议”。</p> <h3 id="block"><a href="#block" class="header-anchor">#</a> Block</h3> <p>Block是一个独立的实体，即通常所说的模块或组件。例：header、menu、search</p> <p>规则</p> <p>块名需能清晰的表达出，其用途、功能或意义，具有唯一性。</p> <p>块名称之间用-连接。每个块名前应增加一个前缀，
+这前缀在 CSS 中有命名空间（如：m-、u-、分别代表：mod 模块、ui 元件）。
+每个块在逻辑上和功能上都相互独立。</p> <p>由于块是独立的，可以在应用开发中进行复用，从而降低代码重复并提高开发效率。</p> <p>块可以放置在页面上的任何位置，也可以互相嵌套。同类型的块，在显示上可能会有一定的差异，所以<strong>不要定义过多的外观显示样式</strong>，主要负责结构的呈现。这样就能确保块在不同地方复用和嵌套时，增加其扩展性。</p> <p>综上所述，最终我们可以把BEM规则最终定义成：</p> <p><code>.[命名空间]-[组件名/块]__[元素名/元素]--[修饰符]</code></p> <p>情景</p> <p>需要构建一个 search 组件。</p> <p>写法</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.m-search</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><p>结构</p> <p>如果打算开发一套框架，可以使用具有代表性的缩写，用来表示命名空间：</p> <p>Element UI(el-)、Ant Design(ant-)、iView(ivu-)。</p> <h3 id="element"><a href="#element" class="header-anchor">#</a> Element</h3> <p>是块中的组成部分，对应块中的子元素/子节点。例：header title、menu item、list item</p> <p>规则</p> <p>元素名需能简单的描述出，其结构、布局或意义，并且在语义上与块相关联。块与元素之间用__连接。不能与块分开单独使用。</p> <p>块的内部元素，都被认为是块的子元素。一个块中元素的类名必须用父级块的名称作为前缀，因此不能写成：block__elem1__elem2。</p> <p>情景</p> <p>search 组件中包含 input 和 button，是列表中的一个子元素。</p> <p>写法</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.m-search</span><span class="token punctuation">{</span><span class="token punctuation">}</span> 
+<span class="token selector">.m-search__input</span><span class="token punctuation">{</span><span class="token punctuation">}</span> 
+<span class="token selector">.m-search__button</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><p>结构</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>m-search<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>m-search__input<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>m-search__button<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Search<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>原则上书写时不会出现两层以上的嵌套，所有样式都为平级，嵌套只出现在比如 <code>.m-block_active</code> ，状态激活时的情况。</p> <h3 id="modifier"><a href="#modifier" class="header-anchor">#</a> Modifier</h3> <p>定义块和元素的外观、状态或类型。</p> <p>例：color、disabled、size</p> <p>规则 修饰符需能直观易懂表达出，其外观、状态或行为。修饰符用_连接块与元素。修饰符不能单独使用。在必要时可进行扩展，书写成：block__elem_modifier_modifier，第一个modifier表示其命名空间。情景 假定 search 组件有多种外观，我们选择其中一种。并且在用户未输入内容时，button 显示为禁用样式。</p> <p>写法</p> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">.m-search</span><span class="token punctuation">{</span><span class="token punctuation">}</span> 
+<span class="token selector">.m-search_dark</span><span class="token punctuation">{</span><span class="token punctuation">}</span> 
+<span class="token selector">.m-search__input</span><span class="token punctuation">{</span><span class="token punctuation">}</span> 
+<span class="token selector">.m-search__button</span><span class="token punctuation">{</span><span class="token punctuation">}</span> 
+<span class="token selector">.m-search__button_disabled</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div><p>结构</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- dark 表明 search 组件的外观 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>m-search m-search-form_dark<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>m-search__input<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- disabled 表明 search__button 的状态 --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>m-search__button m-search__button_disabled<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Search<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="小结"><a href="#小结" class="header-anchor">#</a> 小结</h3> <p>很多人觉得 BEM 写法难看，刚刚接触可能是会觉得有点奇怪，但所有东西都有一个适应过程。如果仅仅为了好看，规避其优点，我认为得不偿失。个人建议可以尝试使用 BEM 规范来书写代码。</p> <p>BEM 命名会使得 Class 类名变长，但经过 GZIP 等压缩后，文件的体积其实并无太大影响。</p> <p>就和早年提出 CSS语义化 一样，不要为了语义而去语义，语义化本身的作用就是帮助大家更好的识别代码，所有的规范都是基于项目的发展和团队的协作，团队可以根据成员的意愿选择最合适的方式。</p> <h2 id="全文总结"><a href="#全文总结" class="header-anchor">#</a> 全文总结</h2> <ul><li>全局样式遵循类名控制一个属性或一组功能的样式，遵循BEM命名</li> <li>组件内的样式，使用Less/Sass 合理嵌套，遵循BEM命名</li> <li>元素的状态，使用<code>.active</code>，<code>.current</code>，<code>.disable</code>，嵌套在BEM之后</li></ul> <div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 全局 */</span>
+<span class="token selector">.display-flex</span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span>flex
+<span class="token punctuation">}</span>
+<span class="token selector">.flex-1</span><span class="token punctuation">{</span>
+  <span class="token property">flex</span><span class="token punctuation">:</span>1 1 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 组件 */</span>
+<span class="token selector">.el-input</span><span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span>28px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.el-input_inner</span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span>#ccc<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-css extra-class"><pre class="language-css"><code><span class="token comment">/* 状态 */</span>
+<span class="token selector">.el-input_inner.active</span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span>#777<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Blog/Frontend/upload-and-download/" class="prev">
+        上传下载那些事儿
+      </a></span> <span class="next"><a href="/Blog/Frontend/css-context/">
+        CSS中那些上下文
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.0700b199.js" defer></script><script src="/assets/js/4.85800d9b.js" defer></script><script src="/assets/js/38.a863dc90.js" defer></script>
+  </body>
+</html>

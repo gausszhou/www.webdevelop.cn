@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>汇编语言速记速查 | Web Developer</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css">
+    <link rel="stylesheet" href="//www.gausszhou.top/source/data/css/litegraph-topo.css">
+    <srcipt src="//cdn.bootcdn.net/ajax/libs/zrender/5.1.1/zrender.min.js"></srcipt>
+    <meta name="description" content="Gauss Zhou's Web Developer Note">
+    <meta name="keywords" content="gausszhou , Gauss Zhou , Web , develop ,technical , knowledge">
+    <meta name="author" content="Gauss Zhou">
+    <meta name="og:title" content="Web Develop">
+    <meta name="og:type" content="website">
+    <meta name="og:description" content="Gauss Zhou's Web Developer Note">
+    <meta name="baidu-site-verification" content="">
+    <meta name="msvalidate.01" content="">
+    <meta name="google-site-verification" content="">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="7">
+    
+    <link rel="preload" href="/assets/css/0.styles.199c727d.css" as="style"><link rel="preload" href="/assets/js/app.0700b199.js" as="script"><link rel="preload" href="/assets/js/4.85800d9b.js" as="script"><link rel="preload" href="/assets/js/121.c0e8837b.js" as="script"><link rel="prefetch" href="/assets/js/1.64af6ab6.js"><link rel="prefetch" href="/assets/js/10.91dc4ea6.js"><link rel="prefetch" href="/assets/js/100.9d065f43.js"><link rel="prefetch" href="/assets/js/101.162f6f5a.js"><link rel="prefetch" href="/assets/js/102.547f0494.js"><link rel="prefetch" href="/assets/js/103.8df50f95.js"><link rel="prefetch" href="/assets/js/104.0dc1a023.js"><link rel="prefetch" href="/assets/js/105.6342d25f.js"><link rel="prefetch" href="/assets/js/106.c5f00494.js"><link rel="prefetch" href="/assets/js/107.67279c92.js"><link rel="prefetch" href="/assets/js/108.d0b517b7.js"><link rel="prefetch" href="/assets/js/109.2c4dcaeb.js"><link rel="prefetch" href="/assets/js/11.86efad00.js"><link rel="prefetch" href="/assets/js/110.90adfb2c.js"><link rel="prefetch" href="/assets/js/111.e96a4ae7.js"><link rel="prefetch" href="/assets/js/112.169ab31b.js"><link rel="prefetch" href="/assets/js/113.1f2b9fc2.js"><link rel="prefetch" href="/assets/js/114.0c95ee77.js"><link rel="prefetch" href="/assets/js/115.79141d61.js"><link rel="prefetch" href="/assets/js/116.03dd9b47.js"><link rel="prefetch" href="/assets/js/117.8438da1c.js"><link rel="prefetch" href="/assets/js/118.2a3d98f0.js"><link rel="prefetch" href="/assets/js/119.56aa8bb0.js"><link rel="prefetch" href="/assets/js/12.a355d486.js"><link rel="prefetch" href="/assets/js/120.1d693ff2.js"><link rel="prefetch" href="/assets/js/122.309c2d09.js"><link rel="prefetch" href="/assets/js/123.05bba04a.js"><link rel="prefetch" href="/assets/js/124.6b67611a.js"><link rel="prefetch" href="/assets/js/125.02506fca.js"><link rel="prefetch" href="/assets/js/126.ef821603.js"><link rel="prefetch" href="/assets/js/127.cd6f872b.js"><link rel="prefetch" href="/assets/js/128.bff523e0.js"><link rel="prefetch" href="/assets/js/129.6d874134.js"><link rel="prefetch" href="/assets/js/13.b7a2e696.js"><link rel="prefetch" href="/assets/js/130.27ecf01a.js"><link rel="prefetch" href="/assets/js/131.271da5ba.js"><link rel="prefetch" href="/assets/js/132.77b954e5.js"><link rel="prefetch" href="/assets/js/133.7ec87ea9.js"><link rel="prefetch" href="/assets/js/134.41482d0a.js"><link rel="prefetch" href="/assets/js/135.9bb9090d.js"><link rel="prefetch" href="/assets/js/136.afb054c5.js"><link rel="prefetch" href="/assets/js/137.78e85fab.js"><link rel="prefetch" href="/assets/js/138.7b30e1df.js"><link rel="prefetch" href="/assets/js/139.a3eb663e.js"><link rel="prefetch" href="/assets/js/14.34da2ea7.js"><link rel="prefetch" href="/assets/js/140.c28342e1.js"><link rel="prefetch" href="/assets/js/141.b2c12178.js"><link rel="prefetch" href="/assets/js/142.b4c64f63.js"><link rel="prefetch" href="/assets/js/143.42bbb2b5.js"><link rel="prefetch" href="/assets/js/144.78422f6c.js"><link rel="prefetch" href="/assets/js/145.be9153a1.js"><link rel="prefetch" href="/assets/js/146.d941f41a.js"><link rel="prefetch" href="/assets/js/147.84300116.js"><link rel="prefetch" href="/assets/js/148.ddb29130.js"><link rel="prefetch" href="/assets/js/149.11f63f93.js"><link rel="prefetch" href="/assets/js/15.056d0b73.js"><link rel="prefetch" href="/assets/js/150.04922cf6.js"><link rel="prefetch" href="/assets/js/151.290d279d.js"><link rel="prefetch" href="/assets/js/152.ec8536b5.js"><link rel="prefetch" href="/assets/js/153.a4173dd7.js"><link rel="prefetch" href="/assets/js/154.d779c69e.js"><link rel="prefetch" href="/assets/js/155.3077f0a2.js"><link rel="prefetch" href="/assets/js/156.cdee6fa6.js"><link rel="prefetch" href="/assets/js/157.3f1d5a91.js"><link rel="prefetch" href="/assets/js/158.a6c22872.js"><link rel="prefetch" href="/assets/js/159.2c0184ca.js"><link rel="prefetch" href="/assets/js/16.fa07b758.js"><link rel="prefetch" href="/assets/js/160.5833a2f0.js"><link rel="prefetch" href="/assets/js/161.2c142f87.js"><link rel="prefetch" href="/assets/js/162.1266048f.js"><link rel="prefetch" href="/assets/js/163.4a5f7392.js"><link rel="prefetch" href="/assets/js/164.7a70881f.js"><link rel="prefetch" href="/assets/js/165.146513ec.js"><link rel="prefetch" href="/assets/js/166.2645f0ab.js"><link rel="prefetch" href="/assets/js/167.3aeb02bb.js"><link rel="prefetch" href="/assets/js/168.7629d5ff.js"><link rel="prefetch" href="/assets/js/169.d4d379e4.js"><link rel="prefetch" href="/assets/js/17.d916cef4.js"><link rel="prefetch" href="/assets/js/170.e0116c1f.js"><link rel="prefetch" href="/assets/js/171.caacdd8c.js"><link rel="prefetch" href="/assets/js/172.aa46a804.js"><link rel="prefetch" href="/assets/js/173.5eb08c7b.js"><link rel="prefetch" href="/assets/js/174.634bccf9.js"><link rel="prefetch" href="/assets/js/175.5c854bb9.js"><link rel="prefetch" href="/assets/js/176.4defa747.js"><link rel="prefetch" href="/assets/js/177.501bd009.js"><link rel="prefetch" href="/assets/js/178.3eac16d7.js"><link rel="prefetch" href="/assets/js/179.99f0fa6e.js"><link rel="prefetch" href="/assets/js/18.f1005fa3.js"><link rel="prefetch" href="/assets/js/180.a7d76a2f.js"><link rel="prefetch" href="/assets/js/181.f98a015d.js"><link rel="prefetch" href="/assets/js/182.bc4badf7.js"><link rel="prefetch" href="/assets/js/183.44be8c5d.js"><link rel="prefetch" href="/assets/js/184.f39a6b50.js"><link rel="prefetch" href="/assets/js/185.061272a9.js"><link rel="prefetch" href="/assets/js/186.abbb412a.js"><link rel="prefetch" href="/assets/js/187.34d77c25.js"><link rel="prefetch" href="/assets/js/188.c2220440.js"><link rel="prefetch" href="/assets/js/189.350abc46.js"><link rel="prefetch" href="/assets/js/19.d298d243.js"><link rel="prefetch" href="/assets/js/190.87f0fd7e.js"><link rel="prefetch" href="/assets/js/191.c5f01ac4.js"><link rel="prefetch" href="/assets/js/192.1302768c.js"><link rel="prefetch" href="/assets/js/193.23c582aa.js"><link rel="prefetch" href="/assets/js/194.74b791d1.js"><link rel="prefetch" href="/assets/js/195.4caf22e0.js"><link rel="prefetch" href="/assets/js/196.9b26c85f.js"><link rel="prefetch" href="/assets/js/197.19d33cff.js"><link rel="prefetch" href="/assets/js/198.b7b6ce3c.js"><link rel="prefetch" href="/assets/js/199.6f952b58.js"><link rel="prefetch" href="/assets/js/2.da16fb8b.js"><link rel="prefetch" href="/assets/js/20.06ba9109.js"><link rel="prefetch" href="/assets/js/200.5e4e9f49.js"><link rel="prefetch" href="/assets/js/201.3f355daa.js"><link rel="prefetch" href="/assets/js/202.3e2919b5.js"><link rel="prefetch" href="/assets/js/203.8585a9f8.js"><link rel="prefetch" href="/assets/js/204.86e09c32.js"><link rel="prefetch" href="/assets/js/205.a8c009b4.js"><link rel="prefetch" href="/assets/js/206.5a9c12c7.js"><link rel="prefetch" href="/assets/js/207.02dbf5d7.js"><link rel="prefetch" href="/assets/js/208.34468414.js"><link rel="prefetch" href="/assets/js/209.e021049b.js"><link rel="prefetch" href="/assets/js/21.5d4702e5.js"><link rel="prefetch" href="/assets/js/210.50f044d7.js"><link rel="prefetch" href="/assets/js/211.df88eea7.js"><link rel="prefetch" href="/assets/js/212.1a61778e.js"><link rel="prefetch" href="/assets/js/213.571cd7a5.js"><link rel="prefetch" href="/assets/js/214.b15e3796.js"><link rel="prefetch" href="/assets/js/215.c35ab00d.js"><link rel="prefetch" href="/assets/js/216.bbb38e4b.js"><link rel="prefetch" href="/assets/js/217.4cc8ce50.js"><link rel="prefetch" href="/assets/js/218.27e9a5dc.js"><link rel="prefetch" href="/assets/js/219.29152dfb.js"><link rel="prefetch" href="/assets/js/22.b29dff3f.js"><link rel="prefetch" href="/assets/js/220.b94a420d.js"><link rel="prefetch" href="/assets/js/221.3e1e3f07.js"><link rel="prefetch" href="/assets/js/222.610c9243.js"><link rel="prefetch" href="/assets/js/223.20324a9e.js"><link rel="prefetch" href="/assets/js/224.6a5c1a7b.js"><link rel="prefetch" href="/assets/js/225.d5981282.js"><link rel="prefetch" href="/assets/js/226.323ae76d.js"><link rel="prefetch" href="/assets/js/227.f8a80a3d.js"><link rel="prefetch" href="/assets/js/228.ba7673a9.js"><link rel="prefetch" href="/assets/js/229.331b64d1.js"><link rel="prefetch" href="/assets/js/23.5397bf05.js"><link rel="prefetch" href="/assets/js/230.4f9aab9d.js"><link rel="prefetch" href="/assets/js/231.85306ec0.js"><link rel="prefetch" href="/assets/js/232.d15e01b6.js"><link rel="prefetch" href="/assets/js/233.9d33c762.js"><link rel="prefetch" href="/assets/js/234.ac16a8ea.js"><link rel="prefetch" href="/assets/js/235.efeff7b8.js"><link rel="prefetch" href="/assets/js/236.67d274b8.js"><link rel="prefetch" href="/assets/js/237.6fae8904.js"><link rel="prefetch" href="/assets/js/238.719fb0d8.js"><link rel="prefetch" href="/assets/js/239.0f5c6dac.js"><link rel="prefetch" href="/assets/js/24.09719cb7.js"><link rel="prefetch" href="/assets/js/240.49c4e101.js"><link rel="prefetch" href="/assets/js/241.768b17f7.js"><link rel="prefetch" href="/assets/js/242.5372e06c.js"><link rel="prefetch" href="/assets/js/243.293366a2.js"><link rel="prefetch" href="/assets/js/244.3e49f572.js"><link rel="prefetch" href="/assets/js/245.cbdf8f5a.js"><link rel="prefetch" href="/assets/js/246.56a55dbe.js"><link rel="prefetch" href="/assets/js/247.3e4f7724.js"><link rel="prefetch" href="/assets/js/248.4fb11b1c.js"><link rel="prefetch" href="/assets/js/249.0caa7968.js"><link rel="prefetch" href="/assets/js/25.05ca3b89.js"><link rel="prefetch" href="/assets/js/250.e70797f8.js"><link rel="prefetch" href="/assets/js/251.ab153d87.js"><link rel="prefetch" href="/assets/js/252.3bca6b4e.js"><link rel="prefetch" href="/assets/js/253.0f0f05bf.js"><link rel="prefetch" href="/assets/js/254.31b0a826.js"><link rel="prefetch" href="/assets/js/255.dcd9479e.js"><link rel="prefetch" href="/assets/js/256.f4f3cbe7.js"><link rel="prefetch" href="/assets/js/257.87b5c111.js"><link rel="prefetch" href="/assets/js/258.a06a5792.js"><link rel="prefetch" href="/assets/js/259.00e7cf37.js"><link rel="prefetch" href="/assets/js/26.a9923aed.js"><link rel="prefetch" href="/assets/js/260.1b15d79f.js"><link rel="prefetch" href="/assets/js/261.7931ff8b.js"><link rel="prefetch" href="/assets/js/262.b79b03fd.js"><link rel="prefetch" href="/assets/js/263.7e7a7a69.js"><link rel="prefetch" href="/assets/js/264.a3362353.js"><link rel="prefetch" href="/assets/js/265.5f5b8f63.js"><link rel="prefetch" href="/assets/js/266.d132b970.js"><link rel="prefetch" href="/assets/js/267.b5e6046b.js"><link rel="prefetch" href="/assets/js/268.0f9d91d5.js"><link rel="prefetch" href="/assets/js/27.49d424f0.js"><link rel="prefetch" href="/assets/js/28.804b176d.js"><link rel="prefetch" href="/assets/js/29.73ad7742.js"><link rel="prefetch" href="/assets/js/30.4b7153eb.js"><link rel="prefetch" href="/assets/js/31.e2baa352.js"><link rel="prefetch" href="/assets/js/32.306f9a8b.js"><link rel="prefetch" href="/assets/js/33.86bba420.js"><link rel="prefetch" href="/assets/js/34.377cc87b.js"><link rel="prefetch" href="/assets/js/35.ccb29e89.js"><link rel="prefetch" href="/assets/js/36.ac3b170b.js"><link rel="prefetch" href="/assets/js/37.a6c86796.js"><link rel="prefetch" href="/assets/js/38.a863dc90.js"><link rel="prefetch" href="/assets/js/39.5bb1248d.js"><link rel="prefetch" href="/assets/js/40.c8f3e571.js"><link rel="prefetch" href="/assets/js/41.90c9a221.js"><link rel="prefetch" href="/assets/js/42.5e7a2243.js"><link rel="prefetch" href="/assets/js/43.4e6e2fa0.js"><link rel="prefetch" href="/assets/js/44.3f386908.js"><link rel="prefetch" href="/assets/js/45.9861347f.js"><link rel="prefetch" href="/assets/js/46.f1a56538.js"><link rel="prefetch" href="/assets/js/47.bfaf984a.js"><link rel="prefetch" href="/assets/js/48.8294d8ff.js"><link rel="prefetch" href="/assets/js/49.33f5b0f7.js"><link rel="prefetch" href="/assets/js/5.27bc9b2c.js"><link rel="prefetch" href="/assets/js/50.89ea98b4.js"><link rel="prefetch" href="/assets/js/51.ed9b70fc.js"><link rel="prefetch" href="/assets/js/52.a6368693.js"><link rel="prefetch" href="/assets/js/53.184d59c4.js"><link rel="prefetch" href="/assets/js/54.090ae4a9.js"><link rel="prefetch" href="/assets/js/55.e2476995.js"><link rel="prefetch" href="/assets/js/56.a22a1485.js"><link rel="prefetch" href="/assets/js/57.3075220f.js"><link rel="prefetch" href="/assets/js/58.452bfc36.js"><link rel="prefetch" href="/assets/js/59.8bd0bc93.js"><link rel="prefetch" href="/assets/js/6.4f220469.js"><link rel="prefetch" href="/assets/js/60.d0efd55d.js"><link rel="prefetch" href="/assets/js/61.616b58ab.js"><link rel="prefetch" href="/assets/js/62.a1ca26c4.js"><link rel="prefetch" href="/assets/js/63.6e7074ce.js"><link rel="prefetch" href="/assets/js/64.baaef4c5.js"><link rel="prefetch" href="/assets/js/65.544aafea.js"><link rel="prefetch" href="/assets/js/66.0cbcb512.js"><link rel="prefetch" href="/assets/js/67.30d4fb26.js"><link rel="prefetch" href="/assets/js/68.fb2c2c07.js"><link rel="prefetch" href="/assets/js/69.eee868b7.js"><link rel="prefetch" href="/assets/js/7.67093bab.js"><link rel="prefetch" href="/assets/js/70.47f4314b.js"><link rel="prefetch" href="/assets/js/71.e61b917c.js"><link rel="prefetch" href="/assets/js/72.bc2c0cbe.js"><link rel="prefetch" href="/assets/js/73.bec5088f.js"><link rel="prefetch" href="/assets/js/74.76623c2b.js"><link rel="prefetch" href="/assets/js/75.ce6f8500.js"><link rel="prefetch" href="/assets/js/76.400e0887.js"><link rel="prefetch" href="/assets/js/77.d4fcbd2b.js"><link rel="prefetch" href="/assets/js/78.fea867a9.js"><link rel="prefetch" href="/assets/js/79.f7238bc4.js"><link rel="prefetch" href="/assets/js/8.c2aa376e.js"><link rel="prefetch" href="/assets/js/80.db5ced4a.js"><link rel="prefetch" href="/assets/js/81.949eaaaf.js"><link rel="prefetch" href="/assets/js/82.1fa9be34.js"><link rel="prefetch" href="/assets/js/83.3a6f83cc.js"><link rel="prefetch" href="/assets/js/84.35fb63b7.js"><link rel="prefetch" href="/assets/js/85.4ff3d26e.js"><link rel="prefetch" href="/assets/js/86.7e761e5a.js"><link rel="prefetch" href="/assets/js/87.da4a560d.js"><link rel="prefetch" href="/assets/js/88.d4678a0e.js"><link rel="prefetch" href="/assets/js/89.8f257cba.js"><link rel="prefetch" href="/assets/js/9.821e10b0.js"><link rel="prefetch" href="/assets/js/90.c544ed8b.js"><link rel="prefetch" href="/assets/js/91.b69a1698.js"><link rel="prefetch" href="/assets/js/92.02e15344.js"><link rel="prefetch" href="/assets/js/93.08fe83ef.js"><link rel="prefetch" href="/assets/js/94.7239b1d9.js"><link rel="prefetch" href="/assets/js/95.8c442a25.js"><link rel="prefetch" href="/assets/js/96.08670966.js"><link rel="prefetch" href="/assets/js/97.730b22df.js"><link rel="prefetch" href="/assets/js/98.676f0c52.js"><link rel="prefetch" href="/assets/js/99.330aee19.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.199c727d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Web Developer</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个性学习" class="dropdown-title"><span class="title">个性学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="个性学习" class="mobile-dropdown-title"><span class="title">个性学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          个人博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Blog/Frontend/" class="nav-link">
+  前端博客
+</a></li><li class="dropdown-subitem"><a href="/Blog/Format/" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-subitem"><a href="/Blog/Admin/" class="nav-link">
+  后台管理
+</a></li><li class="dropdown-subitem"><a href="/Blog/Effect/" class="nav-link">
+  搞点特效
+</a></li><li class="dropdown-subitem"><a href="/Blog/Chore/" class="nav-link">
+  折腾一下
+</a></li></ul></li><li class="dropdown-item"><h4>
+          源码学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/SourceCode/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vite/" class="nav-link">
+  Vite
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue2/" class="nav-link">
+  Vue2
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue3/" class="nav-link">
+  Vue3
+</a></li></ul></li><li class="dropdown-item"><h4>
+          常用工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Tool/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/Tool/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-subitem"><a href="/Tool/Linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/Tool/Docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-subitem"><a href="/Tool/Nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-subitem"><a href="/Tool/Npm/" class="nav-link">
+  Npm
+</a></li><li class="dropdown-subitem"><a href="/Tool/Puppeteer/" class="nav-link">
+  Puppeteer
+</a></li><li class="dropdown-subitem"><a href="/Tool/VSCode/" class="nav-link">
+  VSCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="系统学习" class="dropdown-title"><span class="title">系统学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="系统学习" class="mobile-dropdown-title"><span class="title">系统学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Computer/Science/" class="nav-link">
+  计算机科学导论
+</a></li><li class="dropdown-subitem"><a href="/Computer/System/" class="nav-link">
+  计算机操作系统
+</a></li><li class="dropdown-subitem"><a href="/Computer/Network/" class="nav-link">
+  计算机网络
+</a></li></ul></li><li class="dropdown-item"><h4>
+          在线书籍
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Book/Handbook/" class="nav-link">
+  禅道 程序员生存手册
+</a></li><li class="dropdown-subitem"><a href="/Book/Refactoring2/" class="nav-link">
+  重构 改善既有代码的设计
+</a></li></ul></li><li class="dropdown-item"><h4>
+          学习笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Study/CSS-World/" class="nav-link">
+  CSS世界
+</a></li><li class="dropdown-subitem"><a href="/Study/CSS-New-World/" class="nav-link">
+  CSS新世界
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Houdunren/" class="nav-link">
+  JS后端人视频教程
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Advanced/" class="nav-link">
+  JS高级程序设计
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Pattern/" class="nav-link">
+  JS设计模式与开发实践
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Structure-Algo/" class="nav-link">
+  JS数据结构与算法
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言" class="dropdown-title"><span class="title">编程语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言" class="mobile-dropdown-title"><span class="title">编程语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Language/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Language/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/Language/PHP/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-subitem"><a href="/Language/Node/" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Assembly/" class="nav-link router-link-active">
+  Assembly
+</a></li><li class="dropdown-subitem"><a href="/Language/C/" class="nav-link">
+  C
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="解决方案" class="dropdown-title"><span class="title">解决方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="解决方案" class="mobile-dropdown-title"><span class="title">解决方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          打包工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Bundle/WebPack/" class="nav-link">
+  WebPack
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/VueCLI/" class="nav-link">
+  VueCLI
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/Vite/" class="nav-link">
+  Vite
+</a></li></ul></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/React/" class="nav-link">
+  React
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue2/" class="nav-link">
+  Vue2.x
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue-Router/" class="nav-link">
+  Vue Router
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vuex/" class="nav-link">
+  Vuex
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Jest/" class="nav-link">
+  Jest
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Nuxt/" class="nav-link">
+  Nuxt
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/VueConf/" class="nav-link">
+  VueConf
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue3/" class="nav-link">
+  Vue3.x
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="领域技术" class="dropdown-title"><span class="title">领域技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="领域技术" class="mobile-dropdown-title"><span class="title">领域技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          通用技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Web/HTTP/" class="nav-link">
+  HTTP
+</a></li><li class="dropdown-subitem"><a href="/Web/WebSocket/" class="nav-link">
+  WebSocket
+</a></li><li class="dropdown-subitem"><a href="/Web/WebRTC/" class="nav-link">
+  WebRTC
+</a></li><li class="dropdown-subitem"><a href="/Web/WebAssembly/" class="nav-link">
+  WebAssembly
+</a></li></ul></li><li class="dropdown-item"><h4>
+          图形技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Graph/SVG/" class="nav-link">
+  SVG
+</a></li><li class="dropdown-subitem"><a href="/Graph/Canvas/" class="nav-link">
+  Canvas
+</a></li><li class="dropdown-subitem"><a href="/Graph/WebGL/" class="nav-link">
+  WebGL
+</a></li><li class="dropdown-subitem"><a href="/Graph/ZRender/" class="nav-link">
+  ZRender
+</a></li><li class="dropdown-subitem"><a href="/Graph/Echarts/" class="nav-link">
+  Echarts
+</a></li><li class="dropdown-subitem"><a href="/Graph/Draw2D/" class="nav-link">
+  Draw2D
+</a></li><li class="dropdown-subitem"><a href="/Graph/LiteGraph/" class="nav-link">
+  LiteGraph
+</a></li></ul></li><li class="dropdown-item"><h4>
+          音视频技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Media/Audio/" class="nav-link">
+  Audio
+</a></li><li class="dropdown-subitem"><a href="/Solution/Media/FFmpeg/" class="nav-link">
+  FFmpeg
+</a></li></ul></li><li class="dropdown-item"><h4>
+          数据库技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/DataBase/LowDB/" class="nav-link">
+  LowDB
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/SQLite/" class="nav-link">
+  SQLite
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/MySQL/" class="nav-link">
+  MySQL
+</a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个性学习" class="dropdown-title"><span class="title">个性学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="个性学习" class="mobile-dropdown-title"><span class="title">个性学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          个人博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Blog/Frontend/" class="nav-link">
+  前端博客
+</a></li><li class="dropdown-subitem"><a href="/Blog/Format/" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-subitem"><a href="/Blog/Admin/" class="nav-link">
+  后台管理
+</a></li><li class="dropdown-subitem"><a href="/Blog/Effect/" class="nav-link">
+  搞点特效
+</a></li><li class="dropdown-subitem"><a href="/Blog/Chore/" class="nav-link">
+  折腾一下
+</a></li></ul></li><li class="dropdown-item"><h4>
+          源码学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/SourceCode/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vite/" class="nav-link">
+  Vite
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue2/" class="nav-link">
+  Vue2
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue3/" class="nav-link">
+  Vue3
+</a></li></ul></li><li class="dropdown-item"><h4>
+          常用工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Tool/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/Tool/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-subitem"><a href="/Tool/Linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/Tool/Docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-subitem"><a href="/Tool/Nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-subitem"><a href="/Tool/Npm/" class="nav-link">
+  Npm
+</a></li><li class="dropdown-subitem"><a href="/Tool/Puppeteer/" class="nav-link">
+  Puppeteer
+</a></li><li class="dropdown-subitem"><a href="/Tool/VSCode/" class="nav-link">
+  VSCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="系统学习" class="dropdown-title"><span class="title">系统学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="系统学习" class="mobile-dropdown-title"><span class="title">系统学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Computer/Science/" class="nav-link">
+  计算机科学导论
+</a></li><li class="dropdown-subitem"><a href="/Computer/System/" class="nav-link">
+  计算机操作系统
+</a></li><li class="dropdown-subitem"><a href="/Computer/Network/" class="nav-link">
+  计算机网络
+</a></li></ul></li><li class="dropdown-item"><h4>
+          在线书籍
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Book/Handbook/" class="nav-link">
+  禅道 程序员生存手册
+</a></li><li class="dropdown-subitem"><a href="/Book/Refactoring2/" class="nav-link">
+  重构 改善既有代码的设计
+</a></li></ul></li><li class="dropdown-item"><h4>
+          学习笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Study/CSS-World/" class="nav-link">
+  CSS世界
+</a></li><li class="dropdown-subitem"><a href="/Study/CSS-New-World/" class="nav-link">
+  CSS新世界
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Houdunren/" class="nav-link">
+  JS后端人视频教程
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Advanced/" class="nav-link">
+  JS高级程序设计
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Pattern/" class="nav-link">
+  JS设计模式与开发实践
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Structure-Algo/" class="nav-link">
+  JS数据结构与算法
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言" class="dropdown-title"><span class="title">编程语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言" class="mobile-dropdown-title"><span class="title">编程语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Language/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Language/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/Language/PHP/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-subitem"><a href="/Language/Node/" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Assembly/" class="nav-link router-link-active">
+  Assembly
+</a></li><li class="dropdown-subitem"><a href="/Language/C/" class="nav-link">
+  C
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="解决方案" class="dropdown-title"><span class="title">解决方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="解决方案" class="mobile-dropdown-title"><span class="title">解决方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          打包工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Bundle/WebPack/" class="nav-link">
+  WebPack
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/VueCLI/" class="nav-link">
+  VueCLI
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/Vite/" class="nav-link">
+  Vite
+</a></li></ul></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/React/" class="nav-link">
+  React
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue2/" class="nav-link">
+  Vue2.x
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue-Router/" class="nav-link">
+  Vue Router
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vuex/" class="nav-link">
+  Vuex
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Jest/" class="nav-link">
+  Jest
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Nuxt/" class="nav-link">
+  Nuxt
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/VueConf/" class="nav-link">
+  VueConf
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue3/" class="nav-link">
+  Vue3.x
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="领域技术" class="dropdown-title"><span class="title">领域技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="领域技术" class="mobile-dropdown-title"><span class="title">领域技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          通用技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Web/HTTP/" class="nav-link">
+  HTTP
+</a></li><li class="dropdown-subitem"><a href="/Web/WebSocket/" class="nav-link">
+  WebSocket
+</a></li><li class="dropdown-subitem"><a href="/Web/WebRTC/" class="nav-link">
+  WebRTC
+</a></li><li class="dropdown-subitem"><a href="/Web/WebAssembly/" class="nav-link">
+  WebAssembly
+</a></li></ul></li><li class="dropdown-item"><h4>
+          图形技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Graph/SVG/" class="nav-link">
+  SVG
+</a></li><li class="dropdown-subitem"><a href="/Graph/Canvas/" class="nav-link">
+  Canvas
+</a></li><li class="dropdown-subitem"><a href="/Graph/WebGL/" class="nav-link">
+  WebGL
+</a></li><li class="dropdown-subitem"><a href="/Graph/ZRender/" class="nav-link">
+  ZRender
+</a></li><li class="dropdown-subitem"><a href="/Graph/Echarts/" class="nav-link">
+  Echarts
+</a></li><li class="dropdown-subitem"><a href="/Graph/Draw2D/" class="nav-link">
+  Draw2D
+</a></li><li class="dropdown-subitem"><a href="/Graph/LiteGraph/" class="nav-link">
+  LiteGraph
+</a></li></ul></li><li class="dropdown-item"><h4>
+          音视频技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Media/Audio/" class="nav-link">
+  Audio
+</a></li><li class="dropdown-subitem"><a href="/Solution/Media/FFmpeg/" class="nav-link">
+  FFmpeg
+</a></li></ul></li><li class="dropdown-item"><h4>
+          数据库技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/DataBase/LowDB/" class="nav-link">
+  LowDB
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/SQLite/" class="nav-link">
+  SQLite
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/MySQL/" class="nav-link">
+  MySQL
+</a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Language/Assembly/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/Language/Assembly/01-基础知识.html" class="sidebar-link">基础知识</a></li><li><a href="/Language/Assembly/02-寄存器.html" class="sidebar-link">寄存器</a></li><li><a href="/Language/Assembly/03-内存访问.html" class="sidebar-link">内存访问</a></li><li><a href="/Language/Assembly/04-第一个程序.html" class="sidebar-link">第一个程序</a></li><li><a href="/Language/Assembly/05-如何实现循环.html" class="sidebar-link">如何实现循环</a></li><li><a href="/Language/Assembly/18-速查笔记.html" class="active sidebar-link">速查笔记</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Language/Assembly/18-速查笔记.html#汇编语言速记速查" class="sidebar-link">汇编语言速记速查</a></li><li class="sidebar-sub-header"><a href="/Language/Assembly/18-速查笔记.html#指令集" class="sidebar-link">指令集</a></li><li class="sidebar-sub-header"><a href="/Language/Assembly/18-速查笔记.html#程序语言" class="sidebar-link">程序语言</a></li><li class="sidebar-sub-header"><a href="/Language/Assembly/18-速查笔记.html#数字编码" class="sidebar-link">数字编码</a></li><li class="sidebar-sub-header"><a href="/Language/Assembly/18-速查笔记.html#寄存器结构" class="sidebar-link">寄存器结构</a></li><li class="sidebar-sub-header"><a href="/Language/Assembly/18-速查笔记.html#指令系统" class="sidebar-link">指令系统</a></li><li class="sidebar-sub-header"><a href="/Language/Assembly/18-速查笔记.html#中断向量" class="sidebar-link">中断向量</a></li></ul></li><li><a href="/Language/Assembly/19-程序习题.html" class="sidebar-link">程序习题</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="汇编语言速记速查"><a href="#汇编语言速记速查" class="header-anchor">#</a> 汇编语言速记速查</h2> <h2 id="指令集"><a href="#指令集" class="header-anchor">#</a> 指令集</h2> <table><thead><tr><th>指令集</th> <th>全称</th> <th>含义</th> <th>代表</th></tr></thead> <tbody><tr><td>CISC</td> <td></td> <td>复杂指令集</td> <td>Inter X86</td></tr> <tr><td>RISC</td> <td></td> <td>精简指令集</td> <td>ARM、MIPS、RISC-V</td></tr></tbody></table> <h2 id="程序语言"><a href="#程序语言" class="header-anchor">#</a> 程序语言</h2> <table><thead><tr><th>程序设计语言</th> <th>举例</th></tr></thead> <tbody><tr><td>机器语言</td> <td>0101010101010</td></tr> <tr><td>汇编语言</td> <td>mov ax bx</td></tr> <tr><td>高级语言</td> <td>for(int i=0; i&lt;arr.length;i++)</td></tr></tbody></table> <h2 id="数字编码"><a href="#数字编码" class="header-anchor">#</a> 数字编码</h2> <table><thead><tr><th>数字编码</th> <th>正数</th> <th>负数</th></tr></thead> <tbody><tr><td>[X]原=符号位~数值位</td> <td>正数的符号位是 0</td> <td>负数的符号位是 1</td></tr> <tr><td>[X]反</td> <td>正数[X]反=[X]原</td> <td>负数[X]反=符号位保持~数值位取反</td></tr> <tr><td>[X]补</td> <td>正数[X]补=[X]原</td> <td>负数[X]补=[X]反+1</td></tr> <tr><td>运算</td> <td></td> <td>负数[X]原=[[X]补]补</td></tr></tbody></table> <div class="language- extra-class"><pre class="language-text"><code>原码：用一个二进制位来表示符号，剩下部分表示数值
+[X1]机=01010100
+[X1]真值=+1010100=+84
+反码：为了把减法运算转换为加法运算，引入了反码和补码
+正数[X]反=[X]原
+负数[X]反=符号位保持~数值位取反
+补码：补码和”模“有关，任何有“模”的计量器，均可化减法为加法运算
+[A]补+[B]补=[A+B]补
+[A+B]补为正数时，[A+B]补的数值即为真值
+[A+B]补为负数时，对[A+B]补的数值进行“求反+1”得到真值
+</code></pre></div><h2 id="寄存器结构"><a href="#寄存器结构" class="header-anchor">#</a> 寄存器结构</h2> <table><thead><tr><th>通用寄存器 16bit</th> <th></th> <th></th> <th></th></tr></thead> <tbody><tr><td>AX</td> <td>累加器</td> <td>存放中断控制字</td> <td>乘(除)法运算作为乘(除)数</td></tr> <tr><td>BX</td> <td>基址寄存器</td> <td>查表时做基址（表相对数据段的偏移地址）</td> <td></td></tr> <tr><td>CX</td> <td>计数寄存器</td> <td>处理字符串和移位指令时，作为计数器</td> <td></td></tr> <tr><td>DX</td> <td>数据寄存器</td> <td>常用于输入输出</td> <td></td></tr></tbody></table> <table><thead><tr><th>段寄存器 16bit</th> <th></th> <th></th></tr></thead> <tbody><tr><td>CS</td> <td>程序段寄存器</td> <td>指向程序段在内存中的基地址</td></tr> <tr><td>DS</td> <td>数据段寄存器</td> <td>指向数据段基地址，操作字符串时放源串基址</td></tr> <tr><td>ES</td> <td>附加数据段寄存器</td> <td>指向附加段基地址，操作字符串时放目的基址</td></tr> <tr><td>SS</td> <td>堆栈段寄存器</td> <td>指向堆栈段基地址</td></tr> <tr><td>IP</td> <td>指令指针寄存器</td> <td>程序运行时自动变化，指向下一条指令的地址</td></tr> <tr><td>SI</td> <td>补充 bx 做偏移地址寄存器</td> <td>字符串运算时做源串变址</td></tr> <tr><td>DI</td> <td>补充 bx 做偏移地址寄存器</td> <td>字符串运算时做目的变址</td></tr> <tr><td>BP</td> <td>基址指针寄存器</td> <td>指明数据在堆栈段中的偏移地址</td></tr> <tr><td>SP</td> <td>堆栈指针寄存器</td> <td>指向栈顶位置</td></tr> <tr><td></td> <td></td> <td></td></tr></tbody></table> <table><thead><tr><th>标志寄存器 16bit</th> <th></th> <th></th></tr></thead> <tbody><tr><td>FR</td> <td>标志寄存器</td> <td>16 位寄存器，9 个有效位存放状态标志和控制标志</td></tr></tbody></table> <h2 id="指令系统"><a href="#指令系统" class="header-anchor">#</a> 指令系统</h2> <h3 id="数据传送-dst-目的操作数-src-源操作数"><a href="#数据传送-dst-目的操作数-src-源操作数" class="header-anchor">#</a> 数据传送 (DST 目的操作数 SRC 源操作数)</h3> <table><thead><tr><th>数据传送指令</th> <th></th> <th></th> <th></th></tr></thead> <tbody><tr><td>MOV DST,SRC</td> <td>move</td> <td>赋值指令</td> <td>8bit 或 16bit 寄存器&lt;=8bit 或 16bit 寄存器或立即数</td></tr> <tr><td>PUSH SRC</td> <td>push</td> <td>入栈指令</td> <td>只能是对“字”操作，高位放高字节，低位放低字节</td></tr> <tr><td>POP DST</td> <td>pop</td> <td>出栈指令</td> <td>只能是对“字”操作，8086 满递减堆栈，栈顶 FFH</td></tr> <tr><td>XCHG DST,SRC</td> <td>change</td> <td>交换指令</td> <td>8bit 或 16bit 寄存器&lt;=&gt;8bit 或 16bit 寄存器</td></tr> <tr><td>IN IO,SRC</td> <td>input</td> <td>输入指令</td> <td>端口数据传寄存器，寄存器&lt;--端口地址</td></tr> <tr><td>OUT DST,IO</td> <td>output</td> <td>输出指令</td> <td>寄存器数据传端口，寄存器--&gt;端口地址</td></tr> <tr><td>XLAT TABLE</td> <td></td> <td>查表指令</td> <td>AL&lt;=DS:[BX+AL]，需指定 AL 为下标，BX 为表的基地址</td></tr></tbody></table> <div class="language- extra-class"><pre class="language-text"><code>假设数据段DS基地址是：2000H，BX获取表格相对DS的基地址是：0100H，那么实际上BX指向的单元在整个内存中的地址是：20100H；
+MOV BX,OFFSET TABLE		BX&lt;--表格对DS的偏移地址(又称表格的基地址)
+IN AL,1					AL&lt;--从地址为1的端口读取的数据
+XLAT TABLE				AL&lt;--DS:[BX+AL]
+OUT 5,AL				地址为5的端口输出的数据&lt;--AL
+</code></pre></div><h3 id="地址传送-reg-寄存器-mem-内存"><a href="#地址传送-reg-寄存器-mem-内存" class="header-anchor">#</a> 地址传送 (REG 寄存器，MEM 内存)</h3> <table><thead><tr><th>地址传送指令</th> <th></th> <th></th> <th></th></tr></thead> <tbody><tr><td>LEA REG,MEM</td> <td>Load Effective Address</td> <td>传送偏移地址</td> <td>REG&lt;=MEM 的偏移地址</td></tr> <tr><td>LDS REG,MEM</td> <td>Load pointer into DS</td> <td>传送地址指针</td> <td>段地址传 DS，偏移传 REG</td></tr> <tr><td>LES REG,MEM</td> <td>Load pointer into ES</td> <td>传送地址指针</td> <td>段地址传 ES，偏移传 REG</td></tr></tbody></table> <h3 id="标志传送"><a href="#标志传送" class="header-anchor">#</a> 标志传送</h3> <table><thead><tr><th>标志传送指令（PSW 标志寄存器）</th> <th></th> <th></th></tr></thead> <tbody><tr><td>LAHF</td> <td>Load AH with flag</td> <td>AH&lt;=PSW 低 8bit</td></tr> <tr><td>SAHF</td> <td>store AH with flag</td> <td>PSW 低 8bit&lt;=AH</td></tr> <tr><td>PUSHF</td> <td>Push flag</td> <td>PSW 入栈</td></tr> <tr><td>POPF</td> <td>Pop flag</td> <td>出栈传 PSW</td></tr></tbody></table> <h3 id="算术运算"><a href="#算术运算" class="header-anchor">#</a> 算术运算</h3> <table><thead><tr><th style="text-align:left;">加法</th> <th></th> <th></th></tr></thead> <tbody><tr><td style="text-align:left;">ADD DST,SRC</td> <td>加法指令</td> <td>DST &lt;= DST+SRC</td></tr> <tr><td style="text-align:left;">ADC DST,SRC</td> <td>带进位加法</td> <td>DST &lt;= DST + SRC + CF</td></tr> <tr><td style="text-align:left;">INC DST</td> <td>自加一指令</td> <td>DST &lt;= DST + 1</td></tr></tbody></table> <table><thead><tr><th>减法</th> <th></th> <th></th></tr></thead> <tbody><tr><td>SUB DST,SRC</td> <td>减法指令</td> <td>DST &lt;= DST - SRC</td></tr> <tr><td>SBB DST,SRC</td> <td>带借位减法</td> <td>DST &lt;= DST - SRC - CF</td></tr> <tr><td>DEC DST</td> <td>自减一指令</td> <td>DST &lt;= DST - 1</td></tr> <tr><td>NEG REG</td> <td>求补指令</td> <td>REG&lt;= 0 - REG ，负数[X]补=[X]反+1</td></tr> <tr><td>CMP DST,SRC</td> <td>比较指令</td> <td>DST - SRC，只影响标志寄存器，不改变数值</td></tr></tbody></table> <table><thead><tr><th>乘法</th> <th></th> <th></th></tr></thead> <tbody><tr><td>MUL SRC</td> <td>无符号乘法</td> <td>(AX) &lt;=(AL8) * (SRC8), (DX:AX) &lt;= (AX16) *(SRC16)</td></tr> <tr><td>IMUL SRC</td> <td>带符号乘法</td> <td></td></tr></tbody></table> <table><thead><tr><th>除法</th> <th></th> <th></th></tr></thead> <tbody><tr><td>DIV SRC</td> <td>无符号除法</td> <td>(AL%AH) &lt;= (AX16)/(SRC8), (AX%DX)&lt;=(DX:AX)/(SRC16)</td></tr> <tr><td>IDIV SRC</td> <td>带符号除法</td> <td></td></tr></tbody></table> <table><thead><tr><th>拓展</th> <th></th> <th></th></tr></thead> <tbody><tr><td>CBW</td> <td>byte--&gt;word</td> <td>将 AL 保持原值（有符号数）扩展到 AX，8--&gt;16，按最高位补相同数</td></tr> <tr><td>CWD</td> <td>word--&gt;double</td> <td>将 AX 保持原值（有符号数）扩展到 DX,AX，16--&gt;32，按最高位补相同数</td></tr></tbody></table> <h3 id="逻辑运算"><a href="#逻辑运算" class="header-anchor">#</a> 逻辑运算</h3> <table><thead><tr><th>基本逻辑</th> <th></th> <th></th></tr></thead> <tbody><tr><td>AND DST,SRC</td> <td>按位“与”</td> <td>DST &lt;= DST AND SRC</td></tr> <tr><td>OR DST,SRC</td> <td>按位“或”</td> <td>DST &lt;= DST OR SRC</td></tr> <tr><td>NOT DST</td> <td>按位“非”</td> <td>DST &lt;= NOT DST</td></tr> <tr><td>XOR DST,SRC</td> <td>按位“异或”</td> <td>DST &lt;= DST XOR SRC</td></tr> <tr><td>TEST DST,SRC</td> <td>测试指令</td> <td>DST AND SRC，只影响标志寄存器</td></tr></tbody></table> <table><thead><tr><th>移位运算</th> <th>将 SRC 顺序移动 1 位或 CL 寄存器中指定的位数</th> <th></th></tr></thead> <tbody><tr><td>SHL SRC 1/CL</td> <td>逻辑左移</td> <td></td></tr> <tr><td>SAL SRC,1/CL</td> <td>算术左移</td> <td></td></tr> <tr><td>SHR SRC,1/CL</td> <td>逻辑右移</td> <td></td></tr> <tr><td>SAR SRC,1/CL</td> <td>算术右移，算数右移时，最高位保持不变</td> <td></td></tr> <tr><td>ROL SRC,1/CL</td> <td>循环左移</td> <td></td></tr> <tr><td>ROR SRC,1/CL</td> <td>循环右移</td> <td></td></tr> <tr><td>RCL SRC,1/CL</td> <td>带进位循环左移，原先状态位 CF 的值移入 SRC 的最低位</td> <td></td></tr> <tr><td>RCR SRC,1/CL</td> <td>带进位循环右移，原先状态位 CF 的值移入 SRC 的最高位</td> <td></td></tr></tbody></table> <table><thead><tr><th>串操作</th> <th></th> <th></th></tr></thead> <tbody><tr><td>REP MOVSB/MOVSW</td> <td>串传送</td> <td>[(ES:DI)]&lt;=[(DS:SI)]</td></tr> <tr><td>REP CMPSB/SMPSW</td> <td>串比较</td> <td>[(ES:DI)]-[(DS:SI)]</td></tr> <tr><td>REP SCASB/SCASW</td> <td>串搜索（匹配）</td> <td>AL-[(ES:DI)]</td></tr> <tr><td>REP STOSB/STOSW</td> <td>串存储</td> <td>[(ES:DI)]&lt;=AL</td></tr> <tr><td>REP LODSB/LODSW</td> <td>串读取</td> <td>AL&lt;=[(DS:SI)]</td></tr></tbody></table> <div class="language- extra-class"><pre class="language-text"><code>字符串传送，比较，搜索(匹配)，本质上是循环，[(ES:DI+ADD)]&lt;=[(DS:SI+ADD)] CX从100到0 ADD根据DF标志决定自增还是自减
+MOV SI,1000H			设置源串偏移地址
+MOV DI,2000H			设置目的偏移地址
+MOV CX,100				设置字符串长度
+CLD 					方向标志复位，DF=0，地址向高处增长
+REP MOVSB				开始传送字符串
+</code></pre></div><h3 id="程序控制"><a href="#程序控制" class="header-anchor">#</a> 程序控制</h3> <table><thead><tr><th>跳转指令</th> <th></th> <th></th></tr></thead> <tbody><tr><td>JMP ADDRESS</td> <td>无条件转移</td> <td>无条件跳转到 ADDRESS</td></tr> <tr><td>JZ/JC/JO/JS/JP EX</td> <td></td> <td>当 ZF /CF/OF/SF/PF= 1 时，跳转到 EX</td></tr> <tr><td>JNZ/JNC/JNO/JNS /JNP EX</td> <td></td> <td>当 ZF /CF/OF/SF/PF= 0 时，跳转到 EX</td></tr> <tr><td>JCXZ EX</td> <td>测试转移</td> <td>若 CX = 0，则跳转到 EX (计数器转移，循环)</td></tr></tbody></table> <table><thead><tr><th>循环指令</th> <th></th> <th></th></tr></thead> <tbody><tr><td>LOOP</td> <td>指定 CX 数值后循环 CX 数值次数</td> <td></td></tr> <tr><td>LOOPE/LOOPZ</td> <td>需满足 ZF=1 时循环</td> <td></td></tr> <tr><td>LOOPNE/LOOPNZ</td> <td>需满足 ZF=0 时循环</td> <td></td></tr></tbody></table> <table><thead><tr><th>中断</th> <th></th> <th></th></tr></thead> <tbody><tr><td>INT n</td> <td></td> <td>CPU 转入 n 号中断服务子程序</td></tr> <tr><td>IRET</td> <td>中断返回指令</td> <td>退出中断程序返回主程序断点处</td></tr></tbody></table> <table><thead><tr><th>子程序</th> <th></th> <th></th></tr></thead> <tbody><tr><td>CALL EX/NEAR</td> <td>IP 入栈，子程序的入口地址的位移量 --&gt;IP，CPU 执行子程序</td> <td></td></tr> <tr><td>RET （Num）</td> <td>将栈顶元素出栈 --&gt; IP，将 SP 向高地址移动 Num 位</td> <td></td></tr> <tr><td>标志操作</td> <td></td> <td></td></tr> <tr><td>CLC/STC/SMC</td> <td>CF 清零/置 1/取反</td> <td></td></tr> <tr><td>CLD/STD</td> <td>DF 清零/置 1</td> <td></td></tr> <tr><td>CLI/STI</td> <td>IF=0 不允许中断/IF=1 允许中断</td> <td></td></tr></tbody></table> <table><thead><tr><th>处理器操作</th> <th></th> <th></th></tr></thead> <tbody><tr><td><code>HLT</code></td> <td></td> <td>使处理器处于停止</td></tr> <tr><td><code>WAIT</code></td> <td></td> <td>使处理器处于等待</td></tr> <tr><td><code>NOP</code></td> <td></td> <td>空操作，用于延时</td></tr> <tr><td><code>LOCK</code></td> <td></td> <td>封锁总线指令，可前缀</td></tr> <tr><td><code>ESC</code></td> <td></td> <td>让协处理器取指令</td></tr></tbody></table> <h3 id="伪指令"><a href="#伪指令" class="header-anchor">#</a> 伪指令</h3> <table><thead><tr><th>符号定义(类似 C 语言宏定义)</th> <th></th> <th></th></tr></thead> <tbody><tr><td><code>SIGN EQU num/SRC</code></td> <td><code>sign</code> 被赋值为 <code>num/SIGN</code>被定义为<code>SRC</code>寄存器</td> <td></td></tr> <tr><td><code>SIGN = num</code></td> <td><code>sign</code> 被赋值为 <code>num</code>，可重复使用</td> <td></td></tr> <tr><td></td> <td></td> <td></td></tr></tbody></table> <table><thead><tr><th>数据定义</th> <th></th> <th></th></tr></thead> <tbody><tr><td>DATANAME DB num1,num2....</td> <td>分配字节空间，同时初始化数据</td> <td></td></tr> <tr><td>DATANAME DW num#16</td> <td>分配字空间，同时初始化数据</td> <td></td></tr> <tr><td>DATANAME DB ?</td> <td>分配空间，不进行初始化</td> <td></td></tr> <tr><td>DATANAME DB 'string'</td> <td>分配空间，按地址递增放入 ASCII 码</td> <td></td></tr> <tr><td>DATANAME DB NUM DUP (num)</td> <td>分配 NUM 字节空间，重复初始化 num</td> <td></td></tr></tbody></table> <table><thead><tr><th>过程定义</th> <th></th> <th></th></tr></thead> <tbody><tr><td>PRONAME PROC FAT/NEAR</td> <td>过程名不能省略，过程类型为 FAR 或 NEAR</td> <td></td></tr> <tr><td>RET</td> <td>返回被调用处</td> <td></td></tr> <tr><td>PRONAME ENDP</td> <td>表示过程结束</td> <td></td></tr> <tr><td>CALL PRONAME</td> <td>调用过程（子程序）</td> <td></td></tr> <tr><td>ORG ADDRESS</td> <td>指定 IP 到 address，后面代码的起始偏移地址为 address</td> <td></td></tr></tbody></table> <h2 id="中断向量"><a href="#中断向量" class="header-anchor">#</a> 中断向量</h2> <p>21h</p> <p>10h</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Language/Assembly/05-如何实现循环.html" class="prev">
+        如何实现循环
+      </a></span> <span class="next"><a href="/Language/Assembly/19-程序习题.html">
+        程序习题
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.0700b199.js" defer></script><script src="/assets/js/4.85800d9b.js" defer></script><script src="/assets/js/121.c0e8837b.js" defer></script>
+  </body>
+</html>

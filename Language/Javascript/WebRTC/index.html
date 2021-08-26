@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>WebRTC | Web Developer</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css">
+    <link rel="stylesheet" href="//www.gausszhou.top/source/data/css/litegraph-topo.css">
+    <srcipt src="//cdn.bootcdn.net/ajax/libs/zrender/5.1.1/zrender.min.js"></srcipt>
+    <meta name="description" content="Gauss Zhou's Web Developer Note">
+    <meta name="keywords" content="gausszhou , Gauss Zhou , Web , develop ,technical , knowledge">
+    <meta name="author" content="Gauss Zhou">
+    <meta name="og:title" content="Web Develop">
+    <meta name="og:type" content="website">
+    <meta name="og:description" content="Gauss Zhou's Web Developer Note">
+    <meta name="baidu-site-verification" content="">
+    <meta name="msvalidate.01" content="">
+    <meta name="google-site-verification" content="">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="7">
+    
+    <link rel="preload" href="/assets/css/0.styles.199c727d.css" as="style"><link rel="preload" href="/assets/js/app.0700b199.js" as="script"><link rel="preload" href="/assets/js/4.85800d9b.js" as="script"><link rel="preload" href="/assets/js/266.d132b970.js" as="script"><link rel="prefetch" href="/assets/js/1.64af6ab6.js"><link rel="prefetch" href="/assets/js/10.91dc4ea6.js"><link rel="prefetch" href="/assets/js/100.9d065f43.js"><link rel="prefetch" href="/assets/js/101.162f6f5a.js"><link rel="prefetch" href="/assets/js/102.547f0494.js"><link rel="prefetch" href="/assets/js/103.8df50f95.js"><link rel="prefetch" href="/assets/js/104.0dc1a023.js"><link rel="prefetch" href="/assets/js/105.6342d25f.js"><link rel="prefetch" href="/assets/js/106.c5f00494.js"><link rel="prefetch" href="/assets/js/107.67279c92.js"><link rel="prefetch" href="/assets/js/108.d0b517b7.js"><link rel="prefetch" href="/assets/js/109.2c4dcaeb.js"><link rel="prefetch" href="/assets/js/11.86efad00.js"><link rel="prefetch" href="/assets/js/110.90adfb2c.js"><link rel="prefetch" href="/assets/js/111.e96a4ae7.js"><link rel="prefetch" href="/assets/js/112.169ab31b.js"><link rel="prefetch" href="/assets/js/113.1f2b9fc2.js"><link rel="prefetch" href="/assets/js/114.0c95ee77.js"><link rel="prefetch" href="/assets/js/115.79141d61.js"><link rel="prefetch" href="/assets/js/116.03dd9b47.js"><link rel="prefetch" href="/assets/js/117.8438da1c.js"><link rel="prefetch" href="/assets/js/118.2a3d98f0.js"><link rel="prefetch" href="/assets/js/119.56aa8bb0.js"><link rel="prefetch" href="/assets/js/12.a355d486.js"><link rel="prefetch" href="/assets/js/120.1d693ff2.js"><link rel="prefetch" href="/assets/js/121.c0e8837b.js"><link rel="prefetch" href="/assets/js/122.309c2d09.js"><link rel="prefetch" href="/assets/js/123.05bba04a.js"><link rel="prefetch" href="/assets/js/124.6b67611a.js"><link rel="prefetch" href="/assets/js/125.02506fca.js"><link rel="prefetch" href="/assets/js/126.ef821603.js"><link rel="prefetch" href="/assets/js/127.cd6f872b.js"><link rel="prefetch" href="/assets/js/128.bff523e0.js"><link rel="prefetch" href="/assets/js/129.6d874134.js"><link rel="prefetch" href="/assets/js/13.b7a2e696.js"><link rel="prefetch" href="/assets/js/130.27ecf01a.js"><link rel="prefetch" href="/assets/js/131.271da5ba.js"><link rel="prefetch" href="/assets/js/132.77b954e5.js"><link rel="prefetch" href="/assets/js/133.7ec87ea9.js"><link rel="prefetch" href="/assets/js/134.41482d0a.js"><link rel="prefetch" href="/assets/js/135.9bb9090d.js"><link rel="prefetch" href="/assets/js/136.afb054c5.js"><link rel="prefetch" href="/assets/js/137.78e85fab.js"><link rel="prefetch" href="/assets/js/138.7b30e1df.js"><link rel="prefetch" href="/assets/js/139.a3eb663e.js"><link rel="prefetch" href="/assets/js/14.34da2ea7.js"><link rel="prefetch" href="/assets/js/140.c28342e1.js"><link rel="prefetch" href="/assets/js/141.b2c12178.js"><link rel="prefetch" href="/assets/js/142.b4c64f63.js"><link rel="prefetch" href="/assets/js/143.42bbb2b5.js"><link rel="prefetch" href="/assets/js/144.78422f6c.js"><link rel="prefetch" href="/assets/js/145.be9153a1.js"><link rel="prefetch" href="/assets/js/146.d941f41a.js"><link rel="prefetch" href="/assets/js/147.84300116.js"><link rel="prefetch" href="/assets/js/148.ddb29130.js"><link rel="prefetch" href="/assets/js/149.11f63f93.js"><link rel="prefetch" href="/assets/js/15.056d0b73.js"><link rel="prefetch" href="/assets/js/150.04922cf6.js"><link rel="prefetch" href="/assets/js/151.290d279d.js"><link rel="prefetch" href="/assets/js/152.ec8536b5.js"><link rel="prefetch" href="/assets/js/153.a4173dd7.js"><link rel="prefetch" href="/assets/js/154.d779c69e.js"><link rel="prefetch" href="/assets/js/155.3077f0a2.js"><link rel="prefetch" href="/assets/js/156.cdee6fa6.js"><link rel="prefetch" href="/assets/js/157.3f1d5a91.js"><link rel="prefetch" href="/assets/js/158.a6c22872.js"><link rel="prefetch" href="/assets/js/159.2c0184ca.js"><link rel="prefetch" href="/assets/js/16.fa07b758.js"><link rel="prefetch" href="/assets/js/160.5833a2f0.js"><link rel="prefetch" href="/assets/js/161.2c142f87.js"><link rel="prefetch" href="/assets/js/162.1266048f.js"><link rel="prefetch" href="/assets/js/163.4a5f7392.js"><link rel="prefetch" href="/assets/js/164.7a70881f.js"><link rel="prefetch" href="/assets/js/165.146513ec.js"><link rel="prefetch" href="/assets/js/166.2645f0ab.js"><link rel="prefetch" href="/assets/js/167.3aeb02bb.js"><link rel="prefetch" href="/assets/js/168.7629d5ff.js"><link rel="prefetch" href="/assets/js/169.d4d379e4.js"><link rel="prefetch" href="/assets/js/17.d916cef4.js"><link rel="prefetch" href="/assets/js/170.e0116c1f.js"><link rel="prefetch" href="/assets/js/171.caacdd8c.js"><link rel="prefetch" href="/assets/js/172.aa46a804.js"><link rel="prefetch" href="/assets/js/173.5eb08c7b.js"><link rel="prefetch" href="/assets/js/174.634bccf9.js"><link rel="prefetch" href="/assets/js/175.5c854bb9.js"><link rel="prefetch" href="/assets/js/176.4defa747.js"><link rel="prefetch" href="/assets/js/177.501bd009.js"><link rel="prefetch" href="/assets/js/178.3eac16d7.js"><link rel="prefetch" href="/assets/js/179.99f0fa6e.js"><link rel="prefetch" href="/assets/js/18.f1005fa3.js"><link rel="prefetch" href="/assets/js/180.a7d76a2f.js"><link rel="prefetch" href="/assets/js/181.f98a015d.js"><link rel="prefetch" href="/assets/js/182.bc4badf7.js"><link rel="prefetch" href="/assets/js/183.44be8c5d.js"><link rel="prefetch" href="/assets/js/184.f39a6b50.js"><link rel="prefetch" href="/assets/js/185.061272a9.js"><link rel="prefetch" href="/assets/js/186.abbb412a.js"><link rel="prefetch" href="/assets/js/187.34d77c25.js"><link rel="prefetch" href="/assets/js/188.c2220440.js"><link rel="prefetch" href="/assets/js/189.350abc46.js"><link rel="prefetch" href="/assets/js/19.d298d243.js"><link rel="prefetch" href="/assets/js/190.87f0fd7e.js"><link rel="prefetch" href="/assets/js/191.c5f01ac4.js"><link rel="prefetch" href="/assets/js/192.1302768c.js"><link rel="prefetch" href="/assets/js/193.23c582aa.js"><link rel="prefetch" href="/assets/js/194.74b791d1.js"><link rel="prefetch" href="/assets/js/195.4caf22e0.js"><link rel="prefetch" href="/assets/js/196.9b26c85f.js"><link rel="prefetch" href="/assets/js/197.19d33cff.js"><link rel="prefetch" href="/assets/js/198.b7b6ce3c.js"><link rel="prefetch" href="/assets/js/199.6f952b58.js"><link rel="prefetch" href="/assets/js/2.da16fb8b.js"><link rel="prefetch" href="/assets/js/20.06ba9109.js"><link rel="prefetch" href="/assets/js/200.5e4e9f49.js"><link rel="prefetch" href="/assets/js/201.3f355daa.js"><link rel="prefetch" href="/assets/js/202.3e2919b5.js"><link rel="prefetch" href="/assets/js/203.8585a9f8.js"><link rel="prefetch" href="/assets/js/204.86e09c32.js"><link rel="prefetch" href="/assets/js/205.a8c009b4.js"><link rel="prefetch" href="/assets/js/206.5a9c12c7.js"><link rel="prefetch" href="/assets/js/207.02dbf5d7.js"><link rel="prefetch" href="/assets/js/208.34468414.js"><link rel="prefetch" href="/assets/js/209.e021049b.js"><link rel="prefetch" href="/assets/js/21.5d4702e5.js"><link rel="prefetch" href="/assets/js/210.50f044d7.js"><link rel="prefetch" href="/assets/js/211.df88eea7.js"><link rel="prefetch" href="/assets/js/212.1a61778e.js"><link rel="prefetch" href="/assets/js/213.571cd7a5.js"><link rel="prefetch" href="/assets/js/214.b15e3796.js"><link rel="prefetch" href="/assets/js/215.c35ab00d.js"><link rel="prefetch" href="/assets/js/216.bbb38e4b.js"><link rel="prefetch" href="/assets/js/217.4cc8ce50.js"><link rel="prefetch" href="/assets/js/218.27e9a5dc.js"><link rel="prefetch" href="/assets/js/219.29152dfb.js"><link rel="prefetch" href="/assets/js/22.b29dff3f.js"><link rel="prefetch" href="/assets/js/220.b94a420d.js"><link rel="prefetch" href="/assets/js/221.3e1e3f07.js"><link rel="prefetch" href="/assets/js/222.610c9243.js"><link rel="prefetch" href="/assets/js/223.20324a9e.js"><link rel="prefetch" href="/assets/js/224.6a5c1a7b.js"><link rel="prefetch" href="/assets/js/225.d5981282.js"><link rel="prefetch" href="/assets/js/226.323ae76d.js"><link rel="prefetch" href="/assets/js/227.f8a80a3d.js"><link rel="prefetch" href="/assets/js/228.ba7673a9.js"><link rel="prefetch" href="/assets/js/229.331b64d1.js"><link rel="prefetch" href="/assets/js/23.5397bf05.js"><link rel="prefetch" href="/assets/js/230.4f9aab9d.js"><link rel="prefetch" href="/assets/js/231.85306ec0.js"><link rel="prefetch" href="/assets/js/232.d15e01b6.js"><link rel="prefetch" href="/assets/js/233.9d33c762.js"><link rel="prefetch" href="/assets/js/234.ac16a8ea.js"><link rel="prefetch" href="/assets/js/235.efeff7b8.js"><link rel="prefetch" href="/assets/js/236.67d274b8.js"><link rel="prefetch" href="/assets/js/237.6fae8904.js"><link rel="prefetch" href="/assets/js/238.719fb0d8.js"><link rel="prefetch" href="/assets/js/239.0f5c6dac.js"><link rel="prefetch" href="/assets/js/24.09719cb7.js"><link rel="prefetch" href="/assets/js/240.49c4e101.js"><link rel="prefetch" href="/assets/js/241.768b17f7.js"><link rel="prefetch" href="/assets/js/242.5372e06c.js"><link rel="prefetch" href="/assets/js/243.293366a2.js"><link rel="prefetch" href="/assets/js/244.3e49f572.js"><link rel="prefetch" href="/assets/js/245.cbdf8f5a.js"><link rel="prefetch" href="/assets/js/246.56a55dbe.js"><link rel="prefetch" href="/assets/js/247.3e4f7724.js"><link rel="prefetch" href="/assets/js/248.4fb11b1c.js"><link rel="prefetch" href="/assets/js/249.0caa7968.js"><link rel="prefetch" href="/assets/js/25.05ca3b89.js"><link rel="prefetch" href="/assets/js/250.e70797f8.js"><link rel="prefetch" href="/assets/js/251.ab153d87.js"><link rel="prefetch" href="/assets/js/252.3bca6b4e.js"><link rel="prefetch" href="/assets/js/253.0f0f05bf.js"><link rel="prefetch" href="/assets/js/254.31b0a826.js"><link rel="prefetch" href="/assets/js/255.dcd9479e.js"><link rel="prefetch" href="/assets/js/256.f4f3cbe7.js"><link rel="prefetch" href="/assets/js/257.87b5c111.js"><link rel="prefetch" href="/assets/js/258.a06a5792.js"><link rel="prefetch" href="/assets/js/259.00e7cf37.js"><link rel="prefetch" href="/assets/js/26.a9923aed.js"><link rel="prefetch" href="/assets/js/260.1b15d79f.js"><link rel="prefetch" href="/assets/js/261.7931ff8b.js"><link rel="prefetch" href="/assets/js/262.b79b03fd.js"><link rel="prefetch" href="/assets/js/263.7e7a7a69.js"><link rel="prefetch" href="/assets/js/264.a3362353.js"><link rel="prefetch" href="/assets/js/265.5f5b8f63.js"><link rel="prefetch" href="/assets/js/267.b5e6046b.js"><link rel="prefetch" href="/assets/js/268.0f9d91d5.js"><link rel="prefetch" href="/assets/js/27.49d424f0.js"><link rel="prefetch" href="/assets/js/28.804b176d.js"><link rel="prefetch" href="/assets/js/29.73ad7742.js"><link rel="prefetch" href="/assets/js/30.4b7153eb.js"><link rel="prefetch" href="/assets/js/31.e2baa352.js"><link rel="prefetch" href="/assets/js/32.306f9a8b.js"><link rel="prefetch" href="/assets/js/33.86bba420.js"><link rel="prefetch" href="/assets/js/34.377cc87b.js"><link rel="prefetch" href="/assets/js/35.ccb29e89.js"><link rel="prefetch" href="/assets/js/36.ac3b170b.js"><link rel="prefetch" href="/assets/js/37.a6c86796.js"><link rel="prefetch" href="/assets/js/38.a863dc90.js"><link rel="prefetch" href="/assets/js/39.5bb1248d.js"><link rel="prefetch" href="/assets/js/40.c8f3e571.js"><link rel="prefetch" href="/assets/js/41.90c9a221.js"><link rel="prefetch" href="/assets/js/42.5e7a2243.js"><link rel="prefetch" href="/assets/js/43.4e6e2fa0.js"><link rel="prefetch" href="/assets/js/44.3f386908.js"><link rel="prefetch" href="/assets/js/45.9861347f.js"><link rel="prefetch" href="/assets/js/46.f1a56538.js"><link rel="prefetch" href="/assets/js/47.bfaf984a.js"><link rel="prefetch" href="/assets/js/48.8294d8ff.js"><link rel="prefetch" href="/assets/js/49.33f5b0f7.js"><link rel="prefetch" href="/assets/js/5.27bc9b2c.js"><link rel="prefetch" href="/assets/js/50.89ea98b4.js"><link rel="prefetch" href="/assets/js/51.ed9b70fc.js"><link rel="prefetch" href="/assets/js/52.a6368693.js"><link rel="prefetch" href="/assets/js/53.184d59c4.js"><link rel="prefetch" href="/assets/js/54.090ae4a9.js"><link rel="prefetch" href="/assets/js/55.e2476995.js"><link rel="prefetch" href="/assets/js/56.a22a1485.js"><link rel="prefetch" href="/assets/js/57.3075220f.js"><link rel="prefetch" href="/assets/js/58.452bfc36.js"><link rel="prefetch" href="/assets/js/59.8bd0bc93.js"><link rel="prefetch" href="/assets/js/6.4f220469.js"><link rel="prefetch" href="/assets/js/60.d0efd55d.js"><link rel="prefetch" href="/assets/js/61.616b58ab.js"><link rel="prefetch" href="/assets/js/62.a1ca26c4.js"><link rel="prefetch" href="/assets/js/63.6e7074ce.js"><link rel="prefetch" href="/assets/js/64.baaef4c5.js"><link rel="prefetch" href="/assets/js/65.544aafea.js"><link rel="prefetch" href="/assets/js/66.0cbcb512.js"><link rel="prefetch" href="/assets/js/67.30d4fb26.js"><link rel="prefetch" href="/assets/js/68.fb2c2c07.js"><link rel="prefetch" href="/assets/js/69.eee868b7.js"><link rel="prefetch" href="/assets/js/7.67093bab.js"><link rel="prefetch" href="/assets/js/70.47f4314b.js"><link rel="prefetch" href="/assets/js/71.e61b917c.js"><link rel="prefetch" href="/assets/js/72.bc2c0cbe.js"><link rel="prefetch" href="/assets/js/73.bec5088f.js"><link rel="prefetch" href="/assets/js/74.76623c2b.js"><link rel="prefetch" href="/assets/js/75.ce6f8500.js"><link rel="prefetch" href="/assets/js/76.400e0887.js"><link rel="prefetch" href="/assets/js/77.d4fcbd2b.js"><link rel="prefetch" href="/assets/js/78.fea867a9.js"><link rel="prefetch" href="/assets/js/79.f7238bc4.js"><link rel="prefetch" href="/assets/js/8.c2aa376e.js"><link rel="prefetch" href="/assets/js/80.db5ced4a.js"><link rel="prefetch" href="/assets/js/81.949eaaaf.js"><link rel="prefetch" href="/assets/js/82.1fa9be34.js"><link rel="prefetch" href="/assets/js/83.3a6f83cc.js"><link rel="prefetch" href="/assets/js/84.35fb63b7.js"><link rel="prefetch" href="/assets/js/85.4ff3d26e.js"><link rel="prefetch" href="/assets/js/86.7e761e5a.js"><link rel="prefetch" href="/assets/js/87.da4a560d.js"><link rel="prefetch" href="/assets/js/88.d4678a0e.js"><link rel="prefetch" href="/assets/js/89.8f257cba.js"><link rel="prefetch" href="/assets/js/9.821e10b0.js"><link rel="prefetch" href="/assets/js/90.c544ed8b.js"><link rel="prefetch" href="/assets/js/91.b69a1698.js"><link rel="prefetch" href="/assets/js/92.02e15344.js"><link rel="prefetch" href="/assets/js/93.08fe83ef.js"><link rel="prefetch" href="/assets/js/94.7239b1d9.js"><link rel="prefetch" href="/assets/js/95.8c442a25.js"><link rel="prefetch" href="/assets/js/96.08670966.js"><link rel="prefetch" href="/assets/js/97.730b22df.js"><link rel="prefetch" href="/assets/js/98.676f0c52.js"><link rel="prefetch" href="/assets/js/99.330aee19.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.199c727d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Web Developer</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个性学习" class="dropdown-title"><span class="title">个性学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="个性学习" class="mobile-dropdown-title"><span class="title">个性学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          个人博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Blog/Frontend/" class="nav-link">
+  前端博客
+</a></li><li class="dropdown-subitem"><a href="/Blog/Format/" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-subitem"><a href="/Blog/Admin/" class="nav-link">
+  后台管理
+</a></li><li class="dropdown-subitem"><a href="/Blog/Effect/" class="nav-link">
+  搞点特效
+</a></li><li class="dropdown-subitem"><a href="/Blog/Chore/" class="nav-link">
+  折腾一下
+</a></li></ul></li><li class="dropdown-item"><h4>
+          源码学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/SourceCode/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vite/" class="nav-link">
+  Vite
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue2/" class="nav-link">
+  Vue2
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue3/" class="nav-link">
+  Vue3
+</a></li></ul></li><li class="dropdown-item"><h4>
+          常用工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Tool/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/Tool/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-subitem"><a href="/Tool/Linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/Tool/Docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-subitem"><a href="/Tool/Nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-subitem"><a href="/Tool/Npm/" class="nav-link">
+  Npm
+</a></li><li class="dropdown-subitem"><a href="/Tool/Puppeteer/" class="nav-link">
+  Puppeteer
+</a></li><li class="dropdown-subitem"><a href="/Tool/VSCode/" class="nav-link">
+  VSCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="系统学习" class="dropdown-title"><span class="title">系统学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="系统学习" class="mobile-dropdown-title"><span class="title">系统学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Computer/Science/" class="nav-link">
+  计算机科学导论
+</a></li><li class="dropdown-subitem"><a href="/Computer/System/" class="nav-link">
+  计算机操作系统
+</a></li><li class="dropdown-subitem"><a href="/Computer/Network/" class="nav-link">
+  计算机网络
+</a></li></ul></li><li class="dropdown-item"><h4>
+          在线书籍
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Book/Handbook/" class="nav-link">
+  禅道 程序员生存手册
+</a></li><li class="dropdown-subitem"><a href="/Book/Refactoring2/" class="nav-link">
+  重构 改善既有代码的设计
+</a></li></ul></li><li class="dropdown-item"><h4>
+          学习笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Study/CSS-World/" class="nav-link">
+  CSS世界
+</a></li><li class="dropdown-subitem"><a href="/Study/CSS-New-World/" class="nav-link">
+  CSS新世界
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Houdunren/" class="nav-link">
+  JS后端人视频教程
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Advanced/" class="nav-link">
+  JS高级程序设计
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Pattern/" class="nav-link">
+  JS设计模式与开发实践
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Structure-Algo/" class="nav-link">
+  JS数据结构与算法
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言" class="dropdown-title"><span class="title">编程语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言" class="mobile-dropdown-title"><span class="title">编程语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Language/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Language/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/Language/PHP/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-subitem"><a href="/Language/Node/" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Assembly/" class="nav-link">
+  Assembly
+</a></li><li class="dropdown-subitem"><a href="/Language/C/" class="nav-link">
+  C
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="解决方案" class="dropdown-title"><span class="title">解决方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="解决方案" class="mobile-dropdown-title"><span class="title">解决方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          打包工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Bundle/WebPack/" class="nav-link">
+  WebPack
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/VueCLI/" class="nav-link">
+  VueCLI
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/Vite/" class="nav-link">
+  Vite
+</a></li></ul></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/React/" class="nav-link">
+  React
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue2/" class="nav-link">
+  Vue2.x
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue-Router/" class="nav-link">
+  Vue Router
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vuex/" class="nav-link">
+  Vuex
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Jest/" class="nav-link">
+  Jest
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Nuxt/" class="nav-link">
+  Nuxt
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/VueConf/" class="nav-link">
+  VueConf
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue3/" class="nav-link">
+  Vue3.x
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="领域技术" class="dropdown-title"><span class="title">领域技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="领域技术" class="mobile-dropdown-title"><span class="title">领域技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          通用技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Web/HTTP/" class="nav-link">
+  HTTP
+</a></li><li class="dropdown-subitem"><a href="/Web/WebSocket/" class="nav-link">
+  WebSocket
+</a></li><li class="dropdown-subitem"><a href="/Web/WebRTC/" class="nav-link">
+  WebRTC
+</a></li><li class="dropdown-subitem"><a href="/Web/WebAssembly/" class="nav-link">
+  WebAssembly
+</a></li></ul></li><li class="dropdown-item"><h4>
+          图形技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Graph/SVG/" class="nav-link">
+  SVG
+</a></li><li class="dropdown-subitem"><a href="/Graph/Canvas/" class="nav-link">
+  Canvas
+</a></li><li class="dropdown-subitem"><a href="/Graph/WebGL/" class="nav-link">
+  WebGL
+</a></li><li class="dropdown-subitem"><a href="/Graph/ZRender/" class="nav-link">
+  ZRender
+</a></li><li class="dropdown-subitem"><a href="/Graph/Echarts/" class="nav-link">
+  Echarts
+</a></li><li class="dropdown-subitem"><a href="/Graph/Draw2D/" class="nav-link">
+  Draw2D
+</a></li><li class="dropdown-subitem"><a href="/Graph/LiteGraph/" class="nav-link">
+  LiteGraph
+</a></li></ul></li><li class="dropdown-item"><h4>
+          音视频技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Media/Audio/" class="nav-link">
+  Audio
+</a></li><li class="dropdown-subitem"><a href="/Solution/Media/FFmpeg/" class="nav-link">
+  FFmpeg
+</a></li></ul></li><li class="dropdown-item"><h4>
+          数据库技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/DataBase/LowDB/" class="nav-link">
+  LowDB
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/SQLite/" class="nav-link">
+  SQLite
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/MySQL/" class="nav-link">
+  MySQL
+</a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="个性学习" class="dropdown-title"><span class="title">个性学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="个性学习" class="mobile-dropdown-title"><span class="title">个性学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          个人博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Blog/Frontend/" class="nav-link">
+  前端博客
+</a></li><li class="dropdown-subitem"><a href="/Blog/Format/" class="nav-link">
+  开发规范
+</a></li><li class="dropdown-subitem"><a href="/Blog/Admin/" class="nav-link">
+  后台管理
+</a></li><li class="dropdown-subitem"><a href="/Blog/Effect/" class="nav-link">
+  搞点特效
+</a></li><li class="dropdown-subitem"><a href="/Blog/Chore/" class="nav-link">
+  折腾一下
+</a></li></ul></li><li class="dropdown-item"><h4>
+          源码学习
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/SourceCode/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vite/" class="nav-link">
+  Vite
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue2/" class="nav-link">
+  Vue2
+</a></li><li class="dropdown-subitem"><a href="/Other/SourceCode/Vue3/" class="nav-link">
+  Vue3
+</a></li></ul></li><li class="dropdown-item"><h4>
+          常用工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Tool/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/Tool/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-subitem"><a href="/Tool/Linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-subitem"><a href="/Tool/Docker/" class="nav-link">
+  Docker
+</a></li><li class="dropdown-subitem"><a href="/Tool/Nginx/" class="nav-link">
+  Nginx
+</a></li><li class="dropdown-subitem"><a href="/Tool/Npm/" class="nav-link">
+  Npm
+</a></li><li class="dropdown-subitem"><a href="/Tool/Puppeteer/" class="nav-link">
+  Puppeteer
+</a></li><li class="dropdown-subitem"><a href="/Tool/VSCode/" class="nav-link">
+  VSCode
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="系统学习" class="dropdown-title"><span class="title">系统学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="系统学习" class="mobile-dropdown-title"><span class="title">系统学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础知识
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Computer/Science/" class="nav-link">
+  计算机科学导论
+</a></li><li class="dropdown-subitem"><a href="/Computer/System/" class="nav-link">
+  计算机操作系统
+</a></li><li class="dropdown-subitem"><a href="/Computer/Network/" class="nav-link">
+  计算机网络
+</a></li></ul></li><li class="dropdown-item"><h4>
+          在线书籍
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Book/Handbook/" class="nav-link">
+  禅道 程序员生存手册
+</a></li><li class="dropdown-subitem"><a href="/Book/Refactoring2/" class="nav-link">
+  重构 改善既有代码的设计
+</a></li></ul></li><li class="dropdown-item"><h4>
+          学习笔记
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Study/CSS-World/" class="nav-link">
+  CSS世界
+</a></li><li class="dropdown-subitem"><a href="/Study/CSS-New-World/" class="nav-link">
+  CSS新世界
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Houdunren/" class="nav-link">
+  JS后端人视频教程
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Advanced/" class="nav-link">
+  JS高级程序设计
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Pattern/" class="nav-link">
+  JS设计模式与开发实践
+</a></li><li class="dropdown-subitem"><a href="/Study/JS-Structure-Algo/" class="nav-link">
+  JS数据结构与算法
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="编程语言" class="dropdown-title"><span class="title">编程语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="编程语言" class="mobile-dropdown-title"><span class="title">编程语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          前端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/HTML/" class="nav-link">
+  HTML
+</a></li><li class="dropdown-subitem"><a href="/Language/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-subitem"><a href="/Language/JavaScript/" class="nav-link">
+  JavaScript
+</a></li></ul></li><li class="dropdown-item"><h4>
+          后端开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Bash/" class="nav-link">
+  Bash
+</a></li><li class="dropdown-subitem"><a href="/Language/PHP/" class="nav-link">
+  PHP
+</a></li><li class="dropdown-subitem"><a href="/Language/Node/" class="nav-link">
+  Node
+</a></li></ul></li><li class="dropdown-item"><h4>
+          基础开发
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Language/Assembly/" class="nav-link">
+  Assembly
+</a></li><li class="dropdown-subitem"><a href="/Language/C/" class="nav-link">
+  C
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="解决方案" class="dropdown-title"><span class="title">解决方案</span> <span class="arrow down"></span></button> <button type="button" aria-label="解决方案" class="mobile-dropdown-title"><span class="title">解决方案</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          打包工具
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Bundle/WebPack/" class="nav-link">
+  WebPack
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/VueCLI/" class="nav-link">
+  VueCLI
+</a></li><li class="dropdown-subitem"><a href="/Solution/Bundle/Vite/" class="nav-link">
+  Vite
+</a></li></ul></li><li class="dropdown-item"><h4>
+          React
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/React/" class="nav-link">
+  React
+</a></li></ul></li><li class="dropdown-item"><h4>
+          Vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue2/" class="nav-link">
+  Vue2.x
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue-Router/" class="nav-link">
+  Vue Router
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vuex/" class="nav-link">
+  Vuex
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Jest/" class="nav-link">
+  Jest
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Nuxt/" class="nav-link">
+  Nuxt
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/VueConf/" class="nav-link">
+  VueConf
+</a></li><li class="dropdown-subitem"><a href="/Solution/Framework/Vue/Vue3/" class="nav-link">
+  Vue3.x
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="领域技术" class="dropdown-title"><span class="title">领域技术</span> <span class="arrow down"></span></button> <button type="button" aria-label="领域技术" class="mobile-dropdown-title"><span class="title">领域技术</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          通用技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Web/HTTP/" class="nav-link">
+  HTTP
+</a></li><li class="dropdown-subitem"><a href="/Web/WebSocket/" class="nav-link">
+  WebSocket
+</a></li><li class="dropdown-subitem"><a href="/Web/WebRTC/" class="nav-link">
+  WebRTC
+</a></li><li class="dropdown-subitem"><a href="/Web/WebAssembly/" class="nav-link">
+  WebAssembly
+</a></li></ul></li><li class="dropdown-item"><h4>
+          图形技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Graph/SVG/" class="nav-link">
+  SVG
+</a></li><li class="dropdown-subitem"><a href="/Graph/Canvas/" class="nav-link">
+  Canvas
+</a></li><li class="dropdown-subitem"><a href="/Graph/WebGL/" class="nav-link">
+  WebGL
+</a></li><li class="dropdown-subitem"><a href="/Graph/ZRender/" class="nav-link">
+  ZRender
+</a></li><li class="dropdown-subitem"><a href="/Graph/Echarts/" class="nav-link">
+  Echarts
+</a></li><li class="dropdown-subitem"><a href="/Graph/Draw2D/" class="nav-link">
+  Draw2D
+</a></li><li class="dropdown-subitem"><a href="/Graph/LiteGraph/" class="nav-link">
+  LiteGraph
+</a></li></ul></li><li class="dropdown-item"><h4>
+          音视频技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Solution/Media/Audio/" class="nav-link">
+  Audio
+</a></li><li class="dropdown-subitem"><a href="/Solution/Media/FFmpeg/" class="nav-link">
+  FFmpeg
+</a></li></ul></li><li class="dropdown-item"><h4>
+          数据库技术
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/Other/DataBase/LowDB/" class="nav-link">
+  LowDB
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/SQLite/" class="nav-link">
+  SQLite
+</a></li><li class="dropdown-subitem"><a href="/Other/DataBase/MySQL/" class="nav-link">
+  MySQL
+</a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Language/Javascript/WebRTC/" aria-current="page" class="active sidebar-link">简介</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Language/Javascript/WebRTC/#webrtc" class="sidebar-link">WebRTC</a></li><li class="sidebar-sub-header"><a href="/Language/Javascript/WebRTC/#webrtc是什么" class="sidebar-link">WebRTC是什么 ？</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="webrtc"><a href="#webrtc" class="header-anchor">#</a> WebRTC</h2> <p><img src="https://www.gausszhou.top/source/data/image/learn/webrtc/mesh-sfu-mcu.jpg" alt=""></p> <h2 id="webrtc是什么"><a href="#webrtc是什么" class="header-anchor">#</a> WebRTC是什么 ？</h2> <p>WebRTC 是由一家名为 Gobal IP Solutions，简称 GIPS 的瑞典公司开发的。Google 在 2011 年收购了 GIPS，并将其源代码开源。</p> <p>简单来说，WebRTC 是一个可以在 Web 应用程序中实现音频，视频和数据的实时通信的开源项目。在实时通信中，音视频的采集和处理是一个很复杂的过程。比如音视频流的编解码、降噪和回声消除等，但是在 WebRTC 中，这一切都交由浏览器的底层封装来完成。我们可以直接拿到优化后的媒体流，然后将其输出到本地屏幕和扬声器，或者转发给其对等端。</p> <p>我们可以在不需要任何第三方插件的情况下，实现一个浏览器到浏览器的点对点（P2P）连接，从而进行音视频实时通信。</p> <h3 id="webrtc-api"><a href="#webrtc-api" class="header-anchor">#</a> WebRTC API</h3> <p>WebRTC 提供了一些 API 供我们使用，在实时音视频通信的过程中，我们主要用到以下：</p> <ul><li>mediaDevices</li> <li>getUserMedia：获取音频和视频流（MediaStream）</li> <li>RTCPeerConnection：点对点通信</li> <li>RTCDataChannel：数据通信</li> <li>MediaStream API：媒体流</li></ul> <h3 id="mediadevices-媒体设备"><a href="#mediadevices-媒体设备" class="header-anchor">#</a> MediaDevices 媒体设备</h3> <p><strong><code>MediaDevices</code></strong> 接口提供访问连接媒体输入的设备，如照相机和麦克风，以及屏幕共享等。它可以使你取得任何硬件资源的媒体数据。</p> <table><thead><tr><th>事件</th> <th></th></tr></thead> <tbody><tr><td>devicechange</td> <td>每当媒体设备连接到系统或从系统中移除时</td></tr></tbody></table> <table><thead><tr><th>方法</th> <th></th></tr></thead> <tbody><tr><td>enumerateDevices()</td> <td></td></tr> <tr><td>getSupportedConstraints()</td> <td>返回一个对象，指明设备支持那些配置参数</td></tr> <tr><td>getDisplayMedia()</td> <td>获取显示器或者窗口</td></tr> <tr><td>getUserMedia()</td> <td>获取摄像头，麦克风，屏幕共享</td></tr></tbody></table> <p><code>MediaDevices.getUserMedia()</code> 会提示用户给予使用媒体输入的许可，媒体输入会产生一个<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/MediaStream" target="_blank" rel="noopener noreferrer"><code>MediaStream</code><span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，里面包含了请求的媒体类型的轨道。返回一个<code>Promise</code>对象，由于用户不是必须选择所以可能既不会<code>resolve</code>也不会<code>reject</code>。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> video <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'video'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> constraints <span class="token operator">=</span> <span class="token punctuation">{</span> audio<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> video<span class="token operator">:</span> <span class="token punctuation">{</span> width<span class="token operator">:</span> <span class="token number">1280</span><span class="token punctuation">,</span> height<span class="token operator">:</span> <span class="token number">720</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+navigator<span class="token punctuation">.</span>mediaDevices<span class="token punctuation">.</span><span class="token function">getUserMedia</span><span class="token punctuation">(</span>constraints<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">stream</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    video<span class="token punctuation">.</span>srcObject <span class="token operator">=</span> stream<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="mediastream-媒体流"><a href="#mediastream-媒体流" class="header-anchor">#</a> MediaStream 媒体流</h3> <p>MediaStream表示一个媒体流对象，一个流包含几个<em>轨道</em>，比如视频和音频轨道</p> <table><thead><tr><th>属性</th> <th></th> <th></th></tr></thead> <tbody><tr><td>active</td> <td>boolean</td> <td>这个流是否处于活动状态</td></tr> <tr><td>ended</td> <td>boolean</td> <td>这个流是否被完全读取</td></tr> <tr><td>id</td> <td>string</td> <td>这个流对象的唯一标识符</td></tr></tbody></table> <table><thead><tr><th>事件</th> <th></th></tr></thead> <tbody><tr><td>onaddtrack</td> <td>一个MediaStreamTrack对象添加到这个流时</td></tr> <tr><td>onended</td> <td>当流终止时</td></tr> <tr><td>onremovetrack</td> <td>当一个MediaStreamTrack从这个流上移除时</td></tr></tbody></table> <table><thead><tr><th>其他方法</th> <th></th></tr></thead> <tbody><tr><td>MediaStream.addTrack()</td> <td>添加一个Track</td></tr> <tr><td>MediaStream.removeTrack()</td> <td>删除一个Track</td></tr> <tr><td>MediaStream.clone()</td> <td>克隆一个MediaStream，会有一个新的ID</td></tr> <tr><td>MediaStream.getTracks()</td> <td>返回一个列表，所有Track</td></tr> <tr><td>MediaStream.getAudioTracks()</td> <td>返回一个列表，所有AudioTrack</td></tr> <tr><td>MediaStream.getVideoTracks()</td> <td>返回一个列表，所有VideoTrack</td></tr> <tr><td>MediaStream.getTrackById()</td> <td>按ID查找Track</td></tr></tbody></table> <h3 id="mediastreamtrack"><a href="#mediastreamtrack" class="header-anchor">#</a> MediaStreamTrack</h3> <p>MediaStreamTrack接口在User Agent中表示一段媒体源，比如音轨或视频</p> <table><thead><tr><th>属性</th> <th></th> <th></th></tr></thead> <tbody><tr><td>enabled</td> <td>boolean</td> <td>表示轨道是否有效</td></tr> <tr><td>id</td> <td>string</td> <td>唯一标识符</td></tr> <tr><td>kind</td> <td>video/audio</td> <td>表示轨道类型</td></tr> <tr><td>label</td> <td>string</td> <td>用户指定的标签</td></tr> <tr><td>muted</td> <td>boolean</td> <td>表示轨道是否为静音</td></tr> <tr><td>readonly</td> <td>boolean</td> <td>表示轨道是否只读，不能被修改</td></tr> <tr><td>readyState</td> <td>live/ended</td> <td>表示轨道的当前状态</td></tr> <tr><td>remote</td> <td>boolean</td> <td>表示数据是否时RTC提供的</td></tr></tbody></table> <table><thead><tr><th>事件</th> <th></th> <th></th></tr></thead> <tbody><tr><td>onstarted</td> <td>onmute</td> <td>onunmete</td></tr> <tr><td>onoversonstrained</td> <td>onended</td> <td></td></tr></tbody></table> <table><thead><tr><th>方法</th> <th></th> <th></th></tr></thead> <tbody><tr><td>getConstraints()</td> <td>applyConstraints()</td> <td>getSettings()</td></tr> <tr><td>getCapabilities()</td> <td>clone</td> <td>stop()</td></tr></tbody></table> <h3 id="rtcpeerconnection"><a href="#rtcpeerconnection" class="header-anchor">#</a> RTCPeerConnection</h3> <p>RTCPeerConnection 接口代表一个由本地计算机到远端的 WebRTC 连接。该接口提供了创建，保持，监控，关闭连接的方法的实现。、</p> <p>我们虽然把 WebRTC 称之为点对点的连接，但并不意味着，实现过程中不需要服务器的参与。因为在点对点的信道建立起来之前，二者之间是没有办法通信的。这也就意味着，在信令阶段，我们需要一个通信服务来帮助我们建立起这个连接。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//兼容性处理</span>
+<span class="token keyword">let</span> PeerConnection <span class="token operator">=</span> window<span class="token punctuation">.</span>RTCPeerConnection <span class="token operator">||</span> window<span class="token punctuation">.</span>mozRTCPeerConnection <span class="token operator">||</span> window<span class="token punctuation">.</span>webkitRTCPeerConnection<span class="token punctuation">;</span>
+<span class="token keyword">let</span> iceServers<span class="token operator">=</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span> url<span class="token operator">:</span> <span class="token string">&quot;stun:stun.l.google.com:19302&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// 谷歌的公共服务</span>
+        <span class="token punctuation">{</span>
+          url<span class="token operator">:</span> <span class="token string">&quot;turn:***&quot;</span><span class="token punctuation">,</span>
+          username<span class="token operator">:</span> <span class="token operator">**</span><span class="token operator">*</span><span class="token punctuation">,</span> <span class="token comment">// 用户名</span>
+          credential<span class="token operator">:</span> <span class="token operator">**</span><span class="token operator">*</span> <span class="token comment">// 密码</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+<span class="token keyword">let</span> peer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PeerConnection</span><span class="token punctuation">(</span>iceServers<span class="token punctuation">)</span>
+</code></pre></div><table><thead><tr><th>事件</th> <th></th></tr></thead> <tbody><tr><td><strong>onaddstream</strong></td> <td>当一个媒体流从远程对等体添加到PeerConnection连接中时</td></tr> <tr><td><strong>ondatachannel</strong></td> <td>当一个RTC数据通道添加到连接中</td></tr> <tr><td><strong>onicecandidate</strong></td> <td>当一个ICE候选添加到备选池中</td></tr> <tr><td><strong>oniceconnectionstatechang</strong></td> <td>当一个连接对象的状态发生改变时</td></tr> <tr><td>onidentityresult</td> <td>当身份断言生成时</td></tr> <tr><td>.onidpassertionerror</td> <td>当身份断言关联的身份提供者遇到一个错误时</td></tr> <tr><td>onidpvalidation</td> <td>当身份验证出错时</td></tr> <tr><td>onsignalingstatechange</td> <td>当signalingstate更改的值时</td></tr> <tr><td><strong>onremovestream</strong></td> <td>当从此连接中删除mediastream时</td></tr></tbody></table> <table><thead><tr><th>方法</th> <th></th></tr></thead> <tbody><tr><td><strong>RTCPeerConnection()</strong></td> <td>构造函数，通过new，返回一个RTC对等体连接对象</td></tr> <tr><td><strong>createOffer()</strong></td> <td>呼叫方发送一个offer请求（成功回调，失败回调，配置对象）</td></tr> <tr><td><strong>createAnswer()</strong></td> <td>被呼叫方发送一个answer应答（成功回调，失败回调，配置对象）</td></tr> <tr><td><strong>setLocalDesccription()</strong></td> <td>设置与连接相关的本地描述</td></tr> <tr><td><strong>setRemoteDescription()</strong></td> <td>设置与连接相关的远端描述</td></tr> <tr><td>getLocalStreams()</td> <td>返回连接的本地媒体流数组</td></tr> <tr><td><strong>getRemoteStreams()</strong></td> <td>返回连接的远端媒体流数组</td></tr> <tr><td>addStream()</td> <td>添加一个媒体流</td></tr> <tr><td>removeStream()</td> <td>移除一个媒体流</td></tr> <tr><td>close()</td> <td>关闭一个RTCPeerConnection实例</td></tr> <tr><td>createDataChannel()</td> <td>建立一个新的DC通道</td></tr></tbody></table> <p>基本用法</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> pc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RTCPeerConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+pc<span class="token punctuation">.</span>onaddstream <span class="token operator">=</span> <span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> vid <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">&quot;video&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  document<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>vid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  vid<span class="token punctuation">.</span>srcObject <span class="token operator">=</span> event<span class="token punctuation">.</span>stream<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>呼叫方</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> offerconf <span class="token operator">=</span> <span class="token punctuation">{</span>
+    offerToReceiveAudio<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    offerToReceiveVideo<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    iceRestart<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+navigator<span class="token punctuation">.</span><span class="token function">getUserMedia</span><span class="token punctuation">(</span><span class="token punctuation">{</span>video<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">stream</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    pc<span class="token punctuation">.</span><span class="token function">onaddstream</span><span class="token punctuation">(</span><span class="token punctuation">{</span>stream<span class="token operator">:</span> stream<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    pc<span class="token punctuation">.</span><span class="token function">addStream</span><span class="token punctuation">(</span>stream<span class="token punctuation">)</span><span class="token punctuation">;</span>    
+    pc<span class="token punctuation">.</span><span class="token function">createOffer</span><span class="token punctuation">(</span>offerconf<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">offer</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        pc<span class="token punctuation">.</span><span class="token function">setLocalDescription</span><span class="token punctuation">(</span>offer<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+            <span class="token function">sendOffer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span> 
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>应答方</p> <div class="language- extra-class"><pre class="language-text"><code>pc.setRemoteDescription(offer).then(()=&gt;{
+	pc.createAnswer().then((answer)=&gt;{
+		pc.setLocalDescription(answer).then(()=&gt;{
+			sendAnswer()
+		})
+	})
+})
+</code></pre></div><p><img src="https://static.bookstack.cn/projects/webrtc-book-cn/images/rcwr_0501.png" alt="img"></p> <h3 id="datachannel"><a href="#datachannel" class="header-anchor">#</a> DataChannel</h3> <p>RTCDataChannel接口代表在两者之间建立一个双向数据的通道，用于发送非音视频的信息。</p> <p>可以用createDataChannel()或者在现有的RTCPeerConnection实例上用ondatachannel事件接受，创建出RTCDataChannel类型的对象。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> pc <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RTCPeerConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> dc <span class="token operator">=</span> pc<span class="token punctuation">.</span><span class="token function">createDataChannel</span><span class="token punctuation">(</span><span class="token string">&quot;my channel&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+dc<span class="token punctuation">.</span><span class="token function-variable function">onmessage</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;received: &quot;</span> <span class="token operator">+</span> event<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+dc<span class="token punctuation">.</span><span class="token function-variable function">onopen</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;datachannel open&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+dc<span class="token punctuation">.</span><span class="token function-variable function">onclose</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;datachannel close&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+dc<span class="token punctuation">.</span><span class="token function-variable function">onerror</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;datachannel error&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><table><thead><tr><th>属性</th> <th></th></tr></thead> <tbody><tr><td>label</td> <td>描述通道名字的一个字符串，这个字段可以不唯一</td></tr> <tr><td>ordered</td> <td>返回一个Boolean，表示传递信息的顺序是否有保证</td></tr> <tr><td>protocol</td> <td>返回正在使用的子协议的名称，一个字符串，没有则返回“”</td></tr> <tr><td>id</td> <td>当RTCDdataChannel对象被创建时，作为通道的唯一标识</td></tr> <tr><td>readyState</td> <td>表示数据连接的状态</td></tr></tbody></table> <table><thead><tr><th>事件</th> <th></th></tr></thead> <tbody><tr><td>onopen</td> <td>当底层数据链路传输成功时</td></tr> <tr><td><strong>onmessage</strong></td> <td>当有数据被接受时</td></tr> <tr><td>onclose</td> <td>当底层链路被关闭时</td></tr> <tr><td>onerror</td> <td>当遇到错误时</td></tr></tbody></table> <table><thead><tr><th>方法</th> <th></th></tr></thead> <tbody><tr><td>close()</td> <td>关闭channel，不会立即生效，等消息队列的数据发送完毕之后，channe才会被关闭</td></tr> <tr><td>send()</td> <td>将参数中的数据通过channel通道发送</td></tr></tbody></table> <h3 id="sdp"><a href="#sdp" class="header-anchor">#</a> SDP</h3> <p>WebRTC 使用 Offer-Answer 模型交换 SDP，Offer 中有 SDP，Answer 中也有。例如 Alice 和 Bob 通过 WebRTC 通信：</p> <p>Alice Offer</p> <div class="language-shell extra-class"><pre class="language-shell"><code>// Session description
+<span class="token assign-left variable">v</span><span class="token operator">=</span><span class="token number">0</span>
+<span class="token comment"># version SDP 协议版本，值固定为 0</span>
+<span class="token assign-left variable">o</span><span class="token operator">=</span>- <span class="token number">2397106153131073818</span> <span class="token number">2</span> IN IP4 <span class="token number">127.0</span>.0.1
+<span class="token comment"># origin 代表会话的发起者</span>
+<span class="token assign-left variable">s</span><span class="token operator">=</span>-
+<span class="token comment"># session name 会话的名称，每个 SDP 中有且仅能有一个 s 描述，其值不能为空</span>
+<span class="token assign-left variable">c</span><span class="token operator">=</span>IN IP4 <span class="token number">0.0</span>.0.0
+connection data 
+// Time description
+<span class="token assign-left variable">t</span><span class="token operator">=</span><span class="token number">0</span> <span class="token number">0</span> 携带了会话的连接信息，其实就是 IP 地址
+<span class="token comment"># timing 指定了会话的开始和结束时间，如果开始和结束时间都为 0，那么意味着这次会话是永久的</span>
+
+// Session Attribute
+<span class="token assign-left variable">a</span><span class="token operator">=</span>group:BUNDLE video
+<span class="token assign-left variable">a</span><span class="token operator">=</span>msid-semantic: WMS gLzQPGuagv3xXolwPiiGAULOwOLNItvl8LyS
+
+// Media description
+<span class="token assign-left variable">m</span><span class="token operator">=</span>video <span class="token number">9</span> UDP/TLS/RTP/SAVPF <span class="token number">96</span> <span class="token number">97</span>
+<span class="token comment"># m=&lt;media&gt; &lt;port&gt; &lt;proto&gt; &lt;fmt&gt; ...</span>
+<span class="token assign-left variable">c</span><span class="token operator">=</span>IN IP4 <span class="token number">0.0</span>.0.0
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtcp:9 IN IP4 <span class="token number">0.0</span>.0.0
+<span class="token assign-left variable">a</span><span class="token operator">=</span>ice-ufrag:l5KU
+<span class="token assign-left variable">a</span><span class="token operator">=</span>ice-pwd:+Sxmm3PoJUERpeHYL0HW4/T9
+<span class="token assign-left variable">a</span><span class="token operator">=</span>ice-options:trickle
+<span class="token assign-left variable">a</span><span class="token operator">=</span>fingerprint:sha-256 7C:93:85:40:01:07:91:BE:DA:64:A0:37:7E:61:CB:9D:91:9B:44:F6:C9:AC:3B:37:1C:00:15:4C:5A:B5:67:74
+<span class="token assign-left variable">a</span><span class="token operator">=</span>setup:actpass
+<span class="token assign-left variable">a</span><span class="token operator">=</span>mid:video
+<span class="token assign-left variable">a</span><span class="token operator">=</span>sendrecv
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtcp-mux
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtcp-rsize
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtpmap:96 VP8/90000
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtcp-fb:96 goog-remb
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtcp-fb:96 transport-cc
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtcp-fb:96 ccm fir
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtcp-fb:96 nack
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtcp-fb:96 nack pli
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtpmap:97 rtx/90000
+<span class="token assign-left variable">a</span><span class="token operator">=</span>fmtp:97 <span class="token assign-left variable">apt</span><span class="token operator">=</span><span class="token number">96</span>
+
+<span class="token assign-left variable">a</span><span class="token operator">=</span>ssrc-group:FID <span class="token number">2527104241</span>
+<span class="token assign-left variable">a</span><span class="token operator">=</span>ssrc:2527104241 cname:JPmKBgFHH5YVFyaJ
+<span class="token assign-left variable">a</span><span class="token operator">=</span>ssrc:2527104241 msid:gLzQPGuagv3xXolwPiiGAULOwOLNItvl8LyS c7072509-df47-4828-ad03-7d0274585a56
+<span class="token assign-left variable">a</span><span class="token operator">=</span>ssrc:2527104241 mslabel:gLzQPGuagv3xXolwPiiGAULOwOLNItvl8LyS
+<span class="token assign-left variable">a</span><span class="token operator">=</span>ssrc:2527104241 label:c7072509-df47-4828-ad03-7d0274585a56
+</code></pre></div><p>Bob Answer</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token assign-left variable">v</span><span class="token operator">=</span><span class="token number">0</span>
+<span class="token assign-left variable">o</span><span class="token operator">=</span>- <span class="token number">5443219974135798586</span> <span class="token number">2</span> IN IP4 <span class="token number">127.0</span>.0.1
+<span class="token assign-left variable">s</span><span class="token operator">=</span>-
+<span class="token assign-left variable">t</span><span class="token operator">=</span><span class="token number">0</span> <span class="token number">0</span>
+<span class="token assign-left variable">a</span><span class="token operator">=</span>group:BUNDLE video
+<span class="token assign-left variable">a</span><span class="token operator">=</span>msid-semantic: WMS uiZ7cB0hsFDRGgTIMNp6TajUK9dOoHi43HVs
+<span class="token assign-left variable">m</span><span class="token operator">=</span>video <span class="token number">9</span> UDP/TLS/RTP/SAVPF <span class="token number">96</span> <span class="token number">97</span>
+<span class="token assign-left variable">c</span><span class="token operator">=</span>IN IP4 <span class="token number">0.0</span>.0.0
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtcp:9 IN IP4 <span class="token number">0.0</span>.0.0
+<span class="token assign-left variable">a</span><span class="token operator">=</span>ice-ufrag:MUZf
+<span class="token assign-left variable">a</span><span class="token operator">=</span>ice-pwd:4QhikLcmGXnCfAzHDB++ZjM5
+<span class="token assign-left variable">a</span><span class="token operator">=</span>ice-options:trickle
+<span class="token assign-left variable">a</span><span class="token operator">=</span>fingerprint:sha-256 2A:5A:B8:43:66:05:B3:6A:E9:46:36:DF:DF:20:11:6A:F6:11:EA:D9:4E:26:E3:CE:5A:3A:C6:8D:03:49:7B:DE
+<span class="token assign-left variable">a</span><span class="token operator">=</span>setup:active
+<span class="token assign-left variable">a</span><span class="token operator">=</span>mid:video
+<span class="token assign-left variable">a</span><span class="token operator">=</span>sendrecv
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtcp-mux
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtcp-rsize
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtpmap:96 VP8/90000
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtcp-fb:96 goog-remb
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtcp-fb:96 transport-cc
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtcp-fb:96 ccm fir
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtcp-fb:96 nack
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtcp-fb:96 nack pli
+<span class="token assign-left variable">a</span><span class="token operator">=</span>rtpmap:97 rtx/90000
+<span class="token assign-left variable">a</span><span class="token operator">=</span>fmtp:97 <span class="token assign-left variable">apt</span><span class="token operator">=</span><span class="token number">96</span>
+<span class="token assign-left variable">a</span><span class="token operator">=</span>ssrc-group:FID <span class="token number">3587783331</span>
+<span class="token assign-left variable">a</span><span class="token operator">=</span>ssrc:3587783331 cname:INxZnBV2Sty1zlmN
+<span class="token assign-left variable">a</span><span class="token operator">=</span>ssrc:3587783331 msid:uiZ7cB0hsFDRGgTIMNp6TajUK9dOoHi43HVs a3b297e7-cdbe-464e-a32c-347465ace055
+<span class="token assign-left variable">a</span><span class="token operator">=</span>ssrc:3587783331 mslabel:uiZ7cB0hsFDRGgTIMNp6TajUK9dOoHi43HVs
+<span class="token assign-left variable">a</span><span class="token operator">=</span>ssrc:3587783331 label:a3b297e7-cdbe-464e-a32c-347465ace055
+</code></pre></div><p>注意：SDP Line 是顺序相关的，比如 <code>a=rtpmap:96</code> 后面的都是它相关的设置，直到下一行是 <code>a=rtpmap</code>或者其他属性</p> <p>交换完 SDP 后，会交换 Candidate：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>// Alice Candidate
+candidate: candidate:1912876010 <span class="token number">1</span> udp <span class="token number">2122260223</span> <span class="token number">30.2</span>.220.94 <span class="token number">52832</span> typ <span class="token function">host</span> generation <span class="token number">0</span> ufrag l5KU network-id <span class="token number">1</span> network-cost <span class="token number">10</span>
+candidate: candidate:1015535386 <span class="token number">1</span> tcp <span class="token number">1518280447</span> <span class="token number">30.2</span>.220.94 <span class="token number">9</span> typ <span class="token function">host</span> tcptype active generation <span class="token number">0</span> ufrag l5KU network-id <span class="token number">1</span> network-cost <span class="token number">10</span>
+// Bob Candidate
+candidate:1912876010 <span class="token number">1</span> udp <span class="token number">2122260223</span> <span class="token number">30.2</span>.220.94 <span class="token number">51551</span> typ <span class="token function">host</span> generation <span class="token number">0</span> ufrag MUZf network-id <span class="token number">1</span> network-cost <span class="token number">10</span>
+</code></pre></div><h3 id="sfu"><a href="#sfu" class="header-anchor">#</a> SFU</h3> <p>MediaSoup 这种 SFU，客户端先给一个 Offer 给 SFU，SFU 只是检查这个 Offer 中的媒体特性，然后 SFU 会生成 Offer（包含会议中的其他客户端的流，如果没有人则没有 SSRC）给客户端，客户端发送 Answer 给 SFU。这种方式的好处是其他客户端加入，以及流的变更（比如关闭视频打开视频时），都可以使用 Reoffer，也就是统一由 SFU 发起新的 Offer，客户端响应，SFU 和客户端的交互模式只有一种。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.0700b199.js" defer></script><script src="/assets/js/4.85800d9b.js" defer></script><script src="/assets/js/266.d132b970.js" defer></script>
+  </body>
+</html>
